@@ -6,7 +6,6 @@ import {
   Nunito,
 } from "next/font/google";
 import "./globals.css";
-import "./system.css";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-display",
@@ -45,10 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${archivoBlack.variable} ${archivo.variable} ${nunito.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      lang="es"
+      className={`${archivoBlack.variable} ${archivo.variable} ${nunito.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col bg-white text-ink font-sans antialiased">
+        {children}
+      </body>
     </html>
   );
 }

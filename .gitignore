@@ -40,6 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
-Agents.md
+# ai assistants
+AGENTS.md
 CLAUDE.md
+.claude/
+.design/
