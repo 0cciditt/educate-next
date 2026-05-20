@@ -1,0 +1,1640 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Educate Learning Center — Brand System</title>
+<link rel="stylesheet" href="system.css">
+<style>
+  /* deck-level layout helpers */
+  html, body { background: #1a1a1a; }
+  deck-stage > section {
+    width: 1920px; height: 1080px;
+    background: var(--ed-bg);
+    color: var(--ed-ink);
+    font-family: var(--font-body);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Common page chrome */
+  .page { width: 100%; height: 100%; padding: 80px 96px; position: relative; display: flex; flex-direction: column; }
+  .page--cream { background: var(--ed-bg-warm); }
+  .page--navy  { background: var(--ed-navy); color: #fff; }
+  .page--navy h1, .page--navy h2, .page--navy h3, .page--navy h4 { color: #fff; }
+
+  .page__header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 28px; border-bottom: 1px solid var(--ed-line); margin-bottom: 40px; }
+  .page--navy .page__header { border-color: rgba(255,255,255,.18); }
+  .page__eyebrow { font-family: var(--font-display); font-size: 13px; letter-spacing: .18em; color: var(--ed-orange); text-transform: uppercase; }
+  .page__title { font-family: var(--font-display); font-size: 64px; line-height: .95; letter-spacing: -.02em; margin-top: 6px; }
+  .page__num { font-family: var(--font-mono); font-size: 13px; color: var(--ed-ink-3); letter-spacing: .1em; }
+  .page--navy .page__num { color: rgba(255,255,255,.6); }
+
+  /* Spec tables */
+  .spec { display: grid; grid-template-columns: 220px 1fr; gap: 8px 32px; align-items: baseline; }
+  .spec dt { font-family: var(--font-mono); font-size: 13px; color: var(--ed-ink-3); }
+  .spec dd { margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: 16px; color: var(--ed-ink); }
+
+  /* Hero blocks motif */
+  .stack-motif { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 8px; }
+
+  .hr-soft { height: 1px; background: var(--ed-line); border: 0; margin: 28px 0; }
+
+  /* Mini bg utilities */
+  .bg-grid-dots { background-image: radial-gradient(rgba(31,79,122,.18) 1.2px, transparent 1.2px); background-size: 28px 28px; background-position: 0 0; }
+</style>
+</head>
+<body>
+<deck-stage>
+
+<!-- ============================================================
+SLIDE 01 — COVER
+============================================================ -->
+<section data-screen-label="01 Cover" style="background: var(--ed-bg-warm);">
+  <div class="page" style="padding: 80px 96px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 96px; align-items: center;">
+
+    <div>
+      <div style="font-family: var(--font-mono); font-size: 14px; letter-spacing: .2em; color: var(--ed-ink-3); margin-bottom: 32px;">
+        EDUCATE&nbsp;LEARNING&nbsp;CENTER&nbsp;·&nbsp;BRAND&nbsp;SYSTEM&nbsp;·&nbsp;V1.0
+      </div>
+      <h1 class="display" style="font-size: 168px; line-height: .88;">
+        Building<br/>blocks<br/>for <span style="color: var(--ed-orange);">growing</span><br/>minds.
+      </h1>
+      <p style="margin-top: 40px; font-size: 22px; line-height: 1.55; color: var(--ed-ink-2); max-width: 640px;">
+        The visual language of Educate Learning Center —
+        colors, type, components and patterns for building
+        warm, professional learning experiences for kids and parents.
+      </p>
+
+      <div style="margin-top: 56px; display: flex; gap: 16px; align-items: center;">
+        <img src="brand/logo.png" alt="Educate Learning Center" style="height: 56px;">
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); padding-left: 16px; border-left: 1px solid var(--ed-line);">
+          MAY 2026 · ENGLISH EDITION
+        </span>
+      </div>
+    </div>
+
+    <!-- Block stack art -->
+    <div style="position: relative; width: 100%; aspect-ratio: 1/1.05; max-height: 920px; margin-left: auto;">
+      <!-- Layered colored squares like the logo, exploded -->
+      <div style="position: absolute; left: 0;   top: 0;    width: 38%; height: 38%; background: var(--ed-orange);   border-radius: 18px; box-shadow: var(--sh-lg);"></div>
+      <div style="position: absolute; left: 40%; top: 5%;   width: 38%; height: 38%; background: var(--ed-navy);     border-radius: 18px; box-shadow: var(--sh-lg);"></div>
+      <div style="position: absolute; left: 5%;  top: 32%;  width: 38%; height: 38%; background: var(--ed-yellow);   border-radius: 18px; box-shadow: var(--sh-lg);"></div>
+      <div style="position: absolute; left: 45%; top: 40%;  width: 38%; height: 38%; background: var(--ed-red);      border-radius: 18px; box-shadow: var(--sh-lg);"></div>
+      <div style="position: absolute; left: 0;   top: 62%;  width: 38%; height: 38%; background: var(--ed-burgundy); border-radius: 18px; box-shadow: var(--sh-lg);"></div>
+      <div style="position: absolute; left: 38%; top: 67%;  width: 38%; height: 38%; background: var(--ed-green);    border-radius: 18px; box-shadow: var(--sh-lg);"></div>
+      <!-- Sparkle motifs -->
+      <svg viewBox="0 0 60 60" style="position: absolute; right: -10px; top: 30%; width: 80px; height: 80px;">
+        <path d="M30 4 L34 26 L56 30 L34 34 L30 56 L26 34 L4 30 L26 26 Z" fill="var(--ed-ink)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 02 — NORTH STAR / PERSONALITY
+============================================================ -->
+<section data-screen-label="02 Personality">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">North Star</div>
+        <h2 class="page__title">A brand that teaches with both hands.</h2>
+      </div>
+      <div class="page__num">02 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1;">
+      <div>
+        <p style="font-size: 28px; line-height: 1.45; color: var(--ed-ink-2); max-width: 720px; text-wrap: pretty;">
+          One hand is <strong style="color: var(--ed-navy);">trustworthy</strong> — the steady, organized hand parents shake before signing their kid up.
+          The other is <strong style="color: var(--ed-orange);">joyful</strong> — the hand a 7-year-old grabs on the way into class.
+        </p>
+        <p style="font-size: 20px; line-height: 1.6; color: var(--ed-ink-3); margin-top: 28px; max-width: 680px;">
+          Every page, button, color and word should hold both at once. Skew too corporate and parents trust you but kids tune out. Skew too cartoonish and kids love you but parents won't pay tuition. The system is built to live in the middle, on purpose.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; max-width: 680px;">
+          <div style="padding: 22px; border-radius: var(--r-lg); background: var(--ed-navy-soft);">
+            <div style="font-family: var(--font-display); font-size: 22px; color: var(--ed-navy-deep);">Confident</div>
+            <p style="font-size: 14px; color: var(--ed-ink-3); margin-top: 6px;">Clear hierarchy. Strong geometric type. Real photography.</p>
+          </div>
+          <div style="padding: 22px; border-radius: var(--r-lg); background: var(--ed-orange-soft);">
+            <div style="font-family: var(--font-display); font-size: 22px; color: var(--ed-orange-deep);">Warm</div>
+            <p style="font-size: 14px; color: var(--ed-ink-3); margin-top: 6px;">Rounded shapes. Generous air. Friendly voice in second person.</p>
+          </div>
+          <div style="padding: 22px; border-radius: var(--r-lg); background: var(--ed-yellow-soft);">
+            <div style="font-family: var(--font-display); font-size: 22px; color: #8A6B0C;">Playful</div>
+            <p style="font-size: 14px; color: var(--ed-ink-3); margin-top: 6px;">Color-coded levels. Building-block motif. Joyful illustration accents.</p>
+          </div>
+          <div style="padding: 22px; border-radius: var(--r-lg); background: var(--ed-green-soft);">
+            <div style="font-family: var(--font-display); font-size: 22px; color: var(--ed-green-deep);">Grounded</div>
+            <p style="font-size: 14px; color: var(--ed-ink-3); margin-top: 6px;">Quiet neutrals. Honest, specific copy. No empty marketing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice column -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-family: var(--font-display); font-size: 14px; letter-spacing: .15em; color: var(--ed-ink-3); text-transform: uppercase;">Voice — say / don't say</div>
+
+        <div style="background: #fff; border: 1px solid var(--ed-line); border-radius: var(--r-lg); padding: 24px; display: grid; grid-template-columns: 24px 1fr; gap: 16px; align-items: start;">
+          <div style="width:24px;height:24px;border-radius:8px;background:var(--ed-green); color:#fff; display:grid;place-items:center;font-weight:900;">✓</div>
+          <div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 20px; line-height: 1.4;">"Your child will read their first English chapter book by June."</div>
+            <p style="margin-top: 6px; font-size: 14px; color: var(--ed-ink-3);">Concrete. A specific outcome a parent can picture.</p>
+          </div>
+        </div>
+
+        <div style="background: #fff; border: 1px solid var(--ed-line); border-radius: var(--r-lg); padding: 24px; display: grid; grid-template-columns: 24px 1fr; gap: 16px; align-items: start;">
+          <div style="width:24px;height:24px;border-radius:8px;background:var(--ed-red); color:#fff; display:grid;place-items:center;font-weight:900;">×</div>
+          <div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 20px; line-height: 1.4; text-decoration: line-through; text-decoration-color: var(--ed-red); text-decoration-thickness: 2px;">"World-class English language acquisition methodology."</div>
+            <p style="margin-top: 6px; font-size: 14px; color: var(--ed-ink-3);">Corporate. Nothing a 9-year-old or their mom can grab onto.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--ed-navy); color: #fff; border-radius: var(--r-lg); padding: 28px; margin-top: 12px;">
+          <div style="font-family: var(--font-mono); font-size: 12px; letter-spacing: .15em; opacity: .7;">RULES OF THUMB</div>
+          <ul style="margin: 16px 0 0; padding-left: 18px; line-height: 1.7; font-size: 16px;">
+            <li>Speak directly to a parent or a child — never to "users."</li>
+            <li>Lead with verbs: <em>learn, build, read, speak, play</em>.</li>
+            <li>One exclamation per page, maximum.</li>
+            <li>Numbers and outcomes beat adjectives every time.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 03 — THREE DIRECTIONS
+============================================================ -->
+<section data-screen-label="03 Three Directions">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Visual direction</div>
+        <h2 class="page__title">Three takes on the same brand.</h2>
+      </div>
+      <div class="page__num">03 / 19</div>
+    </header>
+
+    <p style="font-size: 18px; color: var(--ed-ink-3); margin-bottom: 32px; max-width: 900px;">
+      All three use the same logo and color family. They differ in how loud the personality runs.
+      The middle option, <strong style="color: var(--ed-ink);">Building Blocks</strong>, is what the rest of this book is built on — but any of the three is defensible. Pick the one that matches how kid-forward you want to feel.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; flex: 1;">
+
+      <!-- Direction A: Confident Stack -->
+      <article style="background: #fff; border-radius: var(--r-xl); padding: 32px; display: flex; flex-direction: column; gap: 20px; box-shadow: var(--sh-sm); border: 1px solid var(--ed-line-2);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">DIRECTION A</div>
+            <h3 style="font-family: var(--font-display); font-size: 32px; line-height: 1; margin-top: 4px;">Confident<br/>Stack</h3>
+          </div>
+          <span class="badge">Most professional</span>
+        </div>
+        <p style="font-size: 14px; color: var(--ed-ink-3); line-height: 1.55;">Navy-led, minimal accents, big monolithic type. Reads as serious tutoring center — exam prep, business English.</p>
+
+        <!-- Composition preview -->
+        <div style="background: var(--ed-bg-warm); border-radius: var(--r-lg); padding: 24px; margin-top: 4px;">
+          <div style="font-family: var(--font-display); font-size: 36px; line-height: .95; color: var(--ed-navy);">Speak<br/>with<br/>confidence.</div>
+          <div style="margin-top: 16px; display: flex; gap: 8px;">
+            <span class="btn btn--primary btn--sm">Book a class</span>
+            <span class="btn btn--ghost btn--sm">Levels →</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 8px; margin-top: auto;">
+          <div style="width: 32px; height: 32px; background: var(--ed-navy); border-radius: 8px;"></div>
+          <div style="width: 32px; height: 32px; background: var(--ed-orange); border-radius: 8px;"></div>
+          <div style="width: 32px; height: 32px; background: var(--ed-ink); border-radius: 8px;"></div>
+          <div style="width: 32px; height: 32px; background: var(--ed-bg-warm); border-radius: 8px; border: 1px solid var(--ed-line);"></div>
+        </div>
+        <div style="font-size: 12px; color: var(--ed-ink-3); font-family: var(--font-mono);">Archivo Black · Archivo · 1–2 accents only</div>
+      </article>
+
+      <!-- Direction B: Building Blocks (RECOMMENDED) -->
+      <article style="background: #fff; border-radius: var(--r-xl); padding: 32px; display: flex; flex-direction: column; gap: 20px; box-shadow: var(--sh-md); border: 2px solid var(--ed-orange); position: relative;">
+        <div style="position: absolute; top: -14px; right: 24px; background: var(--ed-orange); color: #fff; font-family: var(--font-display); font-size: 12px; padding: 6px 14px; border-radius: 999px; letter-spacing: .1em;">★ RECOMMENDED</div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-orange-deep);">DIRECTION B</div>
+            <h3 style="font-family: var(--font-display); font-size: 32px; line-height: 1; margin-top: 4px;">Building<br/>Blocks</h3>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: var(--ed-ink-3); line-height: 1.55;">Navy anchor + orange accent, with all six logo colors used to code levels and categories. Friendly and structured at once.</p>
+
+        <div style="background: var(--ed-bg-warm); border-radius: var(--r-lg); padding: 24px; position: relative;">
+          <div style="position: absolute; top: 12px; right: 16px; display: grid; grid-template-columns: repeat(2, 16px); gap: 3px;">
+            <div style="background: var(--ed-orange); aspect-ratio: 1;"></div>
+            <div style="background: var(--ed-navy); aspect-ratio: 1;"></div>
+            <div style="background: var(--ed-yellow); aspect-ratio: 1;"></div>
+            <div style="background: var(--ed-green); aspect-ratio: 1;"></div>
+          </div>
+          <div style="display: flex; gap: 4px; margin-bottom: 10px;">
+            <span class="lvl lvl--a1">A1</span>
+            <span class="lvl lvl--b1">B1</span>
+            <span class="lvl lvl--c1">C1</span>
+          </div>
+          <div style="font-family: var(--font-display); font-size: 32px; line-height: .95; color: var(--ed-ink);">
+            Build English,<br/><span style="color: var(--ed-orange);">block by block.</span>
+          </div>
+          <div style="margin-top: 16px; display: flex; gap: 8px;">
+            <span class="btn btn--accent btn--sm">Start free trial</span>
+            <span class="btn btn--secondary btn--sm">See levels</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 6px; margin-top: auto;">
+          <div style="width: 30px; height: 30px; background: var(--ed-orange); border-radius: 6px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-navy); border-radius: 6px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-yellow); border-radius: 6px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-green); border-radius: 6px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-red); border-radius: 6px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-burgundy); border-radius: 6px;"></div>
+        </div>
+        <div style="font-size: 12px; color: var(--ed-ink-3); font-family: var(--font-mono);">Archivo Black · Nunito · all 6 logo colors</div>
+      </article>
+
+      <!-- Direction C: Playful Palette -->
+      <article style="background: #fff; border-radius: var(--r-xl); padding: 32px; display: flex; flex-direction: column; gap: 20px; box-shadow: var(--sh-sm); border: 1px solid var(--ed-line-2);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">DIRECTION C</div>
+            <h3 style="font-family: var(--font-display); font-size: 32px; line-height: 1; margin-top: 4px;">Playful<br/>Palette</h3>
+          </div>
+          <span class="badge badge--orange">Most kid-forward</span>
+        </div>
+        <p style="font-size: 14px; color: var(--ed-ink-3); line-height: 1.55;">Orange and yellow take the lead. Bigger color washes, looser layout. Reads warm — best if the school is mainly under-12s.</p>
+
+        <div style="background: var(--ed-orange-soft); border-radius: var(--r-lg); padding: 24px; position: relative; overflow: hidden;">
+          <div style="position: absolute; right: -20px; bottom: -20px; width: 80px; height: 80px; background: var(--ed-yellow); border-radius: 50%; opacity: .7;"></div>
+          <div style="position: absolute; left: 60%; top: 8px; width: 40px; height: 40px; background: var(--ed-green); border-radius: 12px; transform: rotate(15deg);"></div>
+          <div style="font-family: var(--font-display); font-size: 34px; line-height: .95; color: var(--ed-burgundy-deep); position: relative;">Hello,<br/>let's<br/>play!</div>
+          <div style="margin-top: 16px; display: flex; gap: 8px; position: relative;">
+            <span class="btn btn--accent btn--sm" style="border-radius: 999px;">Join now</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 6px; margin-top: auto;">
+          <div style="width: 30px; height: 30px; background: var(--ed-orange); border-radius: 999px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-yellow); border-radius: 999px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-red); border-radius: 999px;"></div>
+          <div style="width: 30px; height: 30px; background: var(--ed-green); border-radius: 999px;"></div>
+        </div>
+        <div style="font-size: 12px; color: var(--ed-ink-3); font-family: var(--font-mono);">Archivo Black · Nunito · warm palette + soft tints</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 04 — LOGO
+============================================================ -->
+<section data-screen-label="04 Logo">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Identity</div>
+        <h2 class="page__title">The logo.</h2>
+      </div>
+      <div class="page__num">04 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; flex: 1;">
+
+      <!-- Left: primary logo lockup + clearspace -->
+      <div>
+        <div style="background: var(--ed-bg-warm); border-radius: var(--r-xl); padding: 64px; position: relative; min-height: 380px; display: grid; place-items: center;">
+          <!-- clear-space guides -->
+          <div style="position: absolute; inset: 48px; border: 1.5px dashed var(--ed-orange); border-radius: var(--r-lg); opacity: .5;"></div>
+          <img src="brand/logo.png" alt="Educate Learning Center" style="max-width: 70%; height: auto;">
+
+          <!-- corner X markers -->
+          <div style="position: absolute; left: 24px; top: 24px; font-family: var(--font-mono); font-size: 13px; color: var(--ed-orange-deep);">⟵ X ⟶</div>
+          <div style="position: absolute; right: 24px; bottom: 24px; font-family: var(--font-mono); font-size: 13px; color: var(--ed-orange-deep);">X = height of the block-mark</div>
+        </div>
+
+        <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+          <div style="background: var(--ed-bg-warm); border-radius: var(--r-md); padding: 20px; display: flex; flex-direction: column; gap: 8px; min-height: 110px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--ed-ink-3);">MIN. WIDTH (DIGITAL)</div>
+            <div style="font-family: var(--font-display); font-size: 28px;">120 px</div>
+          </div>
+          <div style="background: var(--ed-bg-warm); border-radius: var(--r-md); padding: 20px; display: flex; flex-direction: column; gap: 8px; min-height: 110px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--ed-ink-3);">MIN. WIDTH (PRINT)</div>
+            <div style="font-family: var(--font-display); font-size: 28px;">32 mm</div>
+          </div>
+          <div style="background: var(--ed-bg-warm); border-radius: var(--r-md); padding: 20px; display: flex; flex-direction: column; gap: 8px; min-height: 110px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--ed-ink-3);">CLEAR SPACE</div>
+            <div style="font-family: var(--font-display); font-size: 28px;">≥ 1 X</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: variations + don'ts -->
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">VARIATIONS</div>
+        <div style="background: #fff; border: 1px solid var(--ed-line); border-radius: var(--r-md); padding: 24px; display: grid; place-items: center;">
+          <img src="brand/logo.png" alt="" style="max-width: 80%; height: auto;">
+        </div>
+        <div style="background: var(--ed-navy); border-radius: var(--r-md); padding: 24px; display: grid; place-items: center;">
+          <img src="brand/logo.png" alt="" style="max-width: 80%; height: auto; filter: brightness(0) invert(1);">
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-top: 8px;">DON'T</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+          <div style="background: var(--ed-red-soft); border-radius: var(--r-sm); padding: 12px; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center;">
+            <img src="brand/logo.png" alt="" style="width: 90%; filter: hue-rotate(120deg);">
+            <div style="font-size: 11px; color: var(--ed-red-deep); font-weight: 700;">Recolor blocks</div>
+          </div>
+          <div style="background: var(--ed-red-soft); border-radius: var(--r-sm); padding: 12px; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center;">
+            <img src="brand/logo.png" alt="" style="width: 90%; transform: skewX(-12deg);">
+            <div style="font-size: 11px; color: var(--ed-red-deep); font-weight: 700;">Skew or distort</div>
+          </div>
+          <div style="background: var(--ed-red-soft); border-radius: var(--r-sm); padding: 12px; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; position: relative;">
+            <div style="position: absolute; inset: 12px; background: linear-gradient(45deg,#777,#ccc); border-radius: 4px; opacity: .6;"></div>
+            <img src="brand/logo.png" alt="" style="width: 90%; position: relative;">
+            <div style="font-size: 11px; color: var(--ed-red-deep); font-weight: 700; position: relative;">Busy backgrounds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 05 — COLOR PALETTE
+============================================================ -->
+<section data-screen-label="05 Color Palette">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Color</div>
+        <h2 class="page__title">Six blocks, one palette.</h2>
+      </div>
+      <div class="page__num">05 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-bottom: 32px;">
+      <!-- 6 brand swatches with deep/soft chips -->
+      <!-- Navy -->
+      <div>
+        <div style="background: var(--ed-navy); height: 260px; border-radius: var(--r-md); padding: 18px; color: #fff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 22px;">Navy</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; opacity: .8; margin-top: 4px;">PRIMARY · ANCHOR</div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 13px;">#1F4F7A</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;">
+          <div style="background: var(--ed-navy-deep); height: 36px; border-radius: 6px; padding: 6px; color: #fff; font-family: var(--font-mono); font-size: 10px;">#143B5C</div>
+          <div style="background: var(--ed-navy-soft); height: 36px; border-radius: 6px; padding: 6px; color: var(--ed-navy-deep); font-family: var(--font-mono); font-size: 10px;">#E7EEF5</div>
+        </div>
+      </div>
+      <!-- Orange -->
+      <div>
+        <div style="background: var(--ed-orange); height: 260px; border-radius: var(--r-md); padding: 18px; color: #fff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 22px;">Orange</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; opacity: .9; margin-top: 4px;">ACCENT · ENERGY</div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 13px;">#E76F3A</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;">
+          <div style="background: var(--ed-orange-deep); height: 36px; border-radius: 6px; padding: 6px; color: #fff; font-family: var(--font-mono); font-size: 10px;">#C95A26</div>
+          <div style="background: var(--ed-orange-soft); height: 36px; border-radius: 6px; padding: 6px; color: var(--ed-orange-deep); font-family: var(--font-mono); font-size: 10px;">#FDEEE4</div>
+        </div>
+      </div>
+      <!-- Yellow -->
+      <div>
+        <div style="background: var(--ed-yellow); height: 260px; border-radius: var(--r-md); padding: 18px; color: var(--ed-ink); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 22px;">Yellow</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; opacity: .7; margin-top: 4px;">HIGHLIGHT · FOCUS</div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 13px;">#F2C84B</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;">
+          <div style="background: var(--ed-yellow-deep); height: 36px; border-radius: 6px; padding: 6px; color: var(--ed-ink); font-family: var(--font-mono); font-size: 10px;">#D9AD2E</div>
+          <div style="background: var(--ed-yellow-soft); height: 36px; border-radius: 6px; padding: 6px; color: #8A6B0C; font-family: var(--font-mono); font-size: 10px;">#FDF4D9</div>
+        </div>
+      </div>
+      <!-- Green -->
+      <div>
+        <div style="background: var(--ed-green); height: 260px; border-radius: var(--r-md); padding: 18px; color: #fff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 22px;">Green</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; opacity: .9; margin-top: 4px;">GROWTH · SUCCESS</div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 13px;">#6FA84A</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;">
+          <div style="background: var(--ed-green-deep); height: 36px; border-radius: 6px; padding: 6px; color: #fff; font-family: var(--font-mono); font-size: 10px;">#568935</div>
+          <div style="background: var(--ed-green-soft); height: 36px; border-radius: 6px; padding: 6px; color: var(--ed-green-deep); font-family: var(--font-mono); font-size: 10px;">#ECF4E3</div>
+        </div>
+      </div>
+      <!-- Red -->
+      <div>
+        <div style="background: var(--ed-red); height: 260px; border-radius: var(--r-md); padding: 18px; color: #fff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 22px;">Red</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; opacity: .9; margin-top: 4px;">ALERT · IMPORTANT</div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 13px;">#C84A3F</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;">
+          <div style="background: var(--ed-red-deep); height: 36px; border-radius: 6px; padding: 6px; color: #fff; font-family: var(--font-mono); font-size: 10px;">#A53A30</div>
+          <div style="background: var(--ed-red-soft); height: 36px; border-radius: 6px; padding: 6px; color: var(--ed-red-deep); font-family: var(--font-mono); font-size: 10px;">#FAE5E3</div>
+        </div>
+      </div>
+      <!-- Burgundy -->
+      <div>
+        <div style="background: var(--ed-burgundy); height: 260px; border-radius: var(--r-md); padding: 18px; color: #fff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 22px;">Burgundy</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; opacity: .9; margin-top: 4px;">DEPTH · ADVANCED</div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 13px;">#6B2840</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;">
+          <div style="background: var(--ed-burgundy-deep); height: 36px; border-radius: 6px; padding: 6px; color: #fff; font-family: var(--font-mono); font-size: 10px;">#4F1B2E</div>
+          <div style="background: var(--ed-burgundy-soft); height: 36px; border-radius: 6px; padding: 6px; color: var(--ed-burgundy-deep); font-family: var(--font-mono); font-size: 10px;">#F1E4E8</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Neutrals row -->
+    <div style="display: grid; grid-template-columns: 1fr 4fr; gap: 32px; align-items: center;">
+      <div style="font-family: var(--font-display); font-size: 22px;">Neutrals</div>
+      <div style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px;">
+        <div style="background: var(--ed-ink); height: 70px; border-radius: 8px; padding: 8px; color: #fff; font-family: var(--font-mono); font-size: 10px;">Ink<br/>#161616</div>
+        <div style="background: var(--ed-ink-2); height: 70px; border-radius: 8px; padding: 8px; color: #fff; font-family: var(--font-mono); font-size: 10px;">Ink-2<br/>#2E2E2E</div>
+        <div style="background: var(--ed-ink-3); height: 70px; border-radius: 8px; padding: 8px; color: #fff; font-family: var(--font-mono); font-size: 10px;">Ink-3<br/>#5A5A5A</div>
+        <div style="background: var(--ed-ink-4); height: 70px; border-radius: 8px; padding: 8px; color: #fff; font-family: var(--font-mono); font-size: 10px;">Ink-4<br/>#8C8C8C</div>
+        <div style="background: var(--ed-line); height: 70px; border-radius: 8px; padding: 8px; color: var(--ed-ink); font-family: var(--font-mono); font-size: 10px;">Line<br/>#E6E1D6</div>
+        <div style="background: var(--ed-bg-cream); height: 70px; border-radius: 8px; padding: 8px; color: var(--ed-ink); font-family: var(--font-mono); font-size: 10px;">Cream<br/>#F3ECDD</div>
+        <div style="background: var(--ed-bg-warm); height: 70px; border-radius: 8px; padding: 8px; color: var(--ed-ink); font-family: var(--font-mono); font-size: 10px; border: 1px solid var(--ed-line);">Warm bg<br/>#FAF7F2</div>
+        <div style="background: #fff; height: 70px; border-radius: 8px; padding: 8px; color: var(--ed-ink); font-family: var(--font-mono); font-size: 10px; border: 1px solid var(--ed-line);">White<br/>#FFFFFF</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 06 — COLOR APPLICATION
+============================================================ -->
+<section data-screen-label="06 Color In Use">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Color application</div>
+        <h2 class="page__title">How the palette earns its keep.</h2>
+      </div>
+      <div class="page__num">06 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; flex: 1;">
+      <!-- Left: usage rules -->
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- 60/30/10 -->
+        <div style="background: #fff; border-radius: var(--r-lg); padding: 28px; border: 1px solid var(--ed-line);">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">RATIO · DEFAULT PAGE</div>
+          <div style="font-family: var(--font-display); font-size: 26px; margin-top: 4px;">60 / 30 / 10</div>
+          <div style="display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin-top: 16px;">
+            <div style="flex: 60; background: #fff; border-right: 1px solid var(--ed-line); display: grid; place-items: center; font-size: 12px; color: var(--ed-ink-3);">60% white &amp; warm bg</div>
+            <div style="flex: 30; background: var(--ed-navy); display: grid; place-items: center; font-size: 12px; color: #fff;">30% navy</div>
+            <div style="flex: 10; background: var(--ed-orange); display: grid; place-items: center; font-size: 12px; color: #fff;">10% orange</div>
+          </div>
+          <p style="margin-top: 14px; font-size: 13px; color: var(--ed-ink-3);">Tinted backgrounds (soft yellow/green/red) replace white when sectioning long pages — never more than one tint per fold.</p>
+        </div>
+
+        <!-- Level coding -->
+        <div style="background: #fff; border-radius: var(--r-lg); padding: 28px; border: 1px solid var(--ed-line);">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">SEMANTIC USE · LEVELS &amp; CATEGORIES</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;">
+            <div><span class="lvl lvl--a1">A1</span><div style="font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Beginner · Green</div></div>
+            <div><span class="lvl lvl--a2">A2</span><div style="font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Elementary · Green-deep</div></div>
+            <div><span class="lvl lvl--b1">B1</span><div style="font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Intermediate · Navy</div></div>
+            <div><span class="lvl lvl--b2">B2</span><div style="font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Upper Int. · Navy-deep</div></div>
+            <div><span class="lvl lvl--c1">C1</span><div style="font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Advanced · Burgundy</div></div>
+            <div><span class="lvl lvl--c2">C2</span><div style="font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Proficient · Burgundy-deep</div></div>
+          </div>
+        </div>
+
+        <!-- Pairs -->
+        <div style="background: #fff; border-radius: var(--r-lg); padding: 28px; border: 1px solid var(--ed-line);">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">PAIRS THAT WORK</div>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px;">
+            <div style="display: flex; gap: 6px;"><div style="width: 30px; height: 30px; background: var(--ed-navy); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-orange); border-radius: 8px;"></div></div>
+            <div style="display: flex; gap: 6px;"><div style="width: 30px; height: 30px; background: var(--ed-navy); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-yellow); border-radius: 8px;"></div></div>
+            <div style="display: flex; gap: 6px;"><div style="width: 30px; height: 30px; background: var(--ed-burgundy); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-yellow); border-radius: 8px;"></div></div>
+            <div style="display: flex; gap: 6px;"><div style="width: 30px; height: 30px; background: var(--ed-green); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-navy); border-radius: 8px;"></div></div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-red-deep); margin-top: 20px;">AVOID</div>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px;">
+            <div style="display: flex; gap: 6px; opacity: .9;"><div style="width: 30px; height: 30px; background: var(--ed-red); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-orange); border-radius: 8px;"></div></div>
+            <div style="display: flex; gap: 6px; opacity: .9;"><div style="width: 30px; height: 30px; background: var(--ed-yellow); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-green); border-radius: 8px;"></div></div>
+            <div style="display: flex; gap: 6px; opacity: .9;"><div style="width: 30px; height: 30px; background: var(--ed-red); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-burgundy); border-radius: 8px;"></div></div>
+            <div style="display: flex; gap: 6px; opacity: .9;"><div style="width: 30px; height: 30px; background: var(--ed-orange); border-radius: 8px;"></div><div style="width: 30px; height: 30px; background: var(--ed-yellow); border-radius: 8px;"></div></div>
+          </div>
+          <p style="margin-top: 12px; font-size: 12px; color: var(--ed-ink-3);">Adjacent warm tones (red/orange/yellow) muddy when stacked. Pair warms with navy or white between them.</p>
+        </div>
+      </div>
+
+      <!-- Right: tinted section previews -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">TINTED SECTIONS</div>
+
+        <div style="background: var(--ed-navy-soft); border-radius: var(--r-lg); padding: 28px;">
+          <div style="font-family: var(--font-display); font-size: 30px; color: var(--ed-navy-deep);">Why parents pick Educate</div>
+          <p style="font-size: 14px; color: var(--ed-ink-2); margin-top: 8px;">Navy-soft background for trust-building sections — admissions, methodology, results.</p>
+        </div>
+        <div style="background: var(--ed-orange-soft); border-radius: var(--r-lg); padding: 28px;">
+          <div style="font-family: var(--font-display); font-size: 30px; color: var(--ed-orange-deep);">Open house, every Saturday</div>
+          <p style="font-size: 14px; color: var(--ed-ink-2); margin-top: 8px;">Orange-soft for high-energy calls to action — sign-ups, trial classes, events.</p>
+        </div>
+        <div style="background: var(--ed-green-soft); border-radius: var(--r-lg); padding: 28px;">
+          <div style="font-family: var(--font-display); font-size: 30px; color: var(--ed-green-deep);">3 in 4 kids level up in 9 months</div>
+          <p style="font-size: 14px; color: var(--ed-ink-2); margin-top: 8px;">Green-soft for outcomes, stats, success stories.</p>
+        </div>
+        <div style="background: var(--ed-yellow-soft); border-radius: var(--r-lg); padding: 28px;">
+          <div style="font-family: var(--font-display); font-size: 30px; color: #8A6B0C;">Tip from teacher Maria</div>
+          <p style="font-size: 14px; color: var(--ed-ink-2); margin-top: 8px;">Yellow-soft for tips, highlights, callouts inside long-form content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 07 — TYPOGRAPHY
+============================================================ -->
+<section data-screen-label="07 Typography">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Typography</div>
+        <h2 class="page__title">Confident headlines, friendly body.</h2>
+      </div>
+      <div class="page__num">07 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; flex: 1;">
+      <!-- Display: Archivo Black -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ed-line); padding-bottom: 10px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">DISPLAY · HEADLINES</div>
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Archivo Black · 900</div>
+        </div>
+        <div style="font-family: var(--font-display); font-size: 140px; line-height: .9; letter-spacing: -.03em; margin-top: 24px;">Aa</div>
+        <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; color: var(--ed-ink-3); letter-spacing: .1em;">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/>0 1 2 3 4 5 6 7 8 9</div>
+
+        <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: var(--font-display); font-size: 72px; line-height: 1;">Speak freely.</div>
+          <div style="font-family: var(--font-display); font-size: 48px; line-height: 1;">First class is on us.</div>
+          <div style="font-family: var(--font-display); font-size: 32px; line-height: 1;">Built block by block.</div>
+        </div>
+
+        <dl class="spec" style="margin-top: 36px;">
+          <dt>Display 1 / Hero</dt><dd>96px / 88px · -2% tracking</dd>
+          <dt>Display 2</dt><dd>72px / 70px · -2% tracking</dd>
+          <dt>H1</dt><dd>56px / 56px · -1% tracking</dd>
+          <dt>H2</dt><dd>40px / 44px · -.5% tracking</dd>
+        </dl>
+      </div>
+
+      <!-- Body: Nunito -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ed-line); padding-bottom: 10px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">BODY · UI</div>
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Nunito · 400 / 600 / 800</div>
+        </div>
+        <div style="font-family: var(--font-body); font-weight: 800; font-size: 140px; line-height: .9; letter-spacing: -.03em; margin-top: 24px;">Aa</div>
+        <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; color: var(--ed-ink-3); letter-spacing: .08em;">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/>a b c d e f g h i j k l m n o p q r s t u v w x y z<br/>0 1 2 3 4 5 6 7 8 9</div>
+
+        <div style="margin-top: 36px;">
+          <p style="font-size: 22px; line-height: 1.5; font-weight: 600; max-width: 560px;">Subhead — Real teachers, small groups, and a curriculum that actually moves your kid forward.</p>
+          <p style="font-size: 17px; line-height: 1.6; margin-top: 20px; color: var(--ed-ink-2); max-width: 560px;">
+            Body copy — Every Educate program is designed around a single question: <em>what should a student be able to do at the end of this term?</em> We start with the answer and work backwards.
+          </p>
+          <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 12px;">Microcopy — Prices include all materials. No registration fees.</p>
+        </div>
+
+        <dl class="spec" style="margin-top: 36px;">
+          <dt>Body Large</dt><dd>20px / 32px · 500 / 600</dd>
+          <dt>Body</dt><dd>17px / 28px · 400</dd>
+          <dt>Small</dt><dd>14px / 22px · 500</dd>
+          <dt>Micro / Eyebrow</dt><dd>12px / 18px · 700 · uppercase</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 08 — TYPE IN USE
+============================================================ -->
+<section data-screen-label="08 Type In Use">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Typography in use</div>
+        <h2 class="page__title">A whole story, one hierarchy.</h2>
+      </div>
+      <div class="page__num">08 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; flex: 1;">
+      <article style="max-width: 760px;">
+        <div style="font-family: var(--font-display); font-size: 13px; letter-spacing: .2em; color: var(--ed-orange); text-transform: uppercase;">Methodology · How we teach</div>
+        <h1 style="font-family: var(--font-display); font-size: 88px; line-height: .9; letter-spacing: -.02em; margin-top: 16px;">
+          We measure progress, not effort.
+        </h1>
+        <p style="font-size: 22px; line-height: 1.5; color: var(--ed-ink-2); margin-top: 24px; max-width: 640px;">
+          Every twelve weeks, your child sits with a teacher and a parent for a fifteen-minute review. We open the same assessment from week one and read it together.
+        </p>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--ed-ink-2); margin-top: 18px; max-width: 640px;">
+          Nothing is hidden, nothing is fluffed. If a unit didn't land, we say so and rework the plan. If it did, you'll watch your kid explain — in English — what they learned and what they want to learn next.
+        </p>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--ed-ink-2); margin-top: 14px; max-width: 640px;">
+          That's it. That's the whole method. <a href="#" style="color: var(--ed-navy); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;">Read the full curriculum →</a>
+        </p>
+      </article>
+
+      <!-- Sidebar with hierarchy callout -->
+      <aside style="background: var(--ed-bg-warm); border-radius: var(--r-lg); padding: 32px; align-self: start;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">HIERARCHY</div>
+        <ul style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 18px;">
+          <li><div style="font-family: var(--font-display); font-size: 13px; color: var(--ed-orange); letter-spacing: .15em; text-transform: uppercase;">EYEBROW</div><div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); margin-top: 2px;">.13em tracking · uppercase</div></li>
+          <li><div style="font-family: var(--font-display); font-size: 36px; line-height: 1;">Hero</div><div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); margin-top: 4px;">Archivo Black · 88–96 px</div></li>
+          <li><div style="font-family: var(--font-heading); font-weight: 800; font-size: 20px;">H3 — In-page subhead</div><div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); margin-top: 2px;">Archivo · 800 · 28 px</div></li>
+          <li><div style="font-family: var(--font-body); font-weight: 600; font-size: 18px;">Lede paragraph</div><div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); margin-top: 2px;">Nunito · 600 · 20–22 px</div></li>
+          <li><div style="font-family: var(--font-body); font-size: 15px;">Body — the workhorse of the page.</div><div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); margin-top: 2px;">Nunito · 400 · 17 px · 1.6 leading</div></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 09 — SPACING, RADIUS, SHADOW
+============================================================ -->
+<section data-screen-label="09 Tokens">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Tokens</div>
+        <h2 class="page__title">Spacing, radii, elevation.</h2>
+      </div>
+      <div class="page__num">09 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; flex: 1;">
+      <!-- Spacing -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">SPACING · 4 PX SCALE</div>
+        <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 14px;">
+          <!-- bars -->
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 4px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-1 &nbsp;·&nbsp; 4px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 8px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-2 &nbsp;·&nbsp; 8px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 12px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-3 &nbsp;·&nbsp; 12px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 16px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-4 &nbsp;·&nbsp; 16px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 24px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-5 &nbsp;·&nbsp; 24px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 32px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-6 &nbsp;·&nbsp; 32px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 48px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-7 &nbsp;·&nbsp; 48px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 64px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-8 &nbsp;·&nbsp; 64px</div></div>
+          <div style="display: flex; align-items: center; gap: 16px;"><div style="width: 96px; height: 28px; background: var(--ed-navy); border-radius: 2px;"></div><div style="font-family: var(--font-mono); font-size: 13px;">--s-9 &nbsp;·&nbsp; 96px</div></div>
+        </div>
+      </div>
+
+      <!-- Radius -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">RADIUS</div>
+        <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 8px; line-height: 1.5;">Soft, generous rounding. Pairs the geometric logo with a warmer feel everywhere else.</p>
+        <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="aspect-ratio: 1; background: var(--ed-navy-soft); border-radius: 6px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; color: var(--ed-navy-deep);">xs · 6</div>
+          <div style="aspect-ratio: 1; background: var(--ed-navy-soft); border-radius: 10px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; color: var(--ed-navy-deep);">sm · 10</div>
+          <div style="aspect-ratio: 1; background: var(--ed-navy-soft); border-radius: 16px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; color: var(--ed-navy-deep);">md · 16</div>
+          <div style="aspect-ratio: 1; background: var(--ed-navy-soft); border-radius: 24px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; color: var(--ed-navy-deep);">lg · 24</div>
+          <div style="aspect-ratio: 1; background: var(--ed-navy-soft); border-radius: 32px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; color: var(--ed-navy-deep);">xl · 32</div>
+          <div style="aspect-ratio: 1; background: var(--ed-navy-soft); border-radius: 999px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; color: var(--ed-navy-deep);">pill · 999</div>
+        </div>
+        <p style="font-size: 12px; color: var(--ed-ink-3); margin-top: 16px;">Defaults: buttons → pill, inputs → md, cards → lg, hero panels → xl.</p>
+      </div>
+
+      <!-- Shadow -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">ELEVATION</div>
+        <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 8px; line-height: 1.5;">Soft warm shadows only. No hard black drop shadows.</p>
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="background: #fff; height: 64px; border-radius: 12px; box-shadow: var(--sh-xs); display: flex; align-items: center; padding: 0 18px; font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">--sh-xs · 0 1 2 / .06</div>
+          <div style="background: #fff; height: 64px; border-radius: 12px; box-shadow: var(--sh-sm); display: flex; align-items: center; padding: 0 18px; font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">--sh-sm · cards default</div>
+          <div style="background: #fff; height: 64px; border-radius: 12px; box-shadow: var(--sh-md); display: flex; align-items: center; padding: 0 18px; font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">--sh-md · cards on hover</div>
+          <div style="background: #fff; height: 64px; border-radius: 12px; box-shadow: var(--sh-lg); display: flex; align-items: center; padding: 0 18px; font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">--sh-lg · modals, big cards</div>
+          <div style="background: var(--ed-orange); color: #fff; height: 64px; border-radius: 999px; box-shadow: var(--sh-pop); display: flex; align-items: center; padding: 0 24px; font-family: var(--font-display); font-size: 14px;">--sh-pop · sticker shadow</div>
+          <div style="background: #fff; height: 64px; border-radius: 12px; box-shadow: var(--sh-focus); display: flex; align-items: center; padding: 0 18px; font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">--sh-focus · yellow focus ring</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 10 — ICONOGRAPHY & IMAGERY
+============================================================ -->
+<section data-screen-label="10 Icons & Imagery">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Iconography &amp; imagery</div>
+        <h2 class="page__title">Friendly lines, real faces.</h2>
+      </div>
+      <div class="page__num">10 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; flex: 1;">
+      <!-- Icons -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">ICONS · LUCIDE · 2 PX STROKE</div>
+        <p style="font-size: 15px; color: var(--ed-ink-3); margin-top: 8px; line-height: 1.55; max-width: 520px;">
+          Use the open-source Lucide set with a 2 px stroke and rounded line caps. Always sized in 4 px increments. <strong>Never</strong> use emoji on product surfaces.
+        </p>
+        <!-- 12 icon previews -->
+        <div style="margin-top: 24px; background: var(--ed-bg-warm); border-radius: var(--r-lg); padding: 24px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px;">
+          <!-- each icon: 48x48 svg -->
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">book</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">graduation</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">speak</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">calendar</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">group</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">star</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><polyline points="20 6 9 17 4 12"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">check</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">clock</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">chat</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">success</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">curriculum</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-navy);"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><div style="font-size: 11px; color: var(--ed-ink-3); font-family: var(--font-mono);">progress</div></div>
+        </div>
+
+        <!-- size scale -->
+        <div style="margin-top: 24px; display: flex; align-items: end; gap: 24px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg><div style="font-family: var(--font-mono); font-size: 11px; color: var(--ed-ink-3);">16</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><div style="font-family: var(--font-mono); font-size: 11px; color: var(--ed-ink-3);">20</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><div style="font-family: var(--font-mono); font-size: 11px; color: var(--ed-ink-3);">24 ★</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg><div style="font-family: var(--font-mono); font-size: 11px; color: var(--ed-ink-3);">32</div></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg><div style="font-family: var(--font-mono); font-size: 11px; color: var(--ed-ink-3);">48</div></div>
+        </div>
+      </div>
+
+      <!-- Imagery -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">PHOTOGRAPHY · CANDID · WARM</div>
+        <p style="font-size: 15px; color: var(--ed-ink-3); margin-top: 8px; line-height: 1.55; max-width: 520px;">
+          Real students, real teachers, real classrooms. Natural light, tight crops on faces and hands. No flat-lay laptops, no stock-corporate handshakes.
+        </p>
+
+        <div style="margin-top: 24px; display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; height: 480px;">
+          <div class="photo-ph" data-label="STUDENT · CANDID · TIGHT CROP" style="grid-row: span 2; border-radius: var(--r-lg);"></div>
+          <div class="photo-ph" data-label="HANDS · WRITING" style="border-radius: var(--r-lg);"></div>
+          <div class="photo-ph" data-label="GROUP · CLASSROOM" style="border-radius: var(--r-lg);"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+          <div style="background: var(--ed-green-soft); border-radius: var(--r-md); padding: 18px;">
+            <div style="font-family: var(--font-display); font-size: 15px; color: var(--ed-green-deep); letter-spacing: .05em;">DO</div>
+            <p style="font-size: 13px; color: var(--ed-ink-2); margin-top: 6px; line-height: 1.5;">Candid moments. Warm white balance. Eyes engaged. Mixed ages and backgrounds.</p>
+          </div>
+          <div style="background: var(--ed-red-soft); border-radius: var(--r-md); padding: 18px;">
+            <div style="font-family: var(--font-display); font-size: 15px; color: var(--ed-red-deep); letter-spacing: .05em;">DON'T</div>
+            <p style="font-size: 13px; color: var(--ed-ink-2); margin-top: 6px; line-height: 1.5;">Stock posed shots. Black &amp; white. Heavy filters. Anyone facing camera with a thumbs up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 11 — BUTTONS
+============================================================ -->
+<section data-screen-label="11 Buttons">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Components · 01</div>
+        <h2 class="page__title">Buttons.</h2>
+      </div>
+      <div class="page__num">11 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; flex: 1;">
+      <!-- Variants -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">VARIANTS</div>
+        <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <a href="#" class="btn btn--primary">Primary action</a>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">.btn--primary &nbsp;·&nbsp; default CTA</span>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <a href="#" class="btn btn--accent">Sign up free</a>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">.btn--accent &nbsp;·&nbsp; high-energy / orange</span>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <a href="#" class="btn btn--secondary">Browse levels</a>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">.btn--secondary &nbsp;·&nbsp; outlined</span>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <a href="#" class="btn btn--ghost">See pricing →</a>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">.btn--ghost &nbsp;·&nbsp; tertiary</span>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <a href="#" class="btn btn--danger">Cancel enrolment</a>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">.btn--danger &nbsp;·&nbsp; destructive</span>
+          </div>
+
+          <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">SIZES</div>
+          <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+            <a href="#" class="btn btn--primary btn--lg">Large · 18 px</a>
+            <a href="#" class="btn btn--primary">Default · 16 px</a>
+            <a href="#" class="btn btn--primary btn--sm">Small · 14 px</a>
+          </div>
+
+          <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">WITH ICON</div>
+          <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+            <a href="#" class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              Book a class
+            </a>
+            <a href="#" class="btn btn--secondary">
+              Watch demo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- States -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">STATES</div>
+        <div style="margin-top: 20px; background: var(--ed-bg-warm); border-radius: var(--r-lg); padding: 28px; display: grid; grid-template-columns: 120px 1fr; row-gap: 18px; column-gap: 24px; align-items: center;">
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Default</div>
+          <a href="#" class="btn btn--primary">Book a class</a>
+
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Hover</div>
+          <a href="#" class="btn btn--primary" style="background: var(--ed-navy-deep); transform: translateY(-1px); box-shadow: var(--sh-md);">Book a class</a>
+
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Pressed</div>
+          <a href="#" class="btn btn--primary" style="transform: scale(.97); box-shadow: var(--sh-xs);">Book a class</a>
+
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Focus</div>
+          <a href="#" class="btn btn--primary btn--focus">Book a class</a>
+
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Loading</div>
+          <a href="#" class="btn btn--primary" style="opacity: .85; pointer-events: none;">
+            <span style="width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 999px; display: inline-block; animation: spin 1s linear infinite;"></span>
+            Booking…
+          </a>
+
+          <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3);">Disabled</div>
+          <a href="#" class="btn btn--primary btn--disabled">Book a class</a>
+        </div>
+
+        <div style="margin-top: 24px; background: var(--ed-yellow-soft); border-radius: var(--r-lg); padding: 24px; border-left: 6px solid var(--ed-yellow-deep);">
+          <div style="font-family: var(--font-display); font-size: 16px; color: #8A6B0C; letter-spacing: .04em;">RULE OF ONE</div>
+          <p style="margin-top: 6px; font-size: 15px; line-height: 1.55; color: var(--ed-ink-2);">One <strong>primary</strong> action per view. The orange <em>.btn--accent</em> is reserved for the moment you ask someone to commit — sign-ups and trial bookings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+</section>
+
+<!-- ============================================================
+SLIDE 12 — FORM INPUTS
+============================================================ -->
+<section data-screen-label="12 Form Inputs">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Components · 02</div>
+        <h2 class="page__title">Form inputs.</h2>
+      </div>
+      <div class="page__num">12 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; flex: 1;">
+      <!-- field types -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">FIELD TYPES</div>
+        <div class="field">
+          <label class="field__label">Child's first name</label>
+          <input class="input" value="Lucía">
+        </div>
+        <div class="field">
+          <label class="field__label">Email</label>
+          <input class="input" placeholder="parent@example.com">
+          <span class="field__hint">We only email about your child's class — never marketing.</span>
+        </div>
+        <div class="field">
+          <label class="field__label">Current English level</label>
+          <select class="select"><option>I'm not sure — please test us</option></select>
+        </div>
+        <div class="field">
+          <label class="field__label">Anything we should know?</label>
+          <textarea class="textarea">She gets a bit shy in group classes — works best with one familiar friend nearby.</textarea>
+        </div>
+
+        <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-top: 8px;">
+          <span class="checkbox checkbox--on"><span class="checkbox__box">✓</span> Saturday mornings</span>
+          <span class="checkbox"><span class="checkbox__box"></span> Saturday afternoons</span>
+          <span class="radio radio--on"><span class="radio__dot"></span> In-person</span>
+          <span class="radio"><span class="radio__dot"></span> Online</span>
+          <span style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px;"><span class="toggle toggle--on"></span> Send weekly progress emails</span>
+        </div>
+      </div>
+
+      <!-- states -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">STATES</div>
+
+        <div class="field">
+          <label class="field__label">Default</label>
+          <input class="input" placeholder="Type your answer">
+        </div>
+        <div class="field">
+          <label class="field__label">Focus</label>
+          <input class="input" value="lucia@" style="border-color: var(--ed-navy); box-shadow: 0 0 0 4px rgba(31,79,122,.15);">
+        </div>
+        <div class="field">
+          <label class="field__label">Error</label>
+          <input class="input input--error" value="not-an-email">
+          <span class="field__error">Add an @ and a domain so we can reach you.</span>
+        </div>
+        <div class="field">
+          <label class="field__label">Disabled</label>
+          <input class="input" value="Sept 2 cohort · full" disabled style="background: var(--ed-bg-warm); color: var(--ed-ink-3); cursor: not-allowed;">
+          <span class="field__hint">This class is full. Pick another from the list above.</span>
+        </div>
+
+        <div style="margin-top: 16px; background: #fff; border: 1px solid var(--ed-line); border-radius: var(--r-lg); padding: 24px;">
+          <div style="font-family: var(--font-display); font-size: 18px;">Form anatomy</div>
+          <ul style="margin: 10px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--ed-ink-2);">
+            <li><strong>Label</strong> always above, sentence case, no colon.</li>
+            <li><strong>Hint</strong> below, 13 px, soft ink — explains <em>why</em> we're asking.</li>
+            <li><strong>Error</strong> replaces hint, never lives next to a red border alone.</li>
+            <li><strong>Spacing</strong> 8 px label↔input, 24 px field↔field, 40 px section↔section.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 13 — CARDS
+============================================================ -->
+<section data-screen-label="13 Cards">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Components · 03</div>
+        <h2 class="page__title">Cards.</h2>
+      </div>
+      <div class="page__num">13 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: start;">
+      <!-- Course Card 1 -->
+      <article class="card">
+        <div class="card__media photo-ph" data-label="KIDS · LITTLE EXPLORERS"></div>
+        <div class="card__body">
+          <div class="card__badge-row">
+            <span class="lvl lvl--a1">A1</span>
+            <span class="badge badge--orange badge--dot">Kids · 6–8</span>
+          </div>
+          <h3 class="card__title">Little Explorers</h3>
+          <p class="card__desc">Storybooks, songs and games — 60 minutes of English that doesn't feel like class.</p>
+          <div class="card__meta">
+            <span>Sat &amp; Tue</span><span class="card__meta-dot"></span>
+            <span>6 kids max</span><span class="card__meta-dot"></span>
+            <span>From €34/wk</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Course Card 2 -->
+      <article class="card">
+        <div class="card__media photo-ph" data-label="TEENS · CONFIDENT VOICES"></div>
+        <div class="card__body">
+          <div class="card__badge-row">
+            <span class="lvl lvl--b1">B1</span>
+            <span class="badge badge--solid-navy">Teens · 12–15</span>
+          </div>
+          <h3 class="card__title">Confident Voices</h3>
+          <p class="card__desc">Project-based speaking, writing, and presenting. Built for real teenagers, not textbook ones.</p>
+          <div class="card__meta">
+            <span>Mon &amp; Wed</span><span class="card__meta-dot"></span>
+            <span>8 max</span><span class="card__meta-dot"></span>
+            <span>From €42/wk</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Course Card 3 -->
+      <article class="card" style="box-shadow: var(--sh-md); transform: translateY(-4px);">
+        <div class="card__media" style="background: var(--ed-burgundy); display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-size: 28px;">EXAM PREP</div>
+        <div class="card__body">
+          <div class="card__badge-row">
+            <span class="lvl lvl--c1">C1</span>
+            <span class="badge badge--burgundy">Cambridge · CAE</span>
+          </div>
+          <h3 class="card__title">Advanced & CAE Track</h3>
+          <p class="card__desc">A 22-week sprint to a Cambridge certificate, with practice exams every fortnight.</p>
+          <div class="card__meta">
+            <span>Thu evenings</span><span class="card__meta-dot"></span>
+            <span>10 max</span><span class="card__meta-dot"></span>
+            <span>€780 / term</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <hr class="hr-soft" style="margin-top: 40px;">
+
+    <!-- Testimonial cards -->
+    <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-bottom: 16px;">TESTIMONIAL · QUOTE CARD</div>
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px;">
+      <div class="tcard">
+        <div class="tcard__stars">★★★★★</div>
+        <div class="tcard__quote">"Lucía went from one-word answers to telling us about her day in English at dinner. In four months. We didn't expect that."</div>
+        <div class="tcard__who">
+          <div class="tcard__avatar">M</div>
+          <div>
+            <div class="tcard__name">Mariana C.</div>
+            <div class="tcard__role">Mom of Lucía · A2 student</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard" style="background: var(--ed-navy); color: #fff; border: 0;">
+        <div class="tcard__stars" style="color: var(--ed-yellow);">★★★★★</div>
+        <div class="tcard__quote" style="color: #fff;">"They called when Marco missed a week. Not to upsell. To check he was okay. That's the school."</div>
+        <div class="tcard__who">
+          <div class="tcard__avatar" style="background: var(--ed-yellow); color: var(--ed-navy-deep);">D</div>
+          <div>
+            <div class="tcard__name" style="color: #fff;">Diego R.</div>
+            <div class="tcard__role" style="color: rgba(255,255,255,.7);">Dad of Marco · B1 student</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 14 — NAVIGATION HEADER
+============================================================ -->
+<section data-screen-label="14 Navigation">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Components · 04</div>
+        <h2 class="page__title">Navigation header.</h2>
+      </div>
+      <div class="page__num">14 / 19</div>
+    </header>
+
+    <div style="display: flex; flex-direction: column; gap: 32px; flex: 1;">
+      <!-- Desktop: light -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-bottom: 10px;">DESKTOP · LIGHT</div>
+        <div style="background: #fff; border-radius: var(--r-lg); padding: 18px 28px; display: flex; align-items: center; gap: 40px; box-shadow: var(--sh-sm);">
+          <img src="brand/logo.png" alt="" style="height: 40px;">
+          <nav style="display: flex; gap: 28px; flex: 1;">
+            <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Programs</a>
+            <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">For parents</a>
+            <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Teachers</a>
+            <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Results</a>
+            <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Pricing</a>
+            <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Contact</a>
+          </nav>
+          <a href="#" class="btn btn--ghost btn--sm">Log in</a>
+          <a href="#" class="btn btn--accent btn--sm">Book a free class</a>
+        </div>
+      </div>
+
+      <!-- Desktop with active item -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-bottom: 10px;">DESKTOP · ACTIVE ITEM + MEGA-MENU PEEK</div>
+        <div style="background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-sm); overflow: hidden;">
+          <div style="padding: 18px 28px; display: flex; align-items: center; gap: 40px; border-bottom: 1px solid var(--ed-line-2);">
+            <img src="brand/logo.png" alt="" style="height: 40px;">
+            <nav style="display: flex; gap: 28px; flex: 1;">
+              <a href="#" style="font-family: var(--font-heading); font-weight: 800; font-size: 15px; color: var(--ed-navy); text-decoration: none; position: relative; padding-bottom: 4px;">
+                Programs
+                <span style="position: absolute; bottom: -22px; left: 0; right: 0; height: 3px; background: var(--ed-orange); border-radius: 999px;"></span>
+              </a>
+              <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">For parents</a>
+              <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Teachers</a>
+              <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Results</a>
+              <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Pricing</a>
+              <a href="#" style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--ed-ink); text-decoration: none;">Contact</a>
+            </nav>
+            <a href="#" class="btn btn--ghost btn--sm">Log in</a>
+            <a href="#" class="btn btn--accent btn--sm">Book a free class</a>
+          </div>
+          <!-- mega menu -->
+          <div style="padding: 32px; background: var(--ed-bg-warm); display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--a1">A1</span><span class="lvl lvl--a2">A2</span></div>
+              <div style="font-family: var(--font-display); font-size: 20px; margin-top: 10px;">Kids · 6–11</div>
+              <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 6px;">Little Explorers, Story Squad, Read &amp; Play.</p>
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--b1">B1</span><span class="lvl lvl--b2">B2</span></div>
+              <div style="font-family: var(--font-display); font-size: 20px; margin-top: 10px;">Teens · 12–17</div>
+              <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 6px;">Confident Voices, Project English, Debate Club.</p>
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--c1">C1</span><span class="lvl lvl--c2">C2</span></div>
+              <div style="font-family: var(--font-display); font-size: 20px; margin-top: 10px;">Exam prep</div>
+              <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 6px;">Cambridge KET, PET, FCE, CAE, CPE.</p>
+            </div>
+            <div style="background: #fff; border-radius: var(--r-md); padding: 18px;">
+              <div style="font-family: var(--font-display); font-size: 18px;">Not sure where to start?</div>
+              <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 6px;">Take a 5-minute placement test.</p>
+              <a href="#" class="btn btn--primary btn--sm" style="margin-top: 10px;">Test my child</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div style="display: grid; grid-template-columns: 360px 360px 1fr; gap: 24px; align-items: start;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-bottom: 10px;">MOBILE · CLOSED</div>
+          <div style="width: 360px; height: 80px; background: #fff; border-radius: var(--r-md); box-shadow: var(--sh-sm); padding: 0 20px; display: flex; align-items: center; justify-content: space-between;">
+            <img src="brand/logo.png" alt="" style="height: 36px;">
+            <button style="background: var(--ed-navy); color: #fff; border: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-bottom: 10px;">MOBILE · OPEN</div>
+          <div style="width: 360px; background: #fff; border-radius: var(--r-md); box-shadow: var(--sh-md); overflow: hidden;">
+            <div style="padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--ed-line-2);">
+              <img src="brand/logo.png" alt="" style="height: 32px;">
+              <span style="font-family: var(--font-display); font-size: 18px;">×</span>
+            </div>
+            <div style="padding: 12px 0;">
+              <a style="display: block; padding: 14px 20px; font-family: var(--font-heading); font-weight: 800; color: var(--ed-navy); border-left: 4px solid var(--ed-orange);">Programs</a>
+              <a style="display: block; padding: 14px 20px; font-family: var(--font-heading); font-weight: 700;">For parents</a>
+              <a style="display: block; padding: 14px 20px; font-family: var(--font-heading); font-weight: 700;">Teachers</a>
+              <a style="display: block; padding: 14px 20px; font-family: var(--font-heading); font-weight: 700;">Results</a>
+              <a style="display: block; padding: 14px 20px; font-family: var(--font-heading); font-weight: 700;">Pricing</a>
+              <a style="display: block; padding: 14px 20px; font-family: var(--font-heading); font-weight: 700;">Contact</a>
+            </div>
+            <div style="padding: 16px 20px 20px; border-top: 1px solid var(--ed-line-2); display: flex; flex-direction: column; gap: 10px;">
+              <a class="btn btn--accent" style="justify-content: center;">Book a free class</a>
+              <a class="btn btn--ghost" style="justify-content: center;">Log in</a>
+            </div>
+          </div>
+        </div>
+        <div style="background: #fff; border-radius: var(--r-lg); padding: 24px; align-self: start;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">NAV RULES</div>
+          <ul style="font-size: 14px; line-height: 1.7; color: var(--ed-ink-2); margin: 12px 0 0; padding-left: 18px;">
+            <li>One CTA in the header — the orange one.</li>
+            <li>Logo always links home.</li>
+            <li>Active page: bold + 3 px orange underline.</li>
+            <li>Sticky on scroll; loses shadow until 200 px scrolled.</li>
+            <li>Mobile menu items min 44 px hit area.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 15 — FOOTER
+============================================================ -->
+<section data-screen-label="15 Footer">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Components · 05</div>
+        <h2 class="page__title">Footer.</h2>
+      </div>
+      <div class="page__num">15 / 19</div>
+    </header>
+
+    <div style="background: var(--ed-navy); border-radius: var(--r-xl); padding: 64px 56px; color: #fff; position: relative; overflow: hidden;">
+      <!-- Decorative blocks -->
+      <div style="position: absolute; right: 56px; top: 56px; display: grid; grid-template-columns: repeat(3, 32px); grid-template-rows: repeat(3, 32px); gap: 6px; opacity: .8;">
+        <div></div><div style="background: var(--ed-orange); border-radius: 6px;"></div><div></div>
+        <div style="background: var(--ed-yellow); border-radius: 6px;"></div><div style="background: var(--ed-navy-soft); border-radius: 6px; opacity: .2;"></div><div></div>
+        <div style="background: var(--ed-burgundy); border-radius: 6px;"></div><div style="background: var(--ed-green); border-radius: 6px;"></div><div style="background: var(--ed-red); border-radius: 6px;"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1.3fr; gap: 56px;">
+        <div>
+          <img src="brand/logo.png" alt="" style="height: 56px; filter: brightness(0) invert(1);">
+          <p style="margin-top: 20px; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.75); max-width: 280px;">
+            An English learning center for kids and the parents who care about them. Established 2014.
+          </p>
+          <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <a href="#" style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.1); display: grid; place-items: center; color: #fff; text-decoration: none;">in</a>
+            <a href="#" style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.1); display: grid; place-items: center; color: #fff; text-decoration: none;">f</a>
+            <a href="#" style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.1); display: grid; place-items: center; color: #fff; text-decoration: none;">ig</a>
+            <a href="#" style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.1); display: grid; place-items: center; color: #fff; text-decoration: none;">yt</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-display); font-size: 14px; letter-spacing: .15em; color: var(--ed-orange); text-transform: uppercase;">Programs</div>
+          <ul style="list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Kids · 6–11</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Teens · 12–17</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Cambridge exams</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Summer camp</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Online classes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-display); font-size: 14px; letter-spacing: .15em; color: var(--ed-orange); text-transform: uppercase;">School</div>
+          <ul style="list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Methodology</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Teachers</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Results</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Open house</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-display); font-size: 14px; letter-spacing: .15em; color: var(--ed-orange); text-transform: uppercase;">Help</div>
+          <ul style="list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">FAQ</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Parent portal</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Contact us</a></li>
+            <li><a href="#" style="color: rgba(255,255,255,.85); text-decoration: none;">Refund policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-display); font-size: 14px; letter-spacing: .15em; color: var(--ed-orange); text-transform: uppercase;">Stay in the loop</div>
+          <p style="margin-top: 14px; font-size: 14px; line-height: 1.55; color: rgba(255,255,255,.75);">A short, friendly email once a month with class openings, free events, and parent tips.</p>
+          <div style="margin-top: 16px; display: flex; gap: 8px;">
+            <input class="input" placeholder="your@email.com" style="background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #fff;">
+            <a href="#" class="btn btn--accent btn--sm" style="flex-shrink: 0;">Sign me up</a>
+          </div>
+        </div>
+      </div>
+
+      <hr style="margin-top: 40px; border: 0; border-top: 1px solid rgba(255,255,255,.15);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; font-size: 13px; color: rgba(255,255,255,.6);">
+        <div>© 2026 Educate Learning Center, S.L. · CIF B-12345678</div>
+        <div style="display: flex; gap: 24px;">
+          <a href="#" style="color: rgba(255,255,255,.6); text-decoration: none;">Privacy</a>
+          <a href="#" style="color: rgba(255,255,255,.6); text-decoration: none;">Terms</a>
+          <a href="#" style="color: rgba(255,255,255,.6); text-decoration: none;">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 16 — BADGES & TAGS
+============================================================ -->
+<section data-screen-label="16 Badges & Tags">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Components · 06</div>
+        <h2 class="page__title">Badges &amp; tags.</h2>
+      </div>
+      <div class="page__num">16 / 19</div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; flex: 1;">
+      <!-- Level chips -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">CEFR LEVEL CHIPS</div>
+        <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 8px; line-height: 1.55;">Always paired with the level name on first appearance. Color carries the meaning across the site.</p>
+        <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--a1">A1</span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 14px;">Beginner</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--a2">A2</span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 14px;">Elementary</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--b1">B1</span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 14px;">Intermediate</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--b2">B2</span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 14px;">Upper Int.</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--c1">C1</span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 14px;">Advanced</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><span class="lvl lvl--c2">C2</span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 14px;">Proficient</span></div>
+        </div>
+      </div>
+
+      <!-- Audience badges -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">AUDIENCE &amp; CATEGORY</div>
+        <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 8px; line-height: 1.55;">Soft-tinted pills for filtering and labeling. Use dot variant when paired with similarly colored content.</p>
+        <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <span class="badge badge--orange badge--dot">Kids · 6–11</span>
+          <span class="badge badge--dot">Teens · 12–17</span>
+          <span class="badge badge--burgundy badge--dot">Adults</span>
+          <span class="badge badge--green badge--dot">Online</span>
+          <span class="badge badge--yellow badge--dot">In-person</span>
+          <span class="badge badge--red badge--dot">Wait-list</span>
+          <span class="badge badge--solid-navy">Featured</span>
+          <span class="badge badge--solid-orange">New term</span>
+        </div>
+      </div>
+
+      <!-- Status pills -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">STATUS</div>
+        <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+          <span class="badge badge--green badge--dot">Enrolled</span>
+          <span class="badge badge--yellow badge--dot">Pending payment</span>
+          <span class="badge badge--orange badge--dot">Trial</span>
+          <span class="badge badge--red badge--dot">Class full</span>
+          <span class="badge badge--burgundy badge--dot">Wait-listed</span>
+          <span class="badge badge--dot">Finished</span>
+        </div>
+      </div>
+
+      <!-- Pricing & marketing -->
+      <div style="background: #fff; border-radius: var(--r-lg); padding: 32px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">PRICING &amp; MARKETING</div>
+        <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+          <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--ed-orange); color: #fff; border-radius: 999px; font-family: var(--font-display); font-size: 13px; letter-spacing: .05em;">SAVE 15%</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--ed-yellow); color: var(--ed-ink); border-radius: 999px; font-family: var(--font-display); font-size: 13px; letter-spacing: .05em;">EARLY BIRD</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--ed-green); color: #fff; border-radius: 999px; font-family: var(--font-display); font-size: 13px; letter-spacing: .05em;">MOST POPULAR</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--ed-burgundy); color: #fff; border-radius: 999px; font-family: var(--font-display); font-size: 13px; letter-spacing: .05em;">LIMITED · 4 SPOTS</span>
+        </div>
+        <hr class="hr-soft">
+        <p style="font-size: 13px; color: var(--ed-ink-3);">Use solid color marketing badges sparingly — one per card maximum, and never two adjacent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 17 — HERO VARIANTS
+============================================================ -->
+<section data-screen-label="17 Hero Variants">
+  <div class="page">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Patterns · 01</div>
+        <h2 class="page__title">Hero variants.</h2>
+      </div>
+      <div class="page__num">17 / 19</div>
+    </header>
+
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <!-- Hero A: photo right -->
+      <div style="background: var(--ed-bg-warm); border-radius: var(--r-xl); padding: 56px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; overflow: hidden;">
+        <div>
+          <div style="display: flex; gap: 6px; margin-bottom: 16px;">
+            <span class="lvl lvl--a1">A1</span><span class="lvl lvl--a2">A2</span><span class="lvl lvl--b1">B1</span>
+          </div>
+          <h1 style="font-family: var(--font-display); font-size: 80px; line-height: .92; letter-spacing: -.02em;">
+            Build English,<br/><span style="color: var(--ed-orange);">block by block.</span>
+          </h1>
+          <p style="font-size: 19px; line-height: 1.55; color: var(--ed-ink-2); margin-top: 20px; max-width: 520px;">Small groups, real teachers, a curriculum that meets your kid where they are — and walks them where they want to go.</p>
+          <div style="margin-top: 28px; display: flex; gap: 12px;">
+            <a class="btn btn--accent btn--lg">Book a free class</a>
+            <a class="btn btn--secondary btn--lg">See the curriculum</a>
+          </div>
+        </div>
+        <div class="photo-ph" data-label="STUDENT · READING" style="aspect-ratio: 4/5; border-radius: var(--r-lg);"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- Hero B: colored block panel -->
+        <div style="background: var(--ed-navy); border-radius: var(--r-xl); padding: 48px; color: #fff; position: relative; overflow: hidden; min-height: 320px;">
+          <!-- decoration: stair of colored squares -->
+          <div style="position: absolute; right: -24px; bottom: -24px; display: grid; grid-template-columns: repeat(3, 60px); grid-template-rows: repeat(3, 60px); gap: 8px;">
+            <div></div><div style="background: var(--ed-orange); border-radius: 12px;"></div><div></div>
+            <div style="background: var(--ed-yellow); border-radius: 12px;"></div><div style="background: rgba(255,255,255,.1); border-radius: 12px;"></div><div></div>
+            <div style="background: var(--ed-burgundy); border-radius: 12px;"></div><div style="background: var(--ed-green); border-radius: 12px;"></div><div style="background: var(--ed-red); border-radius: 12px;"></div>
+          </div>
+          <div style="font-family: var(--font-display); font-size: 13px; letter-spacing: .2em; color: var(--ed-yellow); text-transform: uppercase;">For parents</div>
+          <h2 style="font-family: var(--font-display); font-size: 52px; line-height: .95; margin-top: 14px;">Worth talking<br/>about at home.</h2>
+          <p style="font-size: 17px; line-height: 1.5; color: rgba(255,255,255,.85); margin-top: 18px; max-width: 460px;">Quarterly progress reviews you'll actually understand. No jargon.</p>
+          <a class="btn btn--accent" style="margin-top: 24px;">How we report progress →</a>
+        </div>
+
+        <!-- Hero C: centered, light, statement -->
+        <div style="background: var(--ed-yellow-soft); border-radius: var(--r-xl); padding: 48px; text-align: center; min-height: 320px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="font-family: var(--font-display); font-size: 13px; letter-spacing: .2em; color: #8A6B0C; text-transform: uppercase;">Open house</div>
+          <h2 style="font-family: var(--font-display); font-size: 60px; line-height: .95; margin-top: 14px; max-width: 540px;">Come visit on a Saturday.</h2>
+          <p style="font-size: 17px; line-height: 1.5; color: var(--ed-ink-2); margin-top: 18px; max-width: 460px;">Meet teachers, watch a real class, bring your kid. Coffee on us.</p>
+          <a class="btn btn--primary" style="margin-top: 22px;">Reserve our spot</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 18 — STATS BLOCKS
+============================================================ -->
+<section data-screen-label="18 Stats">
+  <div class="page page--cream">
+    <header class="page__header">
+      <div>
+        <div class="page__eyebrow">Patterns · 02</div>
+        <h2 class="page__title">Stats &amp; outcomes.</h2>
+      </div>
+      <div class="page__num">18 / 19</div>
+    </header>
+
+    <div style="display: flex; flex-direction: column; gap: 32px;">
+      <!-- Inline row -->
+      <div style="background: #fff; border-radius: var(--r-xl); padding: 48px 56px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3);">INLINE ROW · USE IN HERO OR ABOVE FOLD</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 28px;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 72px; line-height: 1; color: var(--ed-navy);">12</div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; margin-top: 6px;">years teaching kids</div>
+            <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 4px;">since 2014</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 72px; line-height: 1; color: var(--ed-orange);">3.2k</div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; margin-top: 6px;">students through our doors</div>
+            <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 4px;">and counting</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 72px; line-height: 1; color: var(--ed-green);">76<span style="font-size: 36px;">%</span></div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; margin-top: 6px;">advance one level a year</div>
+            <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 4px;">measured by external CEFR</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 72px; line-height: 1; color: var(--ed-burgundy);">4.9<span style="font-size: 36px;">/5</span></div>
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 15px; margin-top: 6px;">parent satisfaction</div>
+            <p style="font-size: 13px; color: var(--ed-ink-3); margin-top: 4px;">across 412 reviews</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card stats -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-ink-3); margin-bottom: 12px;">CARD STATS · USE IN BODY OR RESULTS PAGE</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div style="background: var(--ed-navy); color: #fff; border-radius: var(--r-lg); padding: 32px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-yellow);">CAMBRIDGE 2025</div>
+            <div style="font-family: var(--font-display); font-size: 88px; line-height: 1; margin-top: 14px;">98<span style="font-size: 44px;">%</span></div>
+            <p style="font-size: 15px; margin-top: 10px; color: rgba(255,255,255,.85); line-height: 1.5;">of our students passed their Cambridge exam on the first try.</p>
+          </div>
+          <div style="background: var(--ed-orange-soft); border-radius: var(--r-lg); padding: 32px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-orange-deep);">CLASS SIZE</div>
+            <div style="font-family: var(--font-display); font-size: 88px; line-height: 1; margin-top: 14px; color: var(--ed-orange-deep);">≤ 8</div>
+            <p style="font-size: 15px; margin-top: 10px; color: var(--ed-ink-2); line-height: 1.5;">kids per teacher, always. So every kid speaks in every class.</p>
+          </div>
+          <div style="background: var(--ed-green-soft); border-radius: var(--r-lg); padding: 32px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--ed-green-deep);">RETENTION</div>
+            <div style="font-family: var(--font-display); font-size: 88px; line-height: 1; margin-top: 14px; color: var(--ed-green-deep);">9<span style="font-size: 44px;">/10</span></div>
+            <p style="font-size: 15px; margin-top: 10px; color: var(--ed-ink-2); line-height: 1.5;">families come back the following year — most stay until college.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+SLIDE 19 — SAMPLE LANDING (PUTTING IT TOGETHER)
+============================================================ -->
+<section data-screen-label="19 Landing Sample">
+  <div class="page" style="padding: 60px 80px; gap: 24px;">
+    <header class="page__header" style="margin-bottom: 16px; padding-bottom: 16px;">
+      <div>
+        <div class="page__eyebrow">Putting it together</div>
+        <h2 class="page__title">A landing page, in the system.</h2>
+      </div>
+      <div class="page__num">19 / 19</div>
+    </header>
+
+    <!-- Simulated browser frame -->
+    <div style="background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-lg); overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+      <!-- Browser chrome -->
+      <div style="background: var(--ed-bg-warm); padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--ed-line);">
+        <span style="width: 12px; height: 12px; border-radius: 999px; background: #FF5F57;"></span>
+        <span style="width: 12px; height: 12px; border-radius: 999px; background: #FEBC2E;"></span>
+        <span style="width: 12px; height: 12px; border-radius: 999px; background: #28C840;"></span>
+        <div style="margin-left: 16px; background: #fff; border: 1px solid var(--ed-line); border-radius: 8px; padding: 6px 14px; font-family: var(--font-mono); font-size: 12px; color: var(--ed-ink-3); flex: 1; max-width: 520px;">educatelearning.com</div>
+      </div>
+
+      <div style="flex: 1; overflow: hidden; display: flex; flex-direction: column;">
+        <!-- Nav -->
+        <div style="padding: 16px 40px; display: flex; align-items: center; gap: 32px; border-bottom: 1px solid var(--ed-line-2);">
+          <img src="brand/logo.png" alt="" style="height: 34px;">
+          <nav style="display: flex; gap: 24px; flex: 1; margin-left: 16px;">
+            <a style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--ed-navy);">Programs</a>
+            <a style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; color: var(--ed-ink);">For parents</a>
+            <a style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; color: var(--ed-ink);">Teachers</a>
+            <a style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; color: var(--ed-ink);">Results</a>
+            <a style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; color: var(--ed-ink);">Pricing</a>
+          </nav>
+          <a class="btn btn--ghost btn--sm">Log in</a>
+          <a class="btn btn--accent btn--sm">Book a free class</a>
+        </div>
+
+        <!-- Hero -->
+        <div style="padding: 48px 40px; background: var(--ed-bg-warm); display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <div style="display: flex; gap: 6px; margin-bottom: 14px;">
+              <span class="lvl lvl--a1">A1</span><span class="lvl lvl--a2">A2</span><span class="lvl lvl--b1">B1</span><span class="lvl lvl--b2">B2</span><span class="lvl lvl--c1">C1</span>
+            </div>
+            <h1 style="font-family: var(--font-display); font-size: 72px; line-height: .92; letter-spacing: -.02em;">
+              Build English,<br/><span style="color: var(--ed-orange);">block by block.</span>
+            </h1>
+            <p style="font-size: 17px; line-height: 1.55; color: var(--ed-ink-2); margin-top: 16px; max-width: 480px;">Small groups, real teachers, and a curriculum that meets your kid where they are. Your first class is free — and yes, you can sit in.</p>
+            <div style="margin-top: 22px; display: flex; gap: 10px;">
+              <a class="btn btn--accent">Book a free class</a>
+              <a class="btn btn--secondary">Take the level test</a>
+            </div>
+            <div style="margin-top: 24px; display: flex; gap: 24px; font-size: 13px; color: var(--ed-ink-3); align-items: center;">
+              <span style="color: var(--ed-yellow-deep); letter-spacing: 2px;">★★★★★</span>
+              <span><strong style="color: var(--ed-ink);">4.9/5</strong> from 412 parents</span>
+            </div>
+          </div>
+          <div style="position: relative; aspect-ratio: 4/4; max-height: 320px; align-self: stretch;">
+            <div class="photo-ph" data-label="STUDENT · CLASSROOM" style="position: absolute; inset: 0; border-radius: var(--r-lg);"></div>
+            <div style="position: absolute; bottom: -16px; right: -16px; background: var(--ed-yellow); color: var(--ed-ink); font-family: var(--font-display); font-size: 14px; padding: 12px 18px; border-radius: 999px; box-shadow: var(--sh-pop);">First class free ★</div>
+          </div>
+        </div>
+
+        <!-- Stats strip -->
+        <div style="padding: 28px 40px; background: #fff; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; border-top: 1px solid var(--ed-line-2); border-bottom: 1px solid var(--ed-line-2);">
+          <div><div style="font-family: var(--font-display); font-size: 36px; color: var(--ed-navy); line-height: 1;">12 yrs</div><div style="font-size: 12px; color: var(--ed-ink-3);">teaching since 2014</div></div>
+          <div><div style="font-family: var(--font-display); font-size: 36px; color: var(--ed-orange); line-height: 1;">3.2k</div><div style="font-size: 12px; color: var(--ed-ink-3);">students taught</div></div>
+          <div><div style="font-family: var(--font-display); font-size: 36px; color: var(--ed-green); line-height: 1;">76%</div><div style="font-size: 12px; color: var(--ed-ink-3);">level up in a year</div></div>
+          <div><div style="font-family: var(--font-display); font-size: 36px; color: var(--ed-burgundy); line-height: 1;">≤ 8</div><div style="font-size: 12px; color: var(--ed-ink-3);">kids per class</div></div>
+        </div>
+
+        <!-- Programs -->
+        <div style="padding: 36px 40px;">
+          <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 20px;">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 12px; letter-spacing: .18em; color: var(--ed-orange); text-transform: uppercase;">Programs</div>
+              <h3 style="font-family: var(--font-display); font-size: 36px; line-height: 1; margin-top: 4px;">Find your kid's class.</h3>
+            </div>
+            <a class="btn btn--ghost btn--sm">All programs →</a>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <!-- mini cards -->
+            <article class="card" style="border-radius: var(--r-md);">
+              <div class="card__media photo-ph" data-label="KIDS" style="aspect-ratio: 16/8;"></div>
+              <div class="card__body" style="padding: 16px 18px;">
+                <div class="card__badge-row"><span class="lvl lvl--a1">A1</span><span class="badge badge--orange">Kids · 6–8</span></div>
+                <div class="card__title" style="font-size: 18px;">Little Explorers</div>
+                <p class="card__desc" style="font-size: 13px;">Storybooks &amp; games. 60 min that doesn't feel like class.</p>
+              </div>
+            </article>
+            <article class="card" style="border-radius: var(--r-md);">
+              <div class="card__media photo-ph" data-label="TEENS" style="aspect-ratio: 16/8;"></div>
+              <div class="card__body" style="padding: 16px 18px;">
+                <div class="card__badge-row"><span class="lvl lvl--b1">B1</span><span class="badge badge--solid-navy">Teens · 12–15</span></div>
+                <div class="card__title" style="font-size: 18px;">Confident Voices</div>
+                <p class="card__desc" style="font-size: 13px;">Project-based speaking, writing, and presenting.</p>
+              </div>
+            </article>
+            <article class="card" style="border-radius: var(--r-md);">
+              <div class="card__media" style="aspect-ratio: 16/8; background: var(--ed-burgundy); display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-size: 18px;">EXAM PREP</div>
+              <div class="card__body" style="padding: 16px 18px;">
+                <div class="card__badge-row"><span class="lvl lvl--c1">C1</span><span class="badge badge--burgundy">Cambridge</span></div>
+                <div class="card__title" style="font-size: 18px;">Advanced &amp; CAE</div>
+                <p class="card__desc" style="font-size: 13px;">22-week sprint to a Cambridge certificate.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Footer-mini -->
+        <div style="background: var(--ed-navy); color: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="brand/logo.png" alt="" style="height: 28px; filter: brightness(0) invert(1);">
+            <span style="font-size: 12px; color: rgba(255,255,255,.6);">© 2026 Educate Learning Center</span>
+          </div>
+          <div style="display: flex; gap: 20px; font-size: 12px; color: rgba(255,255,255,.7);">
+            <span>Programs</span><span>School</span><span>Help</span><span>Contact</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+</body>
+</html>

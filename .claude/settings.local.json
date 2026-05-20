@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(mkdir -p /tmp/design)",
+      "Read(//tmp/**)",
+      "Bash(cp /c/Users/JULIAN/.claude/projects/C--Users-JULIAN-Desktop-educate-next/e4f0ccf4-9c26-4e56-9abf-9c99690bc2bf/tool-results/webfetch-1779314434507-r8g8il.bin ./pkg.gz)",
+      "Bash(mkdir -p /c/Users/JULIAN/Desktop/educate-next/.design)",
+      "Bash(cp -r /tmp/design/unpacked/educate/* /c/Users/JULIAN/Desktop/educate-next/.design/)",
+      "Read(//c/Users/JULIAN/Desktop/educate-next/**)",
+      "Bash(mkdir -p /c/Users/JULIAN/Desktop/educate-next/public/brand)",
+      "Bash(cp /c/Users/JULIAN/Desktop/educate-next/.design/project/brand/logo.png /c/Users/JULIAN/Desktop/educate-next/public/brand/logo.png)"
+    ]
+  }
+}

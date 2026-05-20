@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>Educate Learning Center — Líderes globales empiezan aquí</title>
+<link rel="stylesheet" href="system.css">
+<style>
+  html, body { background: var(--ed-bg); }
+  body { min-width: 1440px; }
+
+  /* page container */
+  .lp { width: 100%; max-width: 1440px; margin: 0 auto; }
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+
+  /* nav */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--ed-line-2);
+  }
+  .nav__inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 16px 64px;
+    display: flex; align-items: center; gap: 40px;
+  }
+  .nav__logo { height: 40px; flex-shrink: 0; }
+  .nav__links { display: flex; gap: 28px; flex: 1; margin-left: 8px; }
+  .nav__link {
+    font-family: var(--font-heading); font-weight: 700;
+    font-size: 15px; color: var(--ed-ink); text-decoration: none;
+    position: relative; padding: 6px 0;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+  .nav__link:hover { color: var(--ed-navy); }
+  .nav__link--active { color: var(--ed-navy); font-weight: 800; }
+  .nav__link--active::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: -22px;
+    height: 3px; background: var(--ed-orange); border-radius: 999px;
+  }
+  .nav__right { display: flex; align-items: center; gap: 12px; }
+
+  /* shared section */
+  section { padding: 96px 0; }
+  .section-eyebrow {
+    font-family: var(--font-display); font-size: 13px;
+    letter-spacing: .2em; color: var(--ed-orange);
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: 64px;
+    line-height: .95; letter-spacing: -.02em;
+    margin: 8px 0 0;
+  }
+  .section-lede {
+    font-size: 20px; line-height: 1.55; color: var(--ed-ink-2);
+    max-width: 720px; margin-top: 18px;
+  }
+
+  /* hero */
+  .hero { padding: 80px 0 64px; background: var(--ed-bg-warm); position: relative; overflow: hidden; }
+  .hero__grid {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 80px; align-items: center;
+    position: relative; z-index: 2;
+  }
+  .hero__levels { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+  .hero__h1 {
+    font-family: var(--font-display); font-size: 96px;
+    line-height: .92; letter-spacing: -.025em;
+  }
+  .hero__lede {
+    font-size: 20px; line-height: 1.55;
+    color: var(--ed-ink-2); margin-top: 22px; max-width: 520px;
+  }
+  .hero__cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero__social {
+    margin-top: 28px; display: flex; gap: 20px; align-items: center;
+    font-size: 14px; color: var(--ed-ink-3);
+  }
+  .hero__stars { color: var(--ed-yellow-deep); letter-spacing: 2px; font-size: 18px; }
+  .hero__photo {
+    position: relative; aspect-ratio: 4/5;
+    border-radius: var(--r-xl); overflow: hidden;
+  }
+  .hero__sticker {
+    position: absolute; bottom: -20px; right: -20px;
+    background: var(--ed-yellow); color: var(--ed-ink);
+    font-family: var(--font-display); font-size: 16px;
+    padding: 16px 22px; border-radius: 999px;
+    box-shadow: var(--sh-pop);
+    transform: rotate(-3deg);
+  }
+  .hero__decor-blocks {
+    position: absolute; top: 80px; left: -40px;
+    display: grid; grid-template-columns: repeat(2, 32px); gap: 6px; opacity: .45;
+  }
+  .hero__decor-blocks > div { width: 32px; height: 32px; border-radius: 6px; }
+
+  /* multilang strip */
+  .langs {
+    padding: 28px 0; background: #fff;
+    border-top: 1px solid var(--ed-line-2);
+    border-bottom: 1px solid var(--ed-line-2);
+  }
+  .langs__inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 64px;
+    display: flex; align-items: center; gap: 48px;
+  }
+  .langs__label {
+    font-family: var(--font-mono); font-size: 12px;
+    letter-spacing: .18em; color: var(--ed-ink-3);
+    flex-shrink: 0;
+  }
+  .langs__list { display: flex; gap: 36px; flex: 1; flex-wrap: wrap; }
+  .langs__lang {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-display); font-size: 22px;
+    color: var(--ed-ink);
+  }
+  .langs__lang span:first-child {
+    font-size: 28px;
+  }
+  .langs__lang--soon { color: var(--ed-ink-4); }
+  .langs__lang--soon::after {
+    content: 'Próximamente'; font-family: var(--font-heading);
+    font-size: 11px; color: var(--ed-orange-deep);
+    background: var(--ed-orange-soft); padding: 3px 8px; border-radius: 999px;
+    letter-spacing: .05em; font-weight: 700;
+  }
+
+  /* stats */
+  .stats { background: #fff; padding: 56px 0; }
+  .stats__grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px;
+    align-items: start;
+  }
+  .stat__num {
+    font-family: var(--font-display); font-size: 72px; line-height: 1;
+  }
+  .stat__sub {
+    font-family: var(--font-heading); font-weight: 700; font-size: 15px;
+    margin-top: 8px;
+  }
+  .stat__caption {
+    font-size: 13px; color: var(--ed-ink-3); margin-top: 4px;
+  }
+
+  /* programs */
+  .programs { background: var(--ed-bg-warm); }
+  .programs__header {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-bottom: 40px; gap: 32px;
+  }
+  .programs__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  }
+
+  /* mission/vision */
+  .mv { background: #fff; }
+  .mv__intro {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+    margin-bottom: 48px; align-items: end;
+  }
+  .mv__grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .mv__card {
+    border-radius: var(--r-xl); padding: 48px;
+    display: flex; flex-direction: column; gap: 20px;
+    position: relative; overflow: hidden;
+  }
+  .mv__card--mision { background: var(--ed-orange-soft); }
+  .mv__card--vision { background: var(--ed-navy); color: #fff; }
+  .mv__card-label {
+    font-family: var(--font-display); font-size: 13px;
+    letter-spacing: .2em; text-transform: uppercase;
+  }
+  .mv__card--mision .mv__card-label { color: var(--ed-orange-deep); }
+  .mv__card--vision .mv__card-label { color: var(--ed-yellow); }
+  .mv__card-title {
+    font-family: var(--font-display); font-size: 56px; line-height: .95;
+    letter-spacing: -.02em;
+  }
+  .mv__card--vision .mv__card-title { color: #fff; }
+  .mv__card-body {
+    font-size: 17px; line-height: 1.65; color: var(--ed-ink-2);
+    margin-top: 4px;
+  }
+  .mv__card--vision .mv__card-body { color: rgba(255,255,255,.85); }
+  .mv__decor {
+    position: absolute; pointer-events: none;
+  }
+
+  /* methodology / pillars */
+  .pillars { background: var(--ed-bg-warm); }
+  .pillars__grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    margin-top: 48px;
+  }
+  .pillar {
+    background: #fff; border-radius: var(--r-lg); padding: 32px;
+    display: flex; flex-direction: column; gap: 12px;
+    border: 1px solid var(--ed-line-2);
+  }
+  .pillar__icon {
+    width: 56px; height: 56px; border-radius: var(--r-md);
+    display: grid; place-items: center; color: #fff;
+    margin-bottom: 4px;
+  }
+  .pillar__title {
+    font-family: var(--font-display); font-size: 22px; line-height: 1.1;
+  }
+  .pillar__desc {
+    font-size: 15px; line-height: 1.55; color: var(--ed-ink-3);
+  }
+
+  /* modalities */
+  .modes { background: #fff; }
+  .modes__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 48px;
+  }
+  .mode {
+    border-radius: var(--r-xl); padding: 40px;
+    display: flex; flex-direction: column; gap: 16px;
+    position: relative; overflow: hidden;
+    min-height: 320px;
+    justify-content: flex-end;
+  }
+  .mode--presencial { background: var(--ed-navy); color: #fff; }
+  .mode--virtual { background: var(--ed-green-soft); }
+  .mode--hibrida { background: var(--ed-yellow-soft); }
+  .mode__tag {
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: .18em; text-transform: uppercase;
+  }
+  .mode--presencial .mode__tag { color: var(--ed-yellow); }
+  .mode--virtual .mode__tag { color: var(--ed-green-deep); }
+  .mode--hibrida .mode__tag { color: #8A6B0C; }
+  .mode__title {
+    font-family: var(--font-display); font-size: 44px; line-height: .95;
+    letter-spacing: -.01em;
+  }
+  .mode--virtual .mode__title { color: var(--ed-green-deep); }
+  .mode--hibrida .mode__title { color: #8A6B0C; }
+  .mode__desc {
+    font-size: 16px; line-height: 1.55;
+  }
+  .mode--presencial .mode__desc { color: rgba(255,255,255,.85); }
+  .mode__icon {
+    position: absolute; top: 32px; right: 32px;
+    width: 64px; height: 64px;
+    opacity: .85;
+  }
+
+  /* testimonials */
+  .testimonials { background: var(--ed-bg-warm); }
+  .testimonials__grid {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px; margin-top: 48px;
+  }
+  .testimonials__grid > .tcard:first-child {
+    grid-row: span 2;
+  }
+
+  /* CTA */
+  .cta {
+    background: var(--ed-orange-soft);
+    padding: 80px 0;
+    position: relative; overflow: hidden;
+  }
+  .cta__inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 64px;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px;
+    align-items: center; position: relative; z-index: 2;
+  }
+  .cta__title {
+    font-family: var(--font-display); font-size: 72px; line-height: .95;
+    letter-spacing: -.02em;
+  }
+  .cta__lede {
+    font-size: 19px; line-height: 1.55; color: var(--ed-ink-2);
+    margin-top: 20px; max-width: 560px;
+  }
+  .cta__form {
+    background: #fff; border-radius: var(--r-xl);
+    padding: 32px; box-shadow: var(--sh-md);
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .cta__form-title {
+    font-family: var(--font-display); font-size: 24px;
+  }
+  .cta__row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .cta__decor {
+    position: absolute; bottom: -40px; right: -40px;
+    display: grid; grid-template-columns: repeat(3, 60px); gap: 8px;
+    opacity: .45;
+  }
+  .cta__decor > div { width: 60px; height: 60px; border-radius: 12px; }
+
+  /* footer */
+  .footer { background: var(--ed-navy); color: #fff; padding-bottom: 0; padding-top: 80px; }
+  .footer__inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 64px;
+  }
+  .footer__top {
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1.3fr;
+    gap: 56px;
+  }
+  .footer__col-title {
+    font-family: var(--font-display); font-size: 14px;
+    letter-spacing: .15em; color: var(--ed-orange);
+    text-transform: uppercase;
+  }
+  .footer__col ul {
+    list-style: none; padding: 0; margin: 16px 0 0;
+    display: flex; flex-direction: column; gap: 10px;
+    font-size: 15px;
+  }
+  .footer__col a {
+    color: rgba(255,255,255,.85); text-decoration: none;
+  }
+  .footer__col a:hover { color: #fff; }
+  .footer__about {
+    color: rgba(255,255,255,.75); line-height: 1.6; font-size: 15px;
+    max-width: 280px; margin-top: 20px;
+  }
+  .footer__social { margin-top: 20px; display: flex; gap: 10px; }
+  .footer__social a {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: rgba(255,255,255,.1);
+    display: grid; place-items: center; color: #fff; text-decoration: none;
+    font-size: 13px; font-weight: 700;
+  }
+  .footer__bottom {
+    margin-top: 48px; padding: 24px 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: rgba(255,255,255,.6);
+  }
+  .footer__bottom-links { display: flex; gap: 24px; }
+  .footer__bottom-links a { color: rgba(255,255,255,.6); text-decoration: none; }
+  .footer__ribbon {
+    display: flex; height: 14px;
+  }
+  .footer__ribbon > div { flex: 1; }
+</style>
+</head>
+<body>
+
+<div class="lp">
+
+<!-- =================== NAV =================== -->
+<nav class="nav">
+  <div class="nav__inner">
+    <img src="brand/logo.png" alt="Educate Learning Center" class="nav__logo">
+    <div class="nav__links">
+      <a href="#programas" class="nav__link nav__link--active">Programas</a>
+      <a href="#metodologia" class="nav__link">Metodología</a>
+      <a href="#modalidades" class="nav__link">Modalidades</a>
+      <a href="#mision" class="nav__link">Nosotros</a>
+      <a href="#testimonios" class="nav__link">Resultados</a>
+      <a href="#contacto" class="nav__link">Contacto</a>
+    </div>
+    <div class="nav__right">
+      <a href="#" class="btn btn--ghost btn--sm">Iniciar sesión</a>
+      <a href="#contacto" class="btn btn--accent btn--sm">Agenda tu clase gratis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<section class="hero">
+  <div class="hero__decor-blocks">
+    <div style="background: var(--ed-orange);"></div>
+    <div style="background: var(--ed-navy);"></div>
+    <div style="background: var(--ed-yellow);"></div>
+    <div style="background: var(--ed-red);"></div>
+    <div style="background: var(--ed-burgundy);"></div>
+    <div style="background: var(--ed-green);"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <div class="hero__levels">
+          <span class="lvl lvl--a1">A1</span>
+          <span class="lvl lvl--a2">A2</span>
+          <span class="lvl lvl--b1">B1</span>
+          <span class="lvl lvl--b2">B2</span>
+          <span class="lvl lvl--c1">C1</span>
+          <span class="lvl lvl--c2">C2</span>
+        </div>
+        <h1 class="hero__h1">
+          Líderes globales<br/>
+          empiezan <span style="color: var(--ed-orange);">aquí.</span>
+        </h1>
+        <p class="hero__lede">
+          Aprende inglés y otros idiomas con profes reales, grupos pequeños y una metodología que conecta lo que vives en el Valle con un mundo entero por descubrir.
+        </p>
+        <div class="hero__cta">
+          <a href="#contacto" class="btn btn--accent btn--lg">Agenda tu clase gratis</a>
+          <a href="#programas" class="btn btn--secondary btn--lg">Ver los programas</a>
+        </div>
+        <div class="hero__social">
+          <span class="hero__stars">★★★★★</span>
+          <span><strong style="color: var(--ed-ink);">4,9/5</strong> · 412 reseñas de familias</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px;">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: var(--ed-green);"></span>
+            Cupos abiertos para julio
+          </span>
+        </div>
+      </div>
+
+      <div class="hero__photo photo-ph" data-label="ESTUDIANTE · CALI · CANDID">
+        <div class="hero__sticker">Primera clase gratis ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== LANGUAGES STRIP =================== -->
+<section class="langs" style="padding: 28px 0;">
+  <div class="langs__inner">
+    <div class="langs__label">IDIOMAS QUE ENSEÑAMOS</div>
+    <div class="langs__list">
+      <div class="langs__lang"><span>🇬🇧</span><span>Inglés</span></div>
+      <div class="langs__lang"><span>🇫🇷</span><span>Francés</span></div>
+      <div class="langs__lang"><span>🇧🇷</span><span>Portugués</span></div>
+      <div class="langs__lang langs__lang--soon"><span style="filter: grayscale(.5);">🇨🇳</span><span>Mandarín</span></div>
+      <div class="langs__lang langs__lang--soon"><span style="filter: grayscale(.5);">🇩🇪</span><span>Alemán</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== STATS =================== -->
+<section class="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div>
+        <div class="stat__num" style="color: var(--ed-navy);">12 <span style="font-size: 32px;">años</span></div>
+        <div class="stat__sub">formando estudiantes</div>
+        <div class="stat__caption">en el Valle del Cauca desde 2014</div>
+      </div>
+      <div>
+        <div class="stat__num" style="color: var(--ed-orange);">3,2k</div>
+        <div class="stat__sub">estudiantes graduados</div>
+        <div class="stat__caption">niños, jóvenes y adultos</div>
+      </div>
+      <div>
+        <div class="stat__num" style="color: var(--ed-green);">76<span style="font-size: 32px;">%</span></div>
+        <div class="stat__sub">sube un nivel CEFR al año</div>
+        <div class="stat__caption">medido por evaluación externa</div>
+      </div>
+      <div>
+        <div class="stat__num" style="color: var(--ed-burgundy);">98<span style="font-size: 32px;">%</span></div>
+        <div class="stat__sub">aprueba Cambridge al primer intento</div>
+        <div class="stat__caption">cohortes 2024 y 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROGRAMS =================== -->
+<section class="programs" id="programas">
+  <div class="container">
+    <div class="programs__header">
+      <div>
+        <div class="section-eyebrow">Programas</div>
+        <h2 class="section-title">Un camino para cada edad.</h2>
+      </div>
+      <p style="font-size: 17px; line-height: 1.55; color: var(--ed-ink-3); max-width: 420px;">
+        Cada programa empieza con una pregunta sencilla: <em>¿qué quieres lograr este año?</em> Construimos el plan desde ahí.
+      </p>
+    </div>
+
+    <div class="programs__grid">
+      <article class="card">
+        <div class="card__media photo-ph" data-label="NIÑOS · CANDID · SALÓN"></div>
+        <div class="card__body">
+          <div class="card__badge-row">
+            <span class="lvl lvl--a1">A1</span>
+            <span class="lvl lvl--a2">A2</span>
+            <span class="badge badge--orange badge--dot">Niños · 6–11</span>
+          </div>
+          <h3 class="card__title">Pequeños Exploradores</h3>
+          <p class="card__desc">Cuentos, canciones, juegos y proyectos cortos. 60 minutos en los que tu hijo habla, no copia.</p>
+          <div class="card__meta">
+            <span>Sáb &amp; mar</span><span class="card__meta-dot"></span>
+            <span>Máx. 8 niños</span><span class="card__meta-dot"></span>
+            <span>Desde $180k/mes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media photo-ph" data-label="ADOLES · PROYECTO EN GRUPO"></div>
+        <div class="card__body">
+          <div class="card__badge-row">
+            <span class="lvl lvl--b1">B1</span>
+            <span class="lvl lvl--b2">B2</span>
+            <span class="badge badge--solid-navy">Jóvenes · 12–17</span>
+          </div>
+          <h3 class="card__title">Voces Seguras</h3>
+          <p class="card__desc">Hablar, escribir y presentar por proyectos reales. Diseñado para adolescentes que viven en redes y se examinan en libros.</p>
+          <div class="card__meta">
+            <span>Lun &amp; mié</span><span class="card__meta-dot"></span>
+            <span>Máx. 10</span><span class="card__meta-dot"></span>
+            <span>Desde $230k/mes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media" style="background: var(--ed-burgundy); display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-size: 28px;">EXAMEN · CAE</div>
+        <div class="card__body">
+          <div class="card__badge-row">
+            <span class="lvl lvl--c1">C1</span>
+            <span class="lvl lvl--c2">C2</span>
+            <span class="badge badge--burgundy">Adultos &amp; Cambridge</span>
+          </div>
+          <h3 class="card__title">Liderazgo Global</h3>
+          <p class="card__desc">Inglés profesional, preparación CAE/IELTS y competencias interculturales para profesionales que necesitan moverse en el mundo.</p>
+          <div class="card__meta">
+            <span>Jue noche</span><span class="card__meta-dot"></span>
+            <span>Máx. 12</span><span class="card__meta-dot"></span>
+            <span>Desde $320k/mes</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== MISION & VISION =================== -->
+<section class="mv" id="mision">
+  <div class="container">
+    <div class="mv__intro">
+      <div>
+        <div class="section-eyebrow">Por qué existimos</div>
+        <h2 class="section-title">Formamos a quienes van a<br/>conectar el Valle con el mundo.</h2>
+      </div>
+      <p style="font-size: 18px; line-height: 1.6; color: var(--ed-ink-2); max-width: 520px;">
+        No enseñamos idiomas para aprobar un examen. Los enseñamos porque cada estudiante que sale de Educate se vuelve un puente — entre su familia, su región y un mundo que necesita más voces como la suya.
+      </p>
+    </div>
+
+    <div class="mv__grid">
+      <article class="mv__card mv__card--mision">
+        <div class="mv__decor" style="top: 24px; right: 24px; display: grid; grid-template-columns: repeat(2, 24px); gap: 4px; opacity: .35;">
+          <div style="background: var(--ed-orange); width: 24px; height: 24px; border-radius: 6px;"></div>
+          <div style="background: var(--ed-yellow); width: 24px; height: 24px; border-radius: 6px;"></div>
+          <div style="background: var(--ed-red); width: 24px; height: 24px; border-radius: 6px;"></div>
+          <div style="background: var(--ed-burgundy); width: 24px; height: 24px; border-radius: 6px;"></div>
+        </div>
+        <div class="mv__card-label">Misión</div>
+        <h3 class="mv__card-title">Construimos<br/>líderes globales.</h3>
+        <p class="mv__card-body">
+          Formamos niños, jóvenes y adultos como líderes globales, desarrollando habilidades comunicativas en múltiples lenguas y competencias interculturales, mediante metodologías y tecnología educativa innovadora. Nos comprometemos con la calidad, el crecimiento continuo y la formación integral de nuestros estudiantes, generando un impacto positivo en la sociedad colombiana y contribuyendo a un mundo más conectado y sostenible.
+        </p>
+      </article>
+
+      <article class="mv__card mv__card--vision">
+        <div class="mv__decor" style="top: 24px; right: 24px; display: grid; grid-template-columns: repeat(2, 24px); gap: 4px; opacity: .45;">
+          <div style="background: var(--ed-orange); width: 24px; height: 24px; border-radius: 6px;"></div>
+          <div style="background: var(--ed-yellow); width: 24px; height: 24px; border-radius: 6px;"></div>
+          <div style="background: var(--ed-green); width: 24px; height: 24px; border-radius: 6px;"></div>
+          <div style="background: rgba(255,255,255,.15); width: 24px; height: 24px; border-radius: 6px;"></div>
+        </div>
+        <div class="mv__card-label">Visión 2030</div>
+        <h3 class="mv__card-title">Referentes del Valle<br/>para el mundo.</h3>
+        <p class="mv__card-body">
+          Para 2030, Educate Learning Center® será reconocido en el Valle del Cauca como un referente en educación multilingüe de alta calidad, con una infraestructura moderna y ambientes de aprendizaje innovadores que integren modalidades presenciales, virtuales e híbridas. Nos destacaremos por formar estudiantes con liderazgo, competencias interculturales y pensamiento global, contribuyendo de manera sostenible al desarrollo social, educativo y cultural de la región.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== METHODOLOGY PILLARS =================== -->
+<section class="pillars" id="metodologia">
+  <div class="container">
+    <div class="section-eyebrow">Metodología</div>
+    <h2 class="section-title">Cuatro principios, una sola escuela.</h2>
+    <p class="section-lede">Lo que hace diferente cada clase en Educate. Sin jerga educativa: los pilares que defendemos en cada hora con cada estudiante.</p>
+
+    <div class="pillars__grid">
+      <article class="pillar">
+        <div class="pillar__icon" style="background: var(--ed-navy);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+        </div>
+        <h3 class="pillar__title">Hablar primero.</h3>
+        <p class="pillar__desc">Cada estudiante habla en cada clase. Sin excepciones. Grupos pequeños hacen posible lo que los libros prometen.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__icon" style="background: var(--ed-orange);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="pillar__title">Competencia intercultural.</h3>
+        <p class="pillar__desc">Idioma sin contexto cultural es vocabulario. Entrenamos a pensar y conectar, no solo a traducir.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__icon" style="background: var(--ed-green);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </div>
+        <h3 class="pillar__title">Progreso medible.</h3>
+        <p class="pillar__desc">Revisión trimestral con profe + estudiante + familia. La misma evaluación se abre cada vez. Nada se infla.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__icon" style="background: var(--ed-burgundy);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="pillar__title">Tecnología que sirve.</h3>
+        <p class="pillar__desc">Plataformas con seguimiento personalizado. Tecnología que potencia al profe, nunca lo reemplaza.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== MODALITIES =================== -->
+<section class="modes" id="modalidades">
+  <div class="container">
+    <div class="section-eyebrow">Modalidades</div>
+    <h2 class="section-title">Donde tú puedas,<br/>cuando tú puedas.</h2>
+    <p class="section-lede">Tres formas de aprender en Educate. La misma metodología, el mismo plan de estudios, el mismo equipo de profes.</p>
+
+    <div class="modes__grid">
+      <article class="mode mode--presencial">
+        <svg class="mode__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+        <div class="mode__tag">SEDE CALI · YUMBO</div>
+        <h3 class="mode__title">Presencial.</h3>
+        <p class="mode__desc">Aulas modernas, materiales incluidos, conexión cara a cara con profes y compañeros. Ideal para niños y para quien aprende mejor en comunidad.</p>
+      </article>
+
+      <article class="mode mode--virtual">
+        <svg class="mode__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ed-green-deep);"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div class="mode__tag">EN VIVO · GRUPOS PEQUEÑOS</div>
+        <h3 class="mode__title">Virtual.</h3>
+        <p class="mode__desc">Clases en vivo con grupos de máximo 10. Plataforma propia con grabaciones, ejercicios y seguimiento. Para quien vive lejos o tiene una agenda apretada.</p>
+      </article>
+
+      <article class="mode mode--hibrida">
+        <svg class="mode__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color: #8A6B0C;"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+        <div class="mode__tag">LO MEJOR DE LOS DOS</div>
+        <h3 class="mode__title">Híbrida.</h3>
+        <p class="mode__desc">Dos clases presenciales y una virtual cada semana. Mantén la conexión humana sin sacrificar la flexibilidad.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TESTIMONIALS =================== -->
+<section class="testimonials" id="testimonios">
+  <div class="container">
+    <div class="section-eyebrow">Familias Educate</div>
+    <h2 class="section-title">Lo que dicen quienes ya están aquí.</h2>
+
+    <div class="testimonials__grid">
+      <div class="tcard" style="background: var(--ed-navy); color: #fff; border: 0; justify-content: space-between;">
+        <div class="tcard__stars" style="color: var(--ed-yellow);">★★★★★</div>
+        <div class="tcard__quote" style="color: #fff; font-size: 28px;">
+          "Lucía pasó de respuestas de una palabra a contarnos su día en inglés en la cena. En cuatro meses. No esperábamos eso."
+        </div>
+        <div class="tcard__who">
+          <div class="tcard__avatar" style="background: var(--ed-yellow); color: var(--ed-navy-deep);">M</div>
+          <div>
+            <div class="tcard__name" style="color: #fff;">Mariana C.</div>
+            <div class="tcard__role" style="color: rgba(255,255,255,.7);">Mamá de Lucía · Cali · A2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tcard__stars">★★★★★</div>
+        <div class="tcard__quote">"Llamaron cuando Marco faltó una semana. No para vendernos algo. Para ver si estaba bien."</div>
+        <div class="tcard__who">
+          <div class="tcard__avatar">D</div>
+          <div>
+            <div class="tcard__name">Diego R.</div>
+            <div class="tcard__role">Papá de Marco · Yumbo · B1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tcard__stars">★★★★★</div>
+        <div class="tcard__quote">"Pasé el CAE al primer intento. Lo que más me sirvió no fue el examen — fue aprender a defender una idea en otro idioma."</div>
+        <div class="tcard__who">
+          <div class="tcard__avatar" style="background: var(--ed-burgundy);">V</div>
+          <div>
+            <div class="tcard__name">Valentina O.</div>
+            <div class="tcard__role">Adulta · Palmira · C1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tcard__stars">★★★★★</div>
+        <div class="tcard__quote">"Mi hijo de 7 años pide ir a clase. Eso es todo lo que necesito decir."</div>
+        <div class="tcard__who">
+          <div class="tcard__avatar" style="background: var(--ed-green);">A</div>
+          <div>
+            <div class="tcard__name">Andrea L.</div>
+            <div class="tcard__role">Mamá de Tomás · Cali · A1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tcard__stars">★★★★★</div>
+        <div class="tcard__quote">"El francés era para una posibilidad de trabajo en Quebec. La conseguí. Las clases aquí me dieron seguridad para la entrevista."</div>
+        <div class="tcard__who">
+          <div class="tcard__avatar" style="background: var(--ed-red);">J</div>
+          <div>
+            <div class="tcard__name">Juan Camilo P.</div>
+            <div class="tcard__role">Adulto · Cali · Francés B2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA / FORM =================== -->
+<section class="cta" id="contacto">
+  <div class="cta__decor">
+    <div></div>
+    <div style="background: var(--ed-orange);"></div>
+    <div></div>
+    <div style="background: var(--ed-yellow);"></div>
+    <div style="background: var(--ed-red);"></div>
+    <div></div>
+    <div style="background: var(--ed-burgundy);"></div>
+    <div style="background: var(--ed-green);"></div>
+    <div style="background: var(--ed-navy);"></div>
+  </div>
+
+  <div class="cta__inner">
+    <div>
+      <div class="section-eyebrow">Casa abierta</div>
+      <h2 class="cta__title">Ven a vivir<br/>una clase real.</h2>
+      <p class="cta__lede">Agenda 60 minutos. Mira un grupo en vivo, conoce a los profes, trae a tu hijo y prueba sin compromiso. El café lo ponemos nosotros.</p>
+
+      <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ed-orange-deep)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size: 16px; color: var(--ed-ink-2);">Evaluación de nivel gratuita</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ed-orange-deep)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size: 16px; color: var(--ed-ink-2);">Plan personalizado para tu objetivo</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ed-orange-deep)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size: 16px; color: var(--ed-ink-2);">Sin matrícula, sin compromiso</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="cta__form" onsubmit="event.preventDefault();">
+      <div class="cta__form-title">Reserva tu clase gratis.</div>
+      <div class="cta__row">
+        <div class="field">
+          <label class="field__label">Tu nombre</label>
+          <input class="input" placeholder="María">
+        </div>
+        <div class="field">
+          <label class="field__label">¿Y para quién?</label>
+          <select class="select">
+            <option>Para mi hijo/a</option>
+            <option>Para mí</option>
+            <option>Para mi familia</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label">Correo o WhatsApp</label>
+        <input class="input" placeholder="maria@correo.com  ·  +57 300 …">
+      </div>
+      <div class="field">
+        <label class="field__label">¿Qué idioma te interesa?</label>
+        <select class="select">
+          <option>Inglés</option>
+          <option>Francés</option>
+          <option>Portugués</option>
+          <option>Aún no estoy seguro/a</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--accent btn--lg" style="justify-content: center; margin-top: 4px;">
+        Agendar mi clase gratis
+      </button>
+      <p style="font-size: 12px; color: var(--ed-ink-3); text-align: center; margin-top: -4px;">
+        Te respondemos en menos de 24 horas. Solo te escribimos sobre tu clase — nunca marketing.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <img src="brand/logo.png" alt="" style="height: 56px; filter: brightness(0) invert(1);">
+        <p class="footer__about">
+          Centro de aprendizaje multilingüe para niños, jóvenes y adultos. Fundado en Cali en 2014.
+        </p>
+        <div class="footer__social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Programas</div>
+        <ul>
+          <li><a href="#">Niños · 6–11</a></li>
+          <li><a href="#">Jóvenes · 12–17</a></li>
+          <li><a href="#">Adultos</a></li>
+          <li><a href="#">Exámenes Cambridge</a></li>
+          <li><a href="#">Campamento de verano</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Escuela</div>
+        <ul>
+          <li><a href="#">Metodología</a></li>
+          <li><a href="#">Misión y visión</a></li>
+          <li><a href="#">Profes</a></li>
+          <li><a href="#">Resultados</a></li>
+          <li><a href="#">Vacantes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Ayuda</div>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Portal de familias</a></li>
+          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Política de reembolsos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Mantente al tanto</div>
+        <p class="footer__about" style="margin-top: 14px;">Un correo amigable al mes con clases nuevas, eventos gratuitos y consejos para familias.</p>
+        <div style="margin-top: 16px; display: flex; gap: 8px;">
+          <input class="input" placeholder="tu@correo.com" style="background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #fff;">
+          <a href="#" class="btn btn--accent btn--sm" style="flex-shrink: 0;">Suscribirme</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div>© 2026 Educate Learning Center®, S.A.S. · Cali, Valle del Cauca · NIT 901.XXX.XXX-X</div>
+      <div class="footer__bottom-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__ribbon">
+    <div style="background: var(--ed-orange);"></div>
+    <div style="background: var(--ed-navy-deep);"></div>
+    <div style="background: var(--ed-yellow);"></div>
+    <div style="background: var(--ed-green);"></div>
+    <div style="background: var(--ed-red);"></div>
+    <div style="background: var(--ed-burgundy);"></div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
