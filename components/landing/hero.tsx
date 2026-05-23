@@ -31,15 +31,17 @@ export function Hero() {
         }}
       />
 
-      {/* Decor blocks bottom-left (desktop only) */}
+      {/* Decor blocks bottom-left.
+         lg: small + pushed further off-screen so the reviews row clears it.
+         xl: original size and offset, matching the prototype. */}
       <div
         aria-hidden
-        className="hidden lg:grid absolute -bottom-8 -left-8 z-0 grid-cols-3 grid-rows-3 gap-2"
+        className="hidden lg:grid absolute -bottom-16 -left-16 xl:-bottom-8 xl:-left-8 z-0 grid-cols-3 grid-rows-3 gap-1.5 xl:gap-2"
       >
         {decorBlocks.map((bg, i) => (
           <div
             key={i}
-            className={`w-14 h-14 rounded-[10px] ${bg ?? "bg-transparent"}`}
+            className={`w-9 h-9 xl:w-14 xl:h-14 rounded-lg xl:rounded-[10px] ${bg ?? "bg-transparent"}`}
           />
         ))}
       </div>
@@ -52,7 +54,7 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 xl:gap-20 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 xl:gap-20 lg:items-start">
           {/* Text column */}
           <div>
             <div className="inline-flex items-center gap-2.5 bg-bg-warm border border-line rounded-pill pl-2 pr-4 py-2 text-[13px] text-ink-2 mb-5">
@@ -96,7 +98,7 @@ export function Hero() {
           </div>
 
           {/* Photo column */}
-          <div className="relative self-center mt-2 lg:mt-0 max-w-md lg:max-w-none mx-auto w-full">
+          <div className="relative mt-2 lg:mt-0 max-w-md lg:max-w-none mx-auto w-full">
             {/* Tilted navy backdrop */}
             <div
               aria-hidden
