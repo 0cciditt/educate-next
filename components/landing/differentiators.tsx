@@ -9,34 +9,34 @@ const items: {
 }[] = [
   {
     bg: "bg-green",
-    title: "Grupos pequeños siempre",
-    desc: "Máximo 10 estudiantes por clase. Todos hablan, todos los días.",
+    title: "Institución multilingüe",
+    desc: "Más allá del inglés: programas en varias lenguas extranjeras y de segunda lengua.",
   },
   {
     bg: "bg-orange",
-    title: "Seguimiento personalizado",
-    desc: "Un plan ajustado a tu nivel, ritmo y meta — revisado cada trimestre.",
+    title: "Experiencias de inmersión",
+    desc: "Campamentos, intercambios y vivencias culturales que van más allá del aula.",
   },
   {
     bg: "bg-navy",
     title: "Profes certificados",
-    desc: "Licenciados con TKT, CELTA o experiencia internacional. Hablantes nativos en C1+.",
+    desc: "Licenciados en lenguas, con TKT, CELTA o experiencia internacional. Hablantes nativos en C1+.",
   },
   {
     bg: "bg-burgundy",
-    title: "Certificación oficial",
-    desc: "Tu nivel CEFR queda certificado al terminar cada programa. Sirve para universidad y trabajo.",
+    title: "Habilidades blandas",
+    desc: "Liderazgo, comunicación intercultural y compromiso social integrados en cada programa.",
   },
   {
     bg: "bg-yellow-deep",
     iconColor: "text-ink",
-    title: "Horarios flexibles",
-    desc: "Mañanas, tardes, noches y sábados. Cambia tu horario sin perder tu cohorte.",
+    title: "Tiempo libre con propósito",
+    desc: "Programas extracurriculares y de aprovechamiento del tiempo libre para todas las edades.",
   },
   {
     bg: "bg-red",
-    title: "Garantía de nivel",
-    desc: "Si no subes de nivel en un año, tu siguiente módulo lo pagamos nosotros.",
+    title: "Asesoría a instituciones",
+    desc: "Acompañamos a colegios y empresas del sector privado en proyectos lingüísticos a medida.",
   },
 ];
 
@@ -55,8 +55,9 @@ export function Differentiators() {
               para elegirnos.
             </h2>
             <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-md">
-              Lo que separa una academia más de una que de verdad cambia la
-              forma en que tu hijo, tú o tu equipo se relacionan con el inglés.
+              Lo que separa una academia de idiomas de una institución que
+              forma personas para liderar, comprender culturas y comunicarse
+              con el mundo.
             </p>
             <div className="mt-8">
               <Button href="#contacto" variant="primary" size="lg">

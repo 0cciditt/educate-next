@@ -6,6 +6,7 @@ import {
   Nunito,
 } from "next/font/google";
 import "./globals.css";
+import { WhatsAppFab } from "@/components/ui/whatsapp-fab";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-display",
@@ -49,6 +50,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col bg-white text-ink font-sans antialiased">
         {children}
+        <WhatsAppFab />
       </body>
     </html>
   );

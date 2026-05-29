@@ -2,8 +2,8 @@ import { ContactForm } from "./contact-form";
 import { CheckIcon } from "./icons";
 
 const benefits = [
-  "Evaluación de nivel gratuita",
-  "Plan personalizado para tu objetivo",
+  "Asesoría y evaluación de nivel gratuita",
+  "Ruta personalizada según tu meta lingüística y cultural",
   "Sin matrícula, sin compromiso",
 ];
 
@@ -46,12 +46,12 @@ export function ContactCTA() {
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-tight mt-2 text-ink">
               Ven a vivir
               <br />
-              una clase real.
+              una experiencia real.
             </h2>
             <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[560px]">
-              Agenda 60 minutos. Mira un grupo en vivo, conoce a los profes,
-              trae a tu hijo y prueba sin compromiso. El café lo ponemos
-              nosotros.
+              Agenda 60 minutos. Conoce nuestros programas de lenguas,
+              intercambio, inmersión y habilidades blandas. Trae a tu hijo o
+              ven con tu equipo — el café lo ponemos nosotros.
             </p>
 
             <ul className="flex flex-col gap-3.5 mt-8">

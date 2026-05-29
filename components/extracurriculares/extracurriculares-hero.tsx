@@ -2,30 +2,31 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { WHATSAPP_BOOKING_MESSAGE, whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
 
 type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
-    src: "/hero/FOTO-2-scaled.jpg",
-    alt: "Estudiantes Educate en una clase en vivo",
+    src: "/programs/SpellingBee.webp",
+    alt: "Niños participando en el club Spelling Bee en inglés",
   },
   {
-    src: "/hero/hero-2-educate.jpg",
-    alt: "Aula de Educate Learning Center en Cali",
+    src: "/programs/LEAD.webp",
+    alt: "Jóvenes en la experiencia de liderazgo LEAD",
   },
   {
     src: "/hero/hero-3-educate.jpeg",
-    alt: "Estudiantes Educate en actividad cultural",
+    alt: "Estudiantes Educate en una actividad cultural",
   },
   {
-    src: "/hero/hero-4-educate.jpg",
-    alt: "Familia Educate en clase presencial",
+    src: "/hero/FOTO-2-scaled.jpg",
+    alt: "Estudiantes Educate en una clase en vivo",
   },
 ];
 
-export function HeroCarousel() {
+export function ExtracurricularesHero() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -50,7 +51,7 @@ export function HeroCarousel() {
   return (
     <section
       aria-roledescription="carousel"
-      aria-label="Galería Educate Learning Center"
+      aria-label="Programas extracurriculares Educate"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -101,57 +102,52 @@ export function HeroCarousel() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:min-h-[460px] flex flex-col justify-center">
-        <div className="max-w-[640px]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 min-h-[360px] sm:min-h-[400px] md:min-h-[440px] lg:min-h-[480px] flex flex-col justify-center">
+        <div className="max-w-[760px]">
           <div className="inline-flex items-center gap-2.5 bg-white/15 border border-white/25 backdrop-blur-md rounded-pill pl-2 pr-4 py-2 text-[13px] text-white mb-5">
             <span className="bg-orange text-white px-2.5 py-1 rounded-pill font-display text-[11px] tracking-[0.08em]">
-              NUEVO
+              EXTRA
             </span>
-            <span>Inscripciones abiertas · Cohorte de julio 2026</span>
+            <span>Después del colegio · Niños y jóvenes</span>
           </div>
 
           <h1
-            className="font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-[-0.025em] text-white"
+            className="font-display text-[clamp(1.6rem,8vw,4.25rem)] leading-[0.95] tracking-[-0.025em] text-white"
             style={{ textShadow: "0 2px 28px rgba(20,59,92,0.55)" }}
           >
-            Lenguas, culturas y líderes para un{" "}
-            <span className="text-orange">mundo global.</span>
+            Programas
+            <br />
+            <span className="text-orange">Extracurriculares.</span>
           </h1>
 
           <p
             className="text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[560px]"
             style={{ textShadow: "0 1px 14px rgba(20,59,92,0.5)" }}
           >
-            Formación en lengua extranjera y segunda lengua, intercambios
-            culturales, campamentos de inmersión y desarrollo de habilidades
-            blandas. Una experiencia educativa, lúdica y significativa para
-            niños, jóvenes y adultos.
+            Espacios donde niños y jóvenes siguen aprendiendo inglés más allá
+            del aula: deletreo, matemáticas, ciencia y liderazgo, siempre a
+            través del juego y la curiosidad.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Button href="#contacto" variant="accent" size="lg">
-              Agenda una visita
+          <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <Button
+              href={whatsappUrl(WHATSAPP_BOOKING_MESSAGE)}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="accent"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Agenda tu clase gratis
             </Button>
             <Button
               href="#programas"
               variant="secondary"
               size="lg"
-              className="!bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+              className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
             >
               Conoce los programas
             </Button>
-          </div>
-
-          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/90">
-            <span className="inline-flex items-center gap-2">
-              <span className="text-yellow tracking-[2px] text-lg">★★★★★</span>
-              <strong className="text-white">4,9/5</strong>
-              <span>· 412 reseñas de familias</span>
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green" aria-hidden />
-              Cupos abiertos para julio
-            </span>
           </div>
         </div>
       </div>

@@ -15,26 +15,26 @@ const pillars: {
   {
     bg: "bg-navy",
     icon: <MegaphoneIcon className="w-7 h-7 text-white" />,
-    title: "Hablar primero.",
-    desc: "Cada estudiante habla en cada clase. Sin excepciones. Grupos pequeños hacen posible lo que los libros prometen.",
+    title: "Educación para la vida.",
+    desc: "Formamos para la felicidad y la autorrealización. Lo que aprendes en clase es lo que te sirve afuera de ella.",
   },
   {
     bg: "bg-orange",
     icon: <GlobeIcon className="w-7 h-7 text-white" />,
-    title: "Inmersión cultural.",
-    desc: "Aprendes el idioma con la cultura que lo viste. Películas, podcasts, comida, música — no solo gramática.",
+    title: "Ciudadanos del mundo.",
+    desc: "Aprendes la lengua con la cultura que la viste. Inmersión real: comida, música, historias, comunidades.",
   },
   {
     bg: "bg-green",
     icon: <TrendUpIcon className="w-7 h-7 text-white" />,
-    title: "Progreso medible.",
-    desc: "Evaluación trimestral con profe + estudiante + familia. La misma rúbrica se abre cada vez. Nada se infla.",
+    title: "Liderazgo integral.",
+    desc: "Habilidades blandas y compromiso colectivo-social. No solo formamos hablantes — formamos líderes.",
   },
   {
     bg: "bg-burgundy",
     icon: <MonitorIcon className="w-7 h-7 text-white" />,
-    title: "Tecnología que sirve.",
-    desc: "Plataforma propia con seguimiento personalizado. Tecnología que potencia al profe, nunca lo reemplaza.",
+    title: "Comunidad e inclusión.",
+    desc: "Confianza, respeto, solidaridad e interioridad. Una comunidad que se hace corresponsable de su aprendizaje.",
   },
 ];
 
@@ -43,16 +43,18 @@ export function Methodology() {
     <section id="metodologia" className="bg-bg-warm py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="font-display text-[13px] tracking-[0.2em] text-orange uppercase">
-          Metodología Integral Learning
+          Principios y valores
         </div>
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[0.95] tracking-tight mt-2 text-ink">
-          100% conversacional.
+          Lo que enseñamos
           <br />
-          0% relleno.
+          lo vivimos primero.
         </h2>
         <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[720px]">
-          Una metodología diseñada por psicólogos, pedagogos y licenciados en
-          lenguas extranjeras. Cuatro principios que defendemos en cada clase.
+          Educación para la vida, ciudadanos del mundo, liderazgo integral,
+          corresponsabilidad, interdependencia, solidaridad, confianza, respeto,
+          comunidad, inclusión e interioridad. Estos cuatro principios reúnen el
+          espíritu de Educate.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4 mt-12">

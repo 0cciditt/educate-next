@@ -11,17 +11,17 @@ export function Programs() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between mb-10">
           <div>
             <div className="font-display text-[13px] tracking-[0.2em] text-orange uppercase">
-              Programas de inglés
+              Nuestros programas
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[0.95] tracking-tight mt-2 text-ink">
-              Un curso para cada edad,
+              Una experiencia para cada etapa,
               <br className="hidden sm:inline" />
               <span className="sm:hidden"> </span>una ruta para cada meta.
             </h2>
           </div>
           <p className="text-[17px] leading-relaxed text-ink-3 lg:max-w-sm">
-            Todos nuestros programas están homologados con el Marco Común
-            Europeo y estructurados en módulos de 51 horas.
+            Formación lingüística, intercambio cultural, inmersión y desarrollo
+            humano. Homologados con el Marco Común Europeo cuando aplica.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export function Programs() {
           <ProgramCard
             media={
               <PhotoPlaceholder
-                label="NIÑOS · 6–10"
+                label="LENGUA EXTRANJERA · A1–C2"
                 rounded="rounded-none"
                 className="aspect-[16/10]"
               />
@@ -37,80 +37,76 @@ export function Programs() {
             badges={
               <>
                 <LevelChip level="A1" />
+                <LevelChip level="C2" />
                 <Badge tone="orange" dot>
-                  Niños · 6–10
+                  Niños, jóvenes y adultos
                 </Badge>
               </>
             }
-            title="Little Explorers"
-            desc="Cuentos, canciones, juegos y proyectos cortos. El inglés se descubre, no se memoriza."
-            meta={["6 módulos", "51 h c/u"]}
+            title="Formación en lenguas"
+            desc="Programas de lengua extranjera y segunda lengua. El idioma se descubre con su cultura — no solo se memoriza."
+            meta={["Módulos de 51 h", "Marco Común Europeo"]}
           />
 
           <ProgramCard
             media={
               <PhotoPlaceholder
-                label="NIÑOS · 10–13"
+                label="INTERCAMBIO CULTURAL"
                 rounded="rounded-none"
                 className="aspect-[16/10]"
               />
             }
             badges={
               <>
-                <LevelChip level="A2" />
                 <Badge tone="yellow" dot>
-                  Tweens · 10–13
+                  Jóvenes y adultos
                 </Badge>
               </>
             }
-            title="Explore 4 Learning"
-            desc="Lectura, escritura y conversación con temas que de verdad les importan a esta edad."
-            meta={["8 módulos", "51 h c/u"]}
+            title="Intercambio cultural"
+            desc="Experiencias que conectan a nuestros estudiantes con otras culturas, comunidades y formas de habitar el mundo."
+            meta={["Programas internacionales", "Acompañamiento integral"]}
           />
 
           <ProgramCard
             media={
               <PhotoPlaceholder
-                label="ADOLES + ADULTOS"
+                label="CAMPAMENTOS DE INMERSIÓN"
                 rounded="rounded-none"
                 className="aspect-[16/10]"
               />
             }
             badges={
               <>
-                <LevelChip level="B1" />
-                <LevelChip level="B2" />
-                <Badge tone="solid-navy">Jóvenes & adultos</Badge>
+                <Badge tone="solid-navy">Tiempo libre</Badge>
               </>
             }
-            title="Confident Voices"
-            desc="Inglés conversacional para universidad, viajes y trabajo. Hablar fluido es la meta."
-            meta={["10 módulos", "51 h c/u"]}
+            title="Inmersión y tiempo libre"
+            desc="Campamentos y programas de aprovechamiento del tiempo libre donde se vive la lengua, la cultura y el juego."
+            meta={["Vacaciones", "Experiencias lúdicas"]}
           />
 
           <ProgramCard
             highlight
             media={
               <div className="aspect-[16/10] bg-burgundy grid place-items-center text-white font-display text-2xl sm:text-3xl tracking-tight">
-                CAMBRIDGE
+                B2B
               </div>
             }
             badges={
               <>
-                <LevelChip level="C1" />
-                <LevelChip level="C2" />
-                <Badge tone="burgundy">Cambridge</Badge>
+                <Badge tone="burgundy">Colegios y empresas</Badge>
               </>
             }
-            title="Global Leaders"
-            desc="Preparación CAE, CPE e IELTS. Para profesionales que necesitan moverse en el mundo."
-            meta={["22 semanas", "+ simulacros"]}
+            title="Asesoría institucional"
+            desc="Acompañamos a instituciones educativas y empresas del sector privado en proyectos lingüísticos y extracurriculares."
+            meta={["Diseño a medida", "Habilidades blandas"]}
           />
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Button href="#" variant="secondary">
-            Programa empresarial para tu equipo →
+          <Button href="#contacto" variant="secondary">
+            Diseñemos un programa para tu organización →
           </Button>
         </div>
       </div>

@@ -55,3 +55,11 @@
   --font-sans: var(--font-body);
   --font-mono: var(--font-mono);
 }
+
+/* Smooth in-page anchor scrolling (e.g. the Programas dropdown jumping to a
+   program section). Disabled when the user prefers reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

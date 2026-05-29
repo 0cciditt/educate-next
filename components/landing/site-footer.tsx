@@ -1,34 +1,36 @@
 import Image from "next/image";
+import { whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
 
-const cols: { title: string; links: string[] }[] = [
+type FooterLink = { label: string; href: string };
+
+const cols: { title: string; links: FooterLink[] }[] = [
   {
     title: "Programas",
     links: [
-      "Little Explorers · 6–10",
-      "Explore 4 Learning · 10–13",
-      "Confident Voices · jóvenes y adultos",
-      "Global Leaders · Cambridge",
-      "Programa empresarial",
+      { label: "Summer Camp", href: "/programas/summer-camp" },
+      { label: "Recess Camp®", href: "/programas/recess-camp" },
+      { label: "Spring Break Camp", href: "/programas/spring-break-camp" },
+      { label: "Winter Camp", href: "/programas/winter-camp" },
+      { label: "Extracurriculares", href: "/programas/extracurriculares" },
+      { label: "Centros educativos", href: "/programas/centros-educativos" },
     ],
   },
   {
     title: "Escuela",
     links: [
-      "Metodología",
-      "Misión y visión",
-      "Profes",
-      "¿Qué nos diferencia?",
-      "Vacantes",
+      { label: "Metodología", href: "/#metodologia" },
+      { label: "¿Qué nos diferencia?", href: "/#diferencia" },
+      { label: "Nosotros", href: "/#mision" },
+      { label: "Contacto", href: "/#contacto" },
     ],
   },
   {
     title: "Sedes",
     links: [
-      "Ciudad Jardín",
-      "Tequendama",
-      "Norte / Vipasa",
-      "Aula virtual",
+      { label: "Unicentro", href: "/#sedes" },
+      { label: "Centenario", href: "/#sedes" },
+      { label: "Alfaguara", href: "/#sedes" },
     ],
   },
 ];
@@ -82,12 +84,12 @@ export function SiteFooter() {
               </div>
               <ul className="list-none p-0 mt-4 flex flex-col gap-2.5 text-[15px]">
                 {col.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-white/85 hover:text-white no-underline"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -95,43 +97,30 @@ export function SiteFooter() {
             </div>
           ))}
 
-          {/* Newsletter */}
+          {/* WhatsApp */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="font-display text-sm tracking-[0.15em] uppercase text-white">
-              Mantente al tanto
+              ¿Hablamos?
             </div>
             <p className="text-white/75 leading-relaxed text-[15px] max-w-[280px] mt-4">
-              Un correo amigable al mes con clases nuevas, eventos gratuitos y
-              consejos para familias.
+              Escríbenos por WhatsApp y resolvemos tus dudas sobre programas,
+              sedes y horarios.
             </p>
-            <div className="mt-4 flex flex-col sm:flex-row gap-2">
-              <input
-                className="flex-1 px-4 py-3 rounded-2xl border-[1.5px] border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:border-white"
-                placeholder="tu@correo.com"
-              />
-              <Button href="#" variant="accent" size="sm" className="shrink-0">
-                Suscribirme
-              </Button>
-            </div>
+            <Button
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="accent"
+              size="sm"
+              className="mt-4"
+            >
+              Escríbenos por WhatsApp
+            </Button>
           </div>
         </div>
 
-        <div className="mt-12 py-6 border-t border-white/15 flex flex-col sm:flex-row gap-4 sm:justify-between sm:items-center text-[13px] text-white/60">
-          <div>
-            © 2026 Educate Learning Center®, S.A.S. · Cali, Valle del Cauca ·
-            NIT 901.XXX.XXX-X
-          </div>
-          <div className="flex gap-6">
-            <a href="#" className="text-white/60 hover:text-white/80 no-underline">
-              Privacidad
-            </a>
-            <a href="#" className="text-white/60 hover:text-white/80 no-underline">
-              Términos
-            </a>
-            <a href="#" className="text-white/60 hover:text-white/80 no-underline">
-              Cookies
-            </a>
-          </div>
+        <div className="mt-12 py-6 border-t border-white/15 text-[13px] text-white/60">
+          © 2026 Educate Learning Center®, S.A.S. · Cali, Valle del Cauca
         </div>
       </div>
 

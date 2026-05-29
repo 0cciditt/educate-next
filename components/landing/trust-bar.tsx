@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ClockIcon, GraduationCapIcon, CheckIcon, UsersIcon } from "./icons";
+import { TrophyIcon, GraduationCapIcon, CheckIcon, UsersIcon } from "./icons";
 
 const items = [
   {
@@ -22,7 +22,7 @@ const items = [
   },
   {
     bg: "bg-green",
-    icon: <ClockIcon className="w-5 h-5 text-white" />,
+    icon: <TrophyIcon className="w-5 h-5 text-white" />,
     title: "12 años en el Valle",
     sub: "3.200 estudiantes formados",
   },

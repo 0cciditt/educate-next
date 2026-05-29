@@ -8,24 +8,24 @@ type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
+    src: "/programs/Reccess Camp.webp",
+    alt: "Niños en el campamento de receso escolar de Educate",
+  },
+  {
     src: "/hero/FOTO-2-scaled.jpg",
-    alt: "Estudiantes Educate en una clase en vivo",
-  },
-  {
-    src: "/hero/hero-2-educate.jpg",
-    alt: "Aula de Educate Learning Center en Cali",
-  },
-  {
-    src: "/hero/hero-3-educate.jpeg",
-    alt: "Estudiantes Educate en actividad cultural",
+    alt: "Niños en una clase activa del campamento",
   },
   {
     src: "/hero/hero-4-educate.jpg",
-    alt: "Familia Educate en clase presencial",
+    alt: "Familia y estudiantes Educate en jornada de campamento",
+  },
+  {
+    src: "/hero/hero-3-educate.jpeg",
+    alt: "Estudiantes Educate en una actividad cultural",
   },
 ];
 
-export function HeroCarousel() {
+export function RecessCampHero() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -50,14 +50,13 @@ export function HeroCarousel() {
   return (
     <section
       aria-roledescription="carousel"
-      aria-label="Galería Educate Learning Center"
+      aria-label="Galería Recess Camp"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
-      className="relative overflow-hidden bg-navy-deep text-white"
+      className="relative overflow-hidden bg-orange-deep text-white"
     >
-      {/* Slides — crossfade */}
       <div className="absolute inset-0 z-0">
         {slides.map((s, i) => (
           <div
@@ -82,82 +81,71 @@ export function HeroCarousel() {
         ))}
       </div>
 
-      {/* Universal vertical scrim — keeps mobile (full-width text) readable */}
       <div
         aria-hidden
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(180deg, rgba(20,59,92,0.28) 0%, rgba(20,59,92,0.58) 100%)",
+            "linear-gradient(180deg, rgba(201,90,38,0.32) 0%, rgba(20,59,92,0.58) 100%)",
         }}
       />
-      {/* Left-column scrim — guarantees contrast under the text on desktop */}
       <div
         aria-hidden
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(95deg, rgba(20,59,92,0.72) 0%, rgba(20,59,92,0.5) 35%, rgba(20,59,92,0.12) 65%, transparent 85%)",
+            "linear-gradient(95deg, rgba(20,59,92,0.74) 0%, rgba(201,90,38,0.45) 35%, rgba(201,90,38,0.1) 65%, transparent 85%)",
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:min-h-[460px] flex flex-col justify-center">
-        <div className="max-w-[640px]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[520px] flex flex-col justify-center">
+        <div className="max-w-[680px]">
           <div className="inline-flex items-center gap-2.5 bg-white/15 border border-white/25 backdrop-blur-md rounded-pill pl-2 pr-4 py-2 text-[13px] text-white mb-5">
-            <span className="bg-orange text-white px-2.5 py-1 rounded-pill font-display text-[11px] tracking-[0.08em]">
-              NUEVO
+            <span className="bg-yellow text-ink px-2.5 py-1 rounded-pill font-display text-[11px] tracking-[0.08em]">
+              OCTUBRE 2026
             </span>
-            <span>Inscripciones abiertas · Cohorte de julio 2026</span>
+            <span>Cupos limitados · Cali</span>
           </div>
 
           <h1
-            className="font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-[-0.025em] text-white"
+            className="font-display text-[36px] sm:text-[44px] md:text-5xl lg:text-[60px] xl:text-[72px] leading-[0.95] tracking-[-0.025em] text-white"
             style={{ textShadow: "0 2px 28px rgba(20,59,92,0.55)" }}
           >
-            Lenguas, culturas y líderes para un{" "}
-            <span className="text-orange">mundo global.</span>
+            Recess Camp®.{" "}
+            <span className="text-yellow">El receso se vive aquí.</span>
           </h1>
 
           <p
-            className="text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[560px]"
+            className="text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[600px]"
             style={{ textShadow: "0 1px 14px rgba(20,59,92,0.5)" }}
           >
-            Formación en lengua extranjera y segunda lengua, intercambios
-            culturales, campamentos de inmersión y desarrollo de habilidades
-            blandas. Una experiencia educativa, lúdica y significativa para
-            niños, jóvenes y adultos.
+            Cinco días de campamento durante la semana de receso escolar de
+            octubre, en modalidad Day Camp. Juego, arte, deporte e inglés para
+            que el receso sea aprendizaje y diversión.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Button href="#contacto" variant="accent" size="lg">
-              Agenda una visita
+          <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <Button
+              href="#mas-info"
+              variant="accent"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Solicitar dossier
             </Button>
             <Button
-              href="#programas"
+              href="#experiencia"
               variant="secondary"
               size="lg"
-              className="!bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+              className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
             >
-              Conoce los programas
+              Qué incluye
             </Button>
-          </div>
-
-          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/90">
-            <span className="inline-flex items-center gap-2">
-              <span className="text-yellow tracking-[2px] text-lg">★★★★★</span>
-              <strong className="text-white">4,9/5</strong>
-              <span>· 412 reseñas de familias</span>
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green" aria-hidden />
-              Cupos abiertos para julio
-            </span>
           </div>
         </div>
       </div>
 
-      {/* Carousel controls */}
-      <div className="absolute z-20 bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-4 md:right-6 lg:right-12 xl:right-16 flex items-center gap-2 sm:gap-3 bg-black/20 backdrop-blur-md border border-white/15 rounded-pill px-2.5 sm:px-3 py-1.5 sm:py-2">
+      <div className="absolute z-20 bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-4 md:right-6 lg:right-12 xl:right-16 flex items-center gap-2 sm:gap-3 bg-black/20 backdrop-blur-md border border-white/15 rounded-pill px-2.5 sm:px-3 py-1.5 sm:py-2">
         <div
           className="flex items-center gap-1.5 sm:gap-2"
           role="tablist"

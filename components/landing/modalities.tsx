@@ -13,8 +13,8 @@ export function Modalities() {
           cuando tú puedas.
         </h2>
         <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[720px]">
-          Tres formas de aprender en Educate. La misma metodología, el mismo
-          plan de estudios, el mismo equipo de profes.
+          Tres formas de vivir las lenguas y las culturas en Educate. La misma
+          metodología, el mismo plan de estudios, el mismo equipo de profes.
         </p>
 
         <div className="grid gap-6 lg:grid-cols-3 mt-12">
