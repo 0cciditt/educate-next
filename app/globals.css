@@ -63,3 +63,9 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Every interactive button shows a pointer cursor (skip disabled ones). */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}

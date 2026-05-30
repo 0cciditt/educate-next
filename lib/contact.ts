@@ -8,10 +8,6 @@ export const WHATSAPP_NUMBER = "573000000000";
 export const WHATSAPP_DEFAULT_MESSAGE =
   "¡Hola! Me gustaría recibir más información sobre los programas de Educate.";
 
-/** Message used by the "Agenda tu clase gratis" booking buttons. */
-export const WHATSAPP_BOOKING_MESSAGE =
-  "¡Hola! Quiero agendar mi clase gratis en Educate.";
-
 /**
  * Per-route pre-filled message, so the floating WhatsApp button mentions the
  * exact program the visitor is looking at. Add a new route here when a new

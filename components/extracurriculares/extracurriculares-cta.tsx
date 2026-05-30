@@ -1,9 +1,9 @@
-import { WHATSAPP_BOOKING_MESSAGE, whatsappUrl } from "@/lib/contact";
+import { whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
 import { CheckIcon } from "../landing/icons";
 
 const includes = [
-  "Clase de prueba sin costo",
+  "Asesoría personalizada sin costo",
   "Grupos reducidos por edad y nivel",
   "Horarios flexibles después de clase",
   "Reporte de avance para las familias",
@@ -32,9 +32,9 @@ export function ExtracurricularesCta() {
                 Inscripciones abiertas
               </div>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] leading-[0.95] tracking-tight mt-3 text-white">
-                Agenda una clase
+                Obtén más
                 <br />
-                de prueba gratis.
+                información.
               </h2>
               <p className="text-lg leading-relaxed text-white/85 mt-5 max-w-[540px]">
                 Cuéntanos la edad de tu hijo o hija y el programa que le
@@ -44,14 +44,14 @@ export function ExtracurricularesCta() {
 
               <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
                 <Button
-                  href={whatsappUrl(WHATSAPP_BOOKING_MESSAGE)}
+                  href={whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="accent"
                   size="lg"
                   className="w-full sm:w-auto"
                 >
-                  Agenda tu clase gratis
+                  Obtener más información
                 </Button>
                 <Button
                   href={whatsappUrl(

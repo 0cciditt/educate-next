@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { WHATSAPP_BOOKING_MESSAGE, whatsappUrl } from "@/lib/contact";
+import { whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
 import { CloseIcon, MenuIcon } from "./icons";
 
@@ -112,13 +112,13 @@ export function SiteNavV2() {
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-3 ml-auto">
           <Button
-            href={whatsappUrl(WHATSAPP_BOOKING_MESSAGE)}
+            href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
             variant="accent"
             size="sm"
           >
-            Agenda tu clase gratis
+            Obtener más información
           </Button>
         </div>
 
@@ -208,14 +208,14 @@ export function SiteNavV2() {
             />
             <div className="flex flex-col gap-2 mt-3">
               <Button
-                href={whatsappUrl(WHATSAPP_BOOKING_MESSAGE)}
+                href={whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="accent"
                 size="md"
                 onClick={close}
               >
-                Agenda tu clase gratis
+                Obtener más información
               </Button>
             </div>
           </div>

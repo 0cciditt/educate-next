@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
 
 type Slide = { src: string; alt: string };
@@ -128,15 +129,22 @@ export function HeroCarousel() {
             niños, jóvenes y adultos.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Button href="#contacto" variant="accent" size="lg">
-              Agenda una visita
+          <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <Button
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="accent"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Obtener más información
             </Button>
             <Button
               href="#programas"
               variant="secondary"
               size="lg"
-              className="!bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+              className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
             >
               Conoce los programas
             </Button>

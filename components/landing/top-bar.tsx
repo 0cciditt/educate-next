@@ -1,4 +1,4 @@
-import { WHATSAPP_BOOKING_MESSAGE, whatsappUrl } from "@/lib/contact";
+import { whatsappUrl } from "@/lib/contact";
 import { PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
 
 export function TopBar() {
@@ -33,12 +33,12 @@ export function TopBar() {
             Encuentra tu sede
           </a>
           <a
-            href={whatsappUrl(WHATSAPP_BOOKING_MESSAGE)}
+            href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/85 hover:text-white no-underline"
           >
-            Agenda tu clase gratis →
+            Obtener más información →
           </a>
         </div>
       </div>

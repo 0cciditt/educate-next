@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { WHATSAPP_BOOKING_MESSAGE, whatsappUrl } from "@/lib/contact";
+import { whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
 
 type Slide = { src: string; alt: string };
@@ -131,14 +131,14 @@ export function ExtracurricularesHero() {
 
           <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
             <Button
-              href={whatsappUrl(WHATSAPP_BOOKING_MESSAGE)}
+              href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
               variant="accent"
               size="lg"
               className="w-full sm:w-auto"
             >
-              Agenda tu clase gratis
+              Obtener más información
             </Button>
             <Button
               href="#programas"
