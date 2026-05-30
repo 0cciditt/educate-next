@@ -12,15 +12,15 @@ const slides: Slide[] = [
     alt: "Estudiantes Educate viviendo un campamento de invierno",
   },
   {
-    src: "/hero/hero-4-educate.jpg",
+    src: "/hero/educate-1.webp",
     alt: "Familia y estudiantes Educate en jornada internacional",
   },
   {
-    src: "/hero/hero-2-educate.jpg",
+    src: "/hero/educate-2.webp",
     alt: "Aula de Educate Learning Center preparada para el Winter Camp",
   },
   {
-    src: "/hero/hero-3-educate.jpeg",
+    src: "/hero/educate-3.webp",
     alt: "Estudiantes Educate en una actividad cultural",
   },
 ];

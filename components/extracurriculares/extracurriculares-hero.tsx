@@ -17,11 +17,11 @@ const slides: Slide[] = [
     alt: "Jóvenes en la experiencia de liderazgo LEAD",
   },
   {
-    src: "/hero/hero-3-educate.jpeg",
+    src: "/hero/educate-1.webp",
     alt: "Estudiantes Educate en una actividad cultural",
   },
   {
-    src: "/hero/FOTO-2-scaled.jpg",
+    src: "/hero/educate-2.webp",
     alt: "Estudiantes Educate en una clase en vivo",
   },
 ];

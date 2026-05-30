@@ -8,19 +8,19 @@ type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
-    src: "/hero/hero-3-educate.jpeg",
-    alt: "Estudiantes Educate viviendo una actividad cultural",
+    src: "/programs/Summer Camp.webp",
+    alt: "Estudiantes Educate viviendo el Summer Camp",
   },
   {
-    src: "/hero/FOTO-2-scaled.jpg",
+    src: "/hero/educate-1.webp",
     alt: "Niños en una clase activa del Summer Camp",
   },
   {
-    src: "/hero/hero-4-educate.jpg",
+    src: "/hero/educate-2.webp",
     alt: "Familia y estudiantes Educate en jornada de verano",
   },
   {
-    src: "/hero/hero-2-educate.jpg",
+    src: "/hero/educate-3.webp",
     alt: "Aula de Educate Learning Center preparada para Summer Camp",
   },
 ];

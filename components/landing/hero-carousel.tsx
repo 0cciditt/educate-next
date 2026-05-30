@@ -9,15 +9,15 @@ type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
-    src: "/hero/FOTO-2-scaled.jpg",
+    src: "/hero/educate-1.webp",
     alt: "Estudiantes Educate en una clase en vivo",
   },
   {
-    src: "/hero/hero-2-educate.jpg",
+    src: "/hero/educate-2.webp",
     alt: "Aula de Educate Learning Center en Cali",
   },
   {
-    src: "/hero/hero-3-educate.jpeg",
+    src: "/hero/educate-3.webp",
     alt: "Estudiantes Educate en actividad cultural",
   },
 ];
