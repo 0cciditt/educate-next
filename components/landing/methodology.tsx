@@ -13,13 +13,13 @@ const pillars: {
   desc: string;
 }[] = [
   {
-    bg: "bg-navy",
+    bg: "bg-green",
     icon: <MegaphoneIcon className="w-7 h-7 text-white" />,
     title: "Educación para la vida.",
     desc: "Formamos para la felicidad y la autorrealización. Lo que aprendes en clase es lo que te sirve afuera de ella.",
   },
   {
-    bg: "bg-orange",
+    bg: "bg-green",
     icon: <GlobeIcon className="w-7 h-7 text-white" />,
     title: "Ciudadanos del mundo.",
     desc: "Aprendes la lengua con la cultura que la viste. Inmersión real: comida, música, historias, comunidades.",
@@ -31,7 +31,7 @@ const pillars: {
     desc: "Habilidades blandas y compromiso colectivo-social. No solo formamos hablantes — formamos líderes.",
   },
   {
-    bg: "bg-burgundy",
+    bg: "bg-green",
     icon: <MonitorIcon className="w-7 h-7 text-white" />,
     title: "Comunidad e inclusión.",
     desc: "Confianza, respeto, solidaridad e interioridad. Una comunidad que se hace corresponsable de su aprendizaje.",

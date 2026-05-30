@@ -20,10 +20,6 @@ const slides: Slide[] = [
     src: "/hero/hero-3-educate.jpeg",
     alt: "Estudiantes Educate en actividad cultural",
   },
-  {
-    src: "/hero/hero-4-educate.jpg",
-    alt: "Familia Educate en clase presencial",
-  },
 ];
 
 export function HeroCarousel() {
@@ -67,7 +63,7 @@ export function HeroCarousel() {
             aria-roledescription="slide"
             aria-label={`${i + 1} de ${slides.length}`}
             aria-hidden={i !== index}
-            className={`absolute inset-0 transition-opacity duration-[900ms] ease-out ${
+            className={`absolute inset-0 transition-opacity duration-900 ease-out ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -86,7 +82,7 @@ export function HeroCarousel() {
       {/* Universal vertical scrim — keeps mobile (full-width text) readable */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-1"
         style={{
           background:
             "linear-gradient(180deg, rgba(20,59,92,0.28) 0%, rgba(20,59,92,0.58) 100%)",
@@ -95,7 +91,7 @@ export function HeroCarousel() {
       {/* Left-column scrim — guarantees contrast under the text on desktop */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-1"
         style={{
           background:
             "linear-gradient(95deg, rgba(20,59,92,0.72) 0%, rgba(20,59,92,0.5) 35%, rgba(20,59,92,0.12) 65%, transparent 85%)",
@@ -112,11 +108,11 @@ export function HeroCarousel() {
           </div>
 
           <h1
-            className="font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-[-0.025em] text-white"
+            className="font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-tight text-white"
             style={{ textShadow: "0 2px 28px rgba(20,59,92,0.55)" }}
           >
-            Lenguas, culturas y líderes para un{" "}
-            <span className="text-orange">mundo global.</span>
+            Educate abre las puertas del mundo <br />
+            <span className="text-orange">para tu hijo</span>
           </h1>
 
           <p
@@ -125,8 +121,7 @@ export function HeroCarousel() {
           >
             Formación en lengua extranjera y segunda lengua, intercambios
             culturales, campamentos de inmersión y desarrollo de habilidades
-            blandas. Una experiencia educativa, lúdica y significativa para
-            niños, jóvenes y adultos.
+            blandas. Una experiencia educativa y significativa para tu hijo.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
@@ -144,7 +139,7 @@ export function HeroCarousel() {
               href="#programas"
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+              className="w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
             >
               Conoce los programas
             </Button>

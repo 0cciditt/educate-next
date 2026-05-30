@@ -3,7 +3,7 @@
 //
 // TODO: replace with the real WhatsApp number — digits only, including country
 // code, no "+", spaces or dashes. Example for Colombia: "573001234567".
-export const WHATSAPP_NUMBER = "573000000000";
+export const WHATSAPP_NUMBER = "573117163442";
 
 export const WHATSAPP_DEFAULT_MESSAGE =
   "¡Hola! Me gustaría recibir más información sobre los programas de Educate.";

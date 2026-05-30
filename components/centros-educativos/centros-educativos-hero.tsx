@@ -44,16 +44,6 @@ export function CentrosEducativosHero() {
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="grid gap-12 lg:gap-16 xl:gap-20 lg:grid-cols-2 lg:items-center">
           <div className="relative order-2 lg:order-1 max-w-md lg:max-w-none mx-auto w-full">
-            <div
-              aria-hidden
-              className="hidden sm:block absolute -left-5 -top-5 right-5 bottom-5 bg-navy rounded-[32px] z-0"
-              style={{ transform: "rotate(-3deg)" }}
-            />
-            <div
-              aria-hidden
-              className="hidden sm:block absolute left-5 top-5 -right-5 -bottom-5 bg-orange-soft rounded-[32px] z-0"
-              style={{ transform: "rotate(2deg)" }}
-            />
             <PhotoPlaceholder
               label="DOCENTES Y ESTUDIANTES · AULA BILINGÜE"
               rounded="rounded-[32px]"
@@ -65,7 +55,7 @@ export function CentrosEducativosHero() {
             <div className="font-mono text-[11px] tracking-[0.22em] text-orange uppercase">
               Programa para
             </div>
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-[88px] leading-[0.92] tracking-[-0.025em] mt-3 text-navy">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-[88px] leading-[0.92] tracking-tight mt-3 text-navy">
               Centros
               <br />
               Educativos.

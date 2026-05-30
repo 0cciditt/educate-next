@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { whatsappUrl } from "@/lib/contact";
@@ -33,16 +34,15 @@ const corporativas: ProgramItem[] = [
   },
 ];
 
-type Link = {
+type NavLink = {
   href: string;
   label: string;
 };
 
-const links: Link[] = [
-  { href: "#programas", label: "Programas" },
-  { href: "#metodologia", label: "Metodología" },
-  { href: "#diferencia", label: "¿Qué nos diferencia?" },
+const links: NavLink[] = [
   { href: "#mision", label: "Nosotros" },
+  { href: "#diferencia", label: "¿Qué nos diferencia?" },
+  { href: "#metodologia", label: "Metodología" },
   { href: "#sedes", label: "Sedes" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -83,18 +83,18 @@ export function SiteNavV2() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line-2">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-3 lg:py-4 flex items-center gap-6 lg:gap-10">
-        <a href="/" className="shrink-0 no-underline">
+        <Link href="/" className="shrink-0 no-underline">
           <Image
-            src="/brand/logo.png"
+            src="/brand/logo.webp"
             alt="Educate Learning Center"
             width={160}
             height={40}
             className="h-9 lg:h-10 w-auto"
             priority
           />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden lg:flex flex-1 gap-7">
@@ -128,7 +128,7 @@ export function SiteNavV2() {
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className="lg:hidden ml-auto inline-flex items-center justify-center w-10 h-10 rounded-xl border border-line-2 text-ink hover:bg-navy-soft transition-colors"
+          className="lg:hidden ml-auto inline-flex items-center justify-center w-10 h-10 rounded-xl border border-line-2 text-green-deep hover:bg-navy-soft transition-colors"
         >
           {open ? (
             <CloseIcon className="w-5 h-5" />
@@ -174,39 +174,75 @@ export function SiteNavV2() {
             onScheduleClose={scheduleClose}
             onClose={() => setOpenMenu(null)}
           />
+          <Link
+            href="/programas/preparacion-examenes-internacionales"
+            className={`relative font-heading font-bold text-[14px] px-5 py-3.5 inline-flex items-center gap-2 transition-colors no-underline ${
+              pathname === "/programas/preparacion-examenes-internacionales"
+                ? "text-yellow after:content-[''] after:absolute after:left-5 after:right-5 after:bottom-0 after:h-[3px] after:bg-yellow after:rounded-t-full"
+                : "text-white hover:text-yellow"
+            }`}
+          >
+            Preparación para Exámenes Internacionales
+          </Link>
         </div>
       </div>
 
       {/* Mobile drawer */}
       {open && (
         <div className="lg:hidden border-t border-line-2 bg-white">
-          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 py-4 flex flex-col gap-1">
+          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 py-4 flex flex-col gap-0.5">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={close}
-                className="block font-heading font-bold text-base no-underline py-3 px-2 rounded-lg text-ink hover:bg-bg-warm"
+                className="font-heading font-bold text-base no-underline py-3 px-3 rounded-xl text-ink hover:bg-bg-warm transition-colors"
               >
                 {l.label}
               </a>
             ))}
-            <MobileCategory
-              label="Campamentos"
-              items={campamentos}
-              onItemClick={close}
-            />
-            <MobileCategory
-              label="Programas Extracurriculares"
-              items={extracurriculares}
-              onItemClick={close}
-            />
-            <MobileCategory
-              label="Soluciones corporativas"
-              items={corporativas}
-              onItemClick={close}
-            />
-            <div className="flex flex-col gap-2 mt-3">
+
+            <div className="mt-3 pt-3 border-t border-line-2 flex flex-col gap-0.5">
+              <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-ink-4 px-3 pb-1">
+                Programas
+              </div>
+              <MobileCategory
+                label="Campamentos"
+                items={campamentos}
+                pathname={pathname}
+                onItemClick={close}
+              />
+              <MobileCategory
+                label="Programas Extracurriculares"
+                items={extracurriculares}
+                pathname={pathname}
+                onItemClick={close}
+              />
+              <MobileCategory
+                label="Soluciones corporativas"
+                items={corporativas}
+                pathname={pathname}
+                onItemClick={close}
+              />
+              <a
+                href="/programas/preparacion-examenes-internacionales"
+                onClick={close}
+                aria-current={
+                  pathname === "/programas/preparacion-examenes-internacionales"
+                    ? "page"
+                    : undefined
+                }
+                className={`font-heading font-bold text-base no-underline py-3 px-3 rounded-xl transition-colors ${
+                  pathname === "/programas/preparacion-examenes-internacionales"
+                    ? "text-navy bg-navy-soft"
+                    : "text-ink hover:bg-bg-warm"
+                }`}
+              >
+                Preparación de Exámenes Internacionales
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-line-2">
               <Button
                 href={whatsappUrl()}
                 target="_blank"
@@ -317,31 +353,56 @@ function SubNavDropdown({
 function MobileCategory({
   label,
   items,
+  pathname,
   onItemClick,
 }: {
   label: string;
   items: ProgramItem[];
+  pathname: string | null;
   onItemClick: () => void;
 }) {
+  const [open, setOpen] = useState(false);
+  const isHighlighted = matchesAny(items, pathname);
+
   return (
-    <div className="mt-2 pt-3 border-t border-line-2">
-      <div className="block font-heading font-bold text-base py-3 px-2 text-ink">
-        {label}
-      </div>
-      <div className="ml-2 mt-1 mb-2 grid grid-cols-1 min-[400px]:grid-cols-2 gap-1.5">
-        {items.map((p) => (
-          <a
-            key={p.name}
-            href={p.href}
-            onClick={onItemClick}
-            className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-bg-warm no-underline"
-          >
-            <span className="font-heading font-semibold text-[14px] text-ink leading-tight">
-              {p.name}
-            </span>
-          </a>
-        ))}
-      </div>
+    <div>
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+        className={`w-full flex items-center justify-between gap-2 font-heading font-bold text-base py-3 px-3 rounded-xl transition-colors cursor-pointer ${
+          isHighlighted ? "text-navy bg-navy-soft" : "text-ink hover:bg-bg-warm"
+        }`}
+      >
+        <span>{label}</span>
+        <CaretIcon
+          className={`w-3.5 h-3.5 shrink-0 transition-transform ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+      {open && (
+        <div className="mt-0.5 mb-1 ml-3 pl-3 border-l border-line-2 flex flex-col gap-0.5">
+          {items.map((p) => {
+            const isActive = p.href.startsWith("/") && pathname === p.href;
+            return (
+              <a
+                key={p.name}
+                href={p.href}
+                onClick={onItemClick}
+                aria-current={isActive ? "page" : undefined}
+                className={`block py-2.5 px-3 rounded-lg font-heading font-semibold text-[15px] no-underline transition-colors ${
+                  isActive
+                    ? "text-navy bg-navy-soft"
+                    : "text-ink-2 hover:bg-bg-warm hover:text-navy"
+                }`}
+              >
+                {p.name}
+              </a>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

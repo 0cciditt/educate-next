@@ -6,16 +6,6 @@ export function CentrosEducativosClases() {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="grid gap-12 lg:gap-16 xl:gap-20 lg:grid-cols-2 lg:items-center">
           <div className="relative order-2 lg:order-1 max-w-md lg:max-w-none mx-auto w-full">
-            <div
-              aria-hidden
-              className="hidden sm:block absolute -left-5 -top-5 right-5 bottom-5 bg-green rounded-[32px] z-0"
-              style={{ transform: "rotate(-2deg)" }}
-            />
-            <div
-              aria-hidden
-              className="hidden sm:block absolute left-5 top-5 -right-5 -bottom-5 bg-green-soft rounded-[32px] z-0"
-              style={{ transform: "rotate(3deg)" }}
-            />
             <PhotoPlaceholder
               label="CLASES BILINGÜES EN COLEGIO"
               rounded="rounded-[32px]"

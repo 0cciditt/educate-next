@@ -30,16 +30,6 @@ export function CentrosEducativosPrograma() {
           </div>
 
           <div className="relative max-w-md lg:max-w-none mx-auto w-full">
-            <div
-              aria-hidden
-              className="hidden sm:block absolute -right-5 -top-5 left-5 bottom-5 bg-orange rounded-[32px] z-0"
-              style={{ transform: "rotate(3deg)" }}
-            />
-            <div
-              aria-hidden
-              className="hidden sm:block absolute right-5 top-5 -left-5 -bottom-5 bg-yellow-soft rounded-[32px] z-0"
-              style={{ transform: "rotate(-2deg)" }}
-            />
             <PhotoPlaceholder
               label="ACOMPAÑAMIENTO INSTITUCIONAL"
               rounded="rounded-[32px]"

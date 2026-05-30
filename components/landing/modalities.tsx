@@ -49,7 +49,7 @@ export function Modalities() {
           </article>
 
           <article className="relative overflow-hidden rounded-[32px] bg-yellow-soft p-8 sm:p-10 min-h-[280px] sm:min-h-[320px] flex flex-col justify-end gap-4">
-            <ShuffleIcon className="absolute top-6 right-6 sm:top-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 opacity-85 text-[#8A6B0C]" />
+            <ShuffleIcon className="absolute top-6 right-6 sm:top-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 opacity-85 text-green-deep" />
             <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-[#8A6B0C]">
               LO MEJOR DE LOS DOS
             </div>

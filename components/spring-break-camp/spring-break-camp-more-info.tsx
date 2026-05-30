@@ -59,7 +59,7 @@ export function SpringBreakCampMoreInfo() {
                   rel="noopener noreferrer"
                   variant="secondary"
                   size="lg"
-                  className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+                  className="w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
                 >
                   Escríbenos por WhatsApp
                 </Button>

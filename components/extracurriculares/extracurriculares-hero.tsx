@@ -67,7 +67,7 @@ export function ExtracurricularesHero() {
             aria-roledescription="slide"
             aria-label={`${i + 1} de ${slides.length}`}
             aria-hidden={i !== index}
-            className={`absolute inset-0 transition-opacity duration-[900ms] ease-out ${
+            className={`absolute inset-0 transition-opacity duration-900 ease-out ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -86,7 +86,7 @@ export function ExtracurricularesHero() {
       {/* Universal vertical scrim — keeps mobile (full-width text) readable */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-1"
         style={{
           background:
             "linear-gradient(180deg, rgba(20,59,92,0.28) 0%, rgba(20,59,92,0.58) 100%)",
@@ -95,7 +95,7 @@ export function ExtracurricularesHero() {
       {/* Left-column scrim — guarantees contrast under the text on desktop */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-1"
         style={{
           background:
             "linear-gradient(95deg, rgba(20,59,92,0.72) 0%, rgba(20,59,92,0.5) 35%, rgba(20,59,92,0.12) 65%, transparent 85%)",
@@ -112,7 +112,7 @@ export function ExtracurricularesHero() {
           </div>
 
           <h1
-            className="font-display text-[clamp(1.6rem,8vw,4.25rem)] leading-[0.95] tracking-[-0.025em] text-white"
+            className="font-display text-[clamp(1.6rem,8vw,4.25rem)] leading-[0.95] tracking-tight text-white"
             style={{ textShadow: "0 2px 28px rgba(20,59,92,0.55)" }}
           >
             Programas
@@ -144,7 +144,7 @@ export function ExtracurricularesHero() {
               href="#programas"
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+              className="w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
             >
               Conoce los programas
             </Button>

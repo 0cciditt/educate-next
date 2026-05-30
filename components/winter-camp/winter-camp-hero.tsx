@@ -65,7 +65,7 @@ export function WinterCampHero() {
             aria-roledescription="slide"
             aria-label={`${i + 1} de ${slides.length}`}
             aria-hidden={i !== index}
-            className={`absolute inset-0 transition-opacity duration-[900ms] ease-out ${
+            className={`absolute inset-0 transition-opacity duration-900 ease-out ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -83,7 +83,7 @@ export function WinterCampHero() {
 
       <div
         aria-hidden
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-1"
         style={{
           background:
             "linear-gradient(180deg, rgba(20,59,92,0.35) 0%, rgba(20,59,92,0.62) 100%)",
@@ -91,7 +91,7 @@ export function WinterCampHero() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-1"
         style={{
           background:
             "linear-gradient(95deg, rgba(20,59,92,0.78) 0%, rgba(20,59,92,0.5) 35%, rgba(20,59,92,0.12) 65%, transparent 85%)",
@@ -108,7 +108,7 @@ export function WinterCampHero() {
           </div>
 
           <h1
-            className="font-display text-[36px] sm:text-[44px] md:text-5xl lg:text-[60px] xl:text-[72px] leading-[0.95] tracking-[-0.025em] text-white"
+            className="font-display text-[36px] sm:text-[44px] md:text-5xl lg:text-[60px] xl:text-[72px] leading-[0.95] tracking-tight text-white"
             style={{ textShadow: "0 2px 28px rgba(20,59,92,0.55)" }}
           >
             Winter Camp.{" "}
@@ -137,7 +137,7 @@ export function WinterCampHero() {
               href="#international"
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto !bg-white/10 !text-white !border-white/60 backdrop-blur-sm hover:!bg-white/20"
+              className="w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
             >
               Ver destinos
             </Button>

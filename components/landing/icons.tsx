@@ -24,6 +24,9 @@ export {
   HiOutlineBeaker as BeakerIcon,
   HiOutlineSparkles as SparklesIcon,
   HiOutlineRocketLaunch as RocketLaunchIcon,
+  HiOutlinePencilSquare as PencilSquareIcon,
+  HiOutlineAdjustmentsHorizontal as AdjustmentsIcon,
+  HiOutlineClipboardDocumentCheck as ClipboardCheckIcon,
 } from "react-icons/hi2";
 
 // WhatsApp uses its real brand mark rather than a generic chat bubble.

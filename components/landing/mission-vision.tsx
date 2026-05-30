@@ -23,12 +23,6 @@ export function MissionVision() {
 
         <div className="grid gap-6 lg:grid-cols-2">
           <article className="relative overflow-hidden rounded-[32px] bg-orange-soft p-8 sm:p-10 lg:p-12 flex flex-col gap-5">
-            <div className="absolute top-6 right-6 grid grid-cols-2 gap-1 opacity-35">
-              <div className="w-6 h-6 rounded-md bg-orange" />
-              <div className="w-6 h-6 rounded-md bg-yellow" />
-              <div className="w-6 h-6 rounded-md bg-red" />
-              <div className="w-6 h-6 rounded-md bg-burgundy" />
-            </div>
             <div className="font-display text-[13px] tracking-[0.2em] uppercase text-orange-deep">
               Misión
             </div>
@@ -37,20 +31,14 @@ export function MissionVision() {
               <br />
               hablan al mundo.
             </h3>
-            <p className="text-base leading-relaxed text-ink-2 mt-1">
-              Formar personas capaces de liderar, comprender las culturas y de
-              comunicarse en múltiples lenguas para interactuar en un mundo
-              globalizado.
+            <p className="text-base leading-relaxed text-ink-2 mt-1 text-justify">
+             Formamos niños, jóvenes y adultos como líderes globales, desarrollando habilidades comunicativas en múltiples lenguas y competencias interculturales, mediante metodologías y tecnología educativa innovadora. <br />
+            <br />
+            Nos comprometemos con la calidad, el crecimiento continuo y la formación integral de nuestros estudiantes, generando un impacto positivo en la sociedad colombiana y contribuyendo a un mundo más conectado y sostenible.
             </p>
           </article>
 
           <article className="relative overflow-hidden rounded-[32px] bg-navy p-8 sm:p-10 lg:p-12 flex flex-col gap-5 text-white">
-            <div className="absolute top-6 right-6 grid grid-cols-2 gap-1 opacity-45">
-              <div className="w-6 h-6 rounded-md bg-orange" />
-              <div className="w-6 h-6 rounded-md bg-yellow" />
-              <div className="w-6 h-6 rounded-md bg-green" />
-              <div className="w-6 h-6 rounded-md bg-white/15" />
-            </div>
             <div className="font-display text-[13px] tracking-[0.2em] uppercase text-yellow">
               Visión
             </div>
@@ -59,13 +47,8 @@ export function MissionVision() {
               <br />
               multilingüe líder.
             </h3>
-            <p className="text-base leading-relaxed text-white/85 mt-1">
-              Seremos reconocidos como una institución multilingüe, líder en
-              experiencias educativas, lúdicas y significativas, que desarrollan
-              habilidades y competencias en sus estudiantes, aportando a su
-              crecimiento integral y liderazgo, desde experiencias de inmersión
-              que vinculan el dominio de las lenguas y el reconocimiento de
-              otras culturas, aportando al desarrollo social.
+            <p className="text-base leading-relaxed text-white/85 mt-1 text-justify">
+            Para el año 2031, Educate Learning Center será reconocido en el valle del cauca como un referente en educación multilingüe de alta calidad, consolidando una infraestructura moderna y ambientes de aprendizaje innovadores que integren modalidades flexibles (presenciales, virtuales e híbridas). Se destacará por formar estudiantes con liderazgo, competencias interculturales y pensamiento global, contribuyendo de manera sostenible al desarrollo social, educativo y cultural de la región
             </p>
           </article>
         </div>

@@ -74,20 +74,8 @@ function ZigzagRow({
   body,
   bullets,
   imageLabel,
-  imageTone,
   flip,
 }: Row) {
-  const toneBg: Record<Row["imageTone"], string> = {
-    navy: "bg-navy",
-    orange: "bg-orange",
-    green: "bg-green",
-  };
-  const toneSoft: Record<Row["imageTone"], string> = {
-    navy: "bg-navy-soft",
-    orange: "bg-orange-soft",
-    green: "bg-green-soft",
-  };
-
   return (
     <div
       id={id}
@@ -96,16 +84,6 @@ function ZigzagRow({
       }`}
     >
       <div className="relative">
-        <div
-          aria-hidden
-          className={`hidden sm:block absolute -left-4 -top-4 right-4 bottom-4 rounded-[32px] ${toneBg[imageTone]}`}
-          style={{ transform: flip ? "rotate(2deg)" : "rotate(-2deg)" }}
-        />
-        <div
-          aria-hidden
-          className={`hidden sm:block absolute left-4 top-4 -right-4 -bottom-4 rounded-[32px] ${toneSoft[imageTone]}`}
-          style={{ transform: flip ? "rotate(-3deg)" : "rotate(3deg)" }}
-        />
         <PhotoPlaceholder
           label={imageLabel}
           rounded="rounded-[32px]"

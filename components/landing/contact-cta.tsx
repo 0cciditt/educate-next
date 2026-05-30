@@ -57,7 +57,7 @@ export function ContactCTA() {
             <ul className="flex flex-col gap-3.5 mt-8">
               {benefits.map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <CheckIcon className="w-5 h-5 text-orange-deep" />
+                  <CheckIcon className="w-5 h-5 text-green-deep" />
                   <span className="text-base text-ink-2">{b}</span>
                 </li>
               ))}

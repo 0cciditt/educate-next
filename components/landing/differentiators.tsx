@@ -13,28 +13,27 @@ const items: {
     desc: "Más allá del inglés: programas en varias lenguas extranjeras y de segunda lengua.",
   },
   {
-    bg: "bg-orange",
+    bg: "bg-green",
     title: "Experiencias de inmersión",
     desc: "Campamentos, intercambios y vivencias culturales que van más allá del aula.",
   },
   {
-    bg: "bg-navy",
+    bg: "bg-green",
     title: "Profes certificados",
     desc: "Licenciados en lenguas, con TKT, CELTA o experiencia internacional. Hablantes nativos en C1+.",
   },
   {
-    bg: "bg-burgundy",
+    bg: "bg-green",
     title: "Habilidades blandas",
     desc: "Liderazgo, comunicación intercultural y compromiso social integrados en cada programa.",
   },
   {
-    bg: "bg-yellow-deep",
-    iconColor: "text-ink",
+    bg: "bg-green",
     title: "Tiempo libre con propósito",
     desc: "Programas extracurriculares y de aprovechamiento del tiempo libre para todas las edades.",
   },
   {
-    bg: "bg-red",
+    bg: "bg-green",
     title: "Asesoría a instituciones",
     desc: "Acompañamos a colegios y empresas del sector privado en proyectos lingüísticos a medida.",
   },

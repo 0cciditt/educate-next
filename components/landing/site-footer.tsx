@@ -52,7 +52,7 @@ export function SiteFooter() {
           {/* About */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Image
-              src="/brand/logo.png"
+              src="/brand/logo.webp"
               alt="Educate Learning Center"
               width={224}
               height={56}
@@ -60,7 +60,7 @@ export function SiteFooter() {
               style={{ filter: "brightness(0) invert(1)" }}
             />
             <p className="text-white/75 leading-relaxed text-[15px] max-w-[280px] mt-5">
-              Academia de inglés para niños, jóvenes y adultos. Fundada en Cali
+              Academia de idiomas para niños, jóvenes y adultos. Fundada en Cali
               en 2014.
             </p>
             <div className="mt-5 flex gap-2.5">

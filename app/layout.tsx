@@ -35,7 +35,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Educate Learning Center — Aprende inglés que te lleva al mundo",
   description:
-    "Academia de inglés en Cali para niños, jóvenes y adultos. Grupos pequeños, profes certificados, metodología 100% conversacional y certificación Cambridge.",
+    "Academia de idiomas en Cali para niños, jóvenes y adultos. Grupos pequeños, profes certificados, metodología 100% conversacional y certificación Cambridge.",
 };
 
 export default function RootLayout({

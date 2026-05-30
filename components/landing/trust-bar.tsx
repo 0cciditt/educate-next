@@ -3,19 +3,19 @@ import { TrophyIcon, GraduationCapIcon, CheckIcon, UsersIcon } from "./icons";
 
 const items = [
   {
-    bg: "bg-navy",
+    bg: "bg-green",
     icon: <GraduationCapIcon className="w-5 h-5 text-white" />,
     title: "Marco Común Europeo",
     sub: "Homologados A1 a C2",
   },
   {
-    bg: "bg-burgundy",
+    bg: "bg-green",
     icon: <CheckIcon className="w-5 h-5 text-white" />,
     title: "Cambridge Authorized",
     sub: "Centro de preparación oficial",
   },
   {
-    bg: "bg-orange",
+    bg: "bg-green",
     icon: <UsersIcon className="w-5 h-5 text-white" />,
     title: "Profes certificados",
     sub: "TKT, CELTA y nativos",

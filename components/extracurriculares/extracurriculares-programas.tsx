@@ -16,10 +16,8 @@ type Program = {
   description: string;
   highlights: string[];
   photoLabel: string;
-  // brand accent applied to the icon chip + decor blocks
+  // brand accent applied to the icon chip
   chip: string;
-  decorBack: string;
-  decorFront: string;
   bullet: string;
 };
 
@@ -38,8 +36,6 @@ const programs: Program[] = [
     ],
     photoLabel: "CLUB DE DELETREO EN INGLÉS",
     chip: "bg-orange",
-    decorBack: "bg-orange",
-    decorFront: "bg-orange-soft",
     bullet: "text-orange",
   },
   {
@@ -56,8 +52,6 @@ const programs: Program[] = [
     ],
     photoLabel: "MATEMÁTICAS EN INGLÉS CON RETOS",
     chip: "bg-navy",
-    decorBack: "bg-navy",
-    decorFront: "bg-navy-soft",
     bullet: "text-navy",
   },
   {
@@ -74,8 +68,6 @@ const programs: Program[] = [
     ],
     photoLabel: "EXPLORACIÓN CIENTÍFICA PARA NIÑOS",
     chip: "bg-green",
-    decorBack: "bg-green",
-    decorFront: "bg-green-soft",
     bullet: "text-green",
   },
   {
@@ -92,8 +84,6 @@ const programs: Program[] = [
     ],
     photoLabel: "EXPERIENCIA DE LIDERAZGO PARA JÓVENES",
     chip: "bg-burgundy",
-    decorBack: "bg-burgundy",
-    decorFront: "bg-burgundy-soft",
     bullet: "text-burgundy",
   },
 ];
@@ -131,16 +121,6 @@ export function ExtracurricularesProgramas() {
                     photoLeft ? "order-2 lg:order-1" : "order-2"
                   }`}
                 >
-                  <div
-                    aria-hidden
-                    className={`hidden sm:block absolute -left-5 -top-5 right-5 bottom-5 rounded-[32px] z-0 ${p.decorBack}`}
-                    style={{ transform: "rotate(-3deg)" }}
-                  />
-                  <div
-                    aria-hidden
-                    className={`hidden sm:block absolute left-5 top-5 -right-5 -bottom-5 rounded-[32px] z-0 ${p.decorFront}`}
-                    style={{ transform: "rotate(2deg)" }}
-                  />
                   <PhotoPlaceholder
                     label={p.photoLabel}
                     rounded="rounded-[32px]"

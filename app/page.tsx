@@ -10,13 +10,11 @@ import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
 import { Stats } from "@/components/landing/stats";
 import { Testimonials } from "@/components/landing/testimonials";
-import { TopBar } from "@/components/landing/top-bar";
 import { TrustBar } from "@/components/landing/trust-bar";
 
 export default function Home() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <HeroCarousel />
