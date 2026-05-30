@@ -17,6 +17,12 @@ const campamentos: ProgramItem[] = [
   { name: "Winter Camp", href: "/programas/winter-camp" },
 ];
 
+const programasIngles: ProgramItem[] = [
+  { name: "Inglés niños y adolescentes", href: "/programas/young-learners" },
+  { name: "Inglés adultos y jóvenes (14+)", href: "/programas/live-english" },
+  { name: "Español para extranjeros", href: "/programas/espanol-para-extranjeros" },
+];
+
 const extracurriculares: ProgramItem[] = [
   { name: "SpellingBee", href: "/programas/extracurriculares#spelling-bee" },
   { name: "Math Genius", href: "/programas/extracurriculares#math-genius" },
@@ -47,7 +53,7 @@ const links: NavLink[] = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-type MenuId = "campamentos" | "extracurriculares" | "corporativas";
+type MenuId = "campamentos" | "ingles" | "extracurriculares" | "corporativas";
 
 const matchesAny = (items: ProgramItem[], path: string | null) =>
   items.some(
@@ -140,7 +146,7 @@ export function SiteNavV2() {
 
       {/* Desktop sub-navbar — program category dropdowns */}
       <div className="hidden lg:block bg-navy">
-        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 flex items-center justify-end gap-2">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 flex flex-wrap items-center justify-center gap-x-0.5">
           <SubNavDropdown
             id="campamentos"
             label="Campamentos"
@@ -149,6 +155,17 @@ export function SiteNavV2() {
             isHighlighted={matchesAny(campamentos, pathname)}
             pathname={pathname}
             onOpen={() => handleOpen("campamentos")}
+            onScheduleClose={scheduleClose}
+            onClose={() => setOpenMenu(null)}
+          />
+          <SubNavDropdown
+            id="ingles"
+            label="Programas de Idiomas"
+            items={programasIngles}
+            isOpen={openMenu === "ingles"}
+            isHighlighted={matchesAny(programasIngles, pathname)}
+            pathname={pathname}
+            onOpen={() => handleOpen("ingles")}
             onScheduleClose={scheduleClose}
             onClose={() => setOpenMenu(null)}
           />
@@ -176,9 +193,9 @@ export function SiteNavV2() {
           />
           <Link
             href="/programas/preparacion-examenes-internacionales"
-            className={`relative font-heading font-bold text-[14px] px-5 py-3.5 inline-flex items-center gap-2 transition-colors no-underline ${
+            className={`relative font-heading font-bold text-[15px] px-4 py-4 inline-flex items-center gap-1.5 transition-colors no-underline ${
               pathname === "/programas/preparacion-examenes-internacionales"
-                ? "text-yellow after:content-[''] after:absolute after:left-5 after:right-5 after:bottom-0 after:h-[3px] after:bg-yellow after:rounded-t-full"
+                ? "text-yellow after:content-[''] after:absolute after:left-4 after:right-4 after:bottom-0 after:h-[3px] after:bg-yellow after:rounded-t-full"
                 : "text-white hover:text-yellow"
             }`}
           >
@@ -209,6 +226,12 @@ export function SiteNavV2() {
               <MobileCategory
                 label="Campamentos"
                 items={campamentos}
+                pathname={pathname}
+                onItemClick={close}
+              />
+              <MobileCategory
+                label="Programas de Idiomas"
+                items={programasIngles}
                 pathname={pathname}
                 onItemClick={close}
               />
@@ -302,9 +325,9 @@ function SubNavDropdown({
         aria-haspopup="true"
         aria-expanded={isOpen}
         onClick={() => (isOpen ? onClose() : onOpen())}
-        className={`relative font-heading font-bold text-[14px] px-5 py-3.5 inline-flex items-center gap-2 transition-colors cursor-pointer ${
+        className={`relative font-heading font-bold text-[15px] px-4 py-4 inline-flex items-center gap-1.5 transition-colors cursor-pointer ${
           isHighlighted
-            ? "text-yellow after:content-[''] after:absolute after:left-5 after:right-5 after:bottom-0 after:h-[3px] after:bg-yellow after:rounded-t-full"
+            ? "text-yellow after:content-[''] after:absolute after:left-4 after:right-4 after:bottom-0 after:h-[3px] after:bg-yellow after:rounded-t-full"
             : "text-white hover:text-yellow"
         }`}
       >
@@ -322,7 +345,7 @@ function SubNavDropdown({
           id={`subnav-${id}`}
           className="absolute right-0 top-full pt-2 z-50"
         >
-          <div className="w-[280px] bg-white rounded-2xl shadow-brand-lg border border-line-2 p-2">
+          <div className="w-[300px] bg-white rounded-2xl shadow-brand-lg border border-line-2 p-2">
             {items.map((p) => {
               const isActive =
                 p.href.startsWith("/") && pathname === p.href;
@@ -333,7 +356,7 @@ function SubNavDropdown({
                   role="menuitem"
                   aria-current={isActive ? "page" : undefined}
                   onClick={onClose}
-                  className={`block px-4 py-2.5 rounded-lg font-heading font-bold text-[14px] no-underline transition-colors ${
+                  className={`block px-4 py-3 rounded-lg font-heading font-bold text-[15px] no-underline transition-colors ${
                     isActive
                       ? "text-navy bg-navy-soft"
                       : "text-ink hover:bg-bg-warm hover:text-navy"

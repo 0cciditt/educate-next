@@ -10,7 +10,11 @@
       "Read(//c/Users/JULIAN/Desktop/educate-next/**)",
       "Bash(mkdir -p /c/Users/JULIAN/Desktop/educate-next/public/brand)",
       "Bash(cp /c/Users/JULIAN/Desktop/educate-next/.design/project/brand/logo.png /c/Users/JULIAN/Desktop/educate-next/public/brand/logo.png)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(magick _favicon_preview.png -resize 512x512 icon.png)",
+      "Bash(magick _favicon_preview.png -resize 180x180 apple-icon.png)",
+      "Bash(magick _favicon_preview.png -define icon:auto-resize=16,32,48 favicon.ico)",
+      "Bash(rm _favicon_preview.png)"
     ]
   }
 }

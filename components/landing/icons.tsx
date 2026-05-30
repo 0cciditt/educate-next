@@ -27,6 +27,8 @@ export {
   HiOutlinePencilSquare as PencilSquareIcon,
   HiOutlineAdjustmentsHorizontal as AdjustmentsIcon,
   HiOutlineClipboardDocumentCheck as ClipboardCheckIcon,
+  HiOutlineChatBubbleLeftRight as ChatIcon,
+  HiOutlineFaceSmile as FaceSmileIcon,
 } from "react-icons/hi2";
 
 // WhatsApp uses its real brand mark rather than a generic chat bubble.
