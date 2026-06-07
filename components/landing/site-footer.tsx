@@ -119,8 +119,14 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 py-6 border-t border-white/15 text-[13px] text-white/60">
-          © 2026 Educate Learning Center®, S.A.S. · Cali, Valle del Cauca
+        <div className="mt-12 py-6 border-t border-white/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-[13px] text-white/60">
+          <span>© 2026 Educate Learning Center®, S.A.S. · Cali, Valle del Cauca</span>
+          <a
+            href="/habeas-data"
+            className="text-white/60 hover:text-white no-underline"
+          >
+            Política de Tratamiento de Datos Personales
+          </a>
         </div>
       </div>
 

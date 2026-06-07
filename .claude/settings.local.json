@@ -14,7 +14,8 @@
       "Bash(magick _favicon_preview.png -resize 512x512 icon.png)",
       "Bash(magick _favicon_preview.png -resize 180x180 apple-icon.png)",
       "Bash(magick _favicon_preview.png -define icon:auto-resize=16,32,48 favicon.ico)",
-      "Bash(rm _favicon_preview.png)"
+      "Bash(rm _favicon_preview.png)",
+      "Bash(npx eslint *)"
     ]
   }
 }
