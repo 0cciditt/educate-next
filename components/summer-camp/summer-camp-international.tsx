@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { GlobeIcon } from "../landing/icons";
 
 type Destination = {
   country: string;
-  flagBg: string;
-  flagAccent: string;
+  flag: string;
   tagline: string;
   body: string;
   meta: { label: string; value: string }[];
@@ -12,8 +12,7 @@ type Destination = {
 const destinations: Destination[] = [
   {
     country: "Canadá",
-    flagBg: "bg-red",
-    flagAccent: "bg-white",
+    flag: "/flags/Flag-of-Canada.svg",
     tagline: "Naturaleza y bilingüismo.",
     body: "Convenios con campamentos de verano en Ontario y la Columbia Británica. Inglés con un guiño francófono y un entorno seguro y natural.",
     meta: [
@@ -23,8 +22,7 @@ const destinations: Destination[] = [
   },
   {
     country: "Estados Unidos",
-    flagBg: "bg-navy",
-    flagAccent: "bg-white",
+    flag: "/flags/Flag-of-the-United-States.svg",
     tagline: "Cultura, deporte y liderazgo.",
     body: "Alianzas con campamentos en la costa este y oeste de EE.UU. Inmersión total en inglés combinando deporte, arte, ciencia y vida en comunidad.",
     meta: [
@@ -34,13 +32,22 @@ const destinations: Destination[] = [
   },
   {
     country: "Alemania",
-    flagBg: "bg-yellow-deep",
-    flagAccent: "bg-ink",
-    tagline: "Europa, en alemán.",
-    body: "Convenios con instituciones aliadas en Alemania para vivir el idioma y la cultura europea. Una experiencia que abre puertas académicas y profesionales.",
+    flag: "/flags/Flag-of-Germany.svg",
+    tagline: "Europa, en inglés.",
+    body: "Convenios con instituciones aliadas en Alemania. El programa se vive en inglés, mientras te sumerges en la cultura europea y el alemán del día a día.",
     meta: [
       { label: "Duración", value: "2–4 semanas" },
-      { label: "Idioma", value: "Alemán + inglés" },
+      { label: "Idioma", value: "Inglés · alemán local" },
+    ],
+  },
+  {
+    country: "Polonia",
+    flag: "/flags/Flag-of-Poland.svg",
+    tagline: "Europa central, en inglés.",
+    body: "Convenios con campamentos en Polonia para vivir el inglés en un entorno europeo seguro, lleno de historia, naturaleza y nuevas amistades internacionales.",
+    meta: [
+      { label: "Duración", value: "2–4 semanas" },
+      { label: "Idioma", value: "Inglés" },
     ],
   },
 ];
@@ -76,7 +83,7 @@ export function SummerCampInternational() {
               <br />
               instituciones aliadas
               <br />
-              en tres países.
+              en cuatro países.
             </h2>
           </div>
           <p className="text-lg leading-relaxed text-white/85 lg:max-w-[480px]">
@@ -87,20 +94,24 @@ export function SummerCampInternational() {
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {destinations.map((d) => (
             <article
               key={d.country}
-              className="relative flex flex-col gap-4 rounded-[28px] bg-white/[0.06] border border-white/15 p-7 sm:p-8 backdrop-blur-sm"
+              className="reveal-up relative flex flex-col gap-4 rounded-[28px] bg-white/[0.06] border border-white/15 p-6 sm:p-7 backdrop-blur-sm transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1] hover:border-white/25"
             >
               <div className="flex items-center gap-3">
-                <div
-                  className={`w-11 h-11 rounded-xl grid place-items-center ${d.flagBg}`}
-                  aria-hidden
-                >
-                  <span className={`w-4 h-4 rounded-sm ${d.flagAccent}`} />
-                </div>
-                <div className="font-display text-2xl sm:text-[28px] leading-none text-white">
+                <span className="relative w-12 h-8 rounded-md overflow-hidden shrink-0 ring-1 ring-white/25 shadow-sm">
+                  <Image
+                    src={d.flag}
+                    alt=""
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </span>
+                <div className="font-display text-2xl sm:text-[26px] leading-none text-white">
                   {d.country}
                 </div>
               </div>
@@ -129,7 +140,7 @@ export function SummerCampInternational() {
         <div className="mt-10 lg:mt-12 grid gap-4 sm:grid-cols-3 rounded-2xl bg-white/[0.06] border border-white/15 p-6 sm:p-7">
           <FactRow label="Edad mínima" value="6 años" />
           <FactRow label="Temporada" value="Mayo a agosto" />
-          <FactRow label="Acompañamiento" value="Educate · de punta a punta" />
+          <FactRow label="Apoyo" value="Educate · de punta a punta" />
         </div>
       </div>
     </section>

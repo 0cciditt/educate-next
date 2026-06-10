@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { PhotoPlaceholder } from "../ui/photo-placeholder";
+
+type Tone = "navy" | "orange" | "green";
 
 type Row = {
   id?: string;
@@ -8,8 +9,16 @@ type Row = {
   body: string;
   bullets: { label: string; value: string }[];
   imageLabel: string;
-  imageTone: "navy" | "orange" | "green";
+  imageTone: Tone;
   flip?: boolean;
+};
+
+const toneGradient: Record<Tone, string> = {
+  navy: "linear-gradient(145deg, var(--color-navy) 0%, var(--color-navy-deep) 100%)",
+  orange:
+    "linear-gradient(145deg, var(--color-orange) 0%, var(--color-orange-deep) 100%)",
+  green:
+    "linear-gradient(145deg, var(--color-green) 0%, var(--color-green-deep) 100%)",
 };
 
 const rows: Row[] = [
@@ -47,7 +56,7 @@ const rows: Row[] = [
     bullets: [
       { label: "Actividades", value: "Juego · arte · deporte" },
       { label: "Habilidades", value: "Autonomía y trabajo en equipo" },
-      { label: "Acompañamiento", value: "Equipo Educate certificado" },
+      { label: "Apoyo", value: "Equipo Educate certificado" },
       { label: "Cierre", value: "Showcase para familias" },
     ],
     imageLabel: "EXPERIENCIAS QUE TRANSFORMAN",
@@ -58,7 +67,7 @@ const rows: Row[] = [
 export function RecessCampZigzag() {
   return (
     <section className="bg-bg-warm py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 flex flex-col gap-16 sm:gap-20 lg:gap-24">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 flex flex-col gap-8 sm:gap-12 lg:gap-24">
         {rows.map((r) => (
           <ZigzagRow key={r.eyebrow} {...r} />
         ))}
@@ -74,37 +83,53 @@ function ZigzagRow({
   body,
   bullets,
   imageLabel,
+  imageTone,
   flip,
 }: Row) {
   return (
     <div
       id={id}
-      className={`grid gap-10 lg:gap-16 lg:items-center lg:grid-cols-2 ${
+      className={`reveal-up overflow-hidden rounded-[28px] bg-white ring-1 ring-line-2 shadow-brand-md lg:grid lg:gap-16 lg:items-center lg:grid-cols-2 lg:overflow-visible lg:rounded-none lg:bg-transparent lg:ring-0 lg:shadow-none ${
         flip ? "lg:[&>*:first-child]:order-2" : ""
       }`}
     >
-      <div className="relative">
-        <PhotoPlaceholder
-          label={imageLabel}
-          rounded="rounded-[32px]"
-          className="relative z-10 aspect-[4/3] shadow-brand-lg"
+      <div
+        className="relative aspect-[16/10] overflow-hidden lg:aspect-[4/3] lg:rounded-[32px] lg:shadow-brand-lg"
+        style={{ background: toneGradient[imageTone] }}
+      >
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(120% 85% at 18% 0%, rgba(255,255,255,0.22), transparent 55%), linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.22) 100%)",
+          }}
         />
+        <span className="absolute bottom-5 left-6 font-display text-base tracking-[0.04em] text-white/95">
+          {imageLabel}
+        </span>
+        <span className="absolute top-5 right-6 font-mono text-[10px] tracking-[0.16em] uppercase text-white/55">
+          Imagen
+        </span>
       </div>
 
-      <div>
+      <div className="p-6 sm:p-8 lg:p-0">
         <div className="font-mono text-[11px] tracking-[0.18em] text-orange uppercase">
           {eyebrow}
         </div>
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] leading-[0.95] tracking-tight mt-3 text-ink">
+        <h2 className="font-display text-2xl sm:text-3xl lg:text-5xl xl:text-[56px] leading-[1.05] lg:leading-[0.95] tracking-tight mt-2 lg:mt-3 text-ink">
           {title}
         </h2>
-        <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[520px]">
+        <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-5 max-w-[520px]">
           {body}
         </p>
 
-        <dl className="mt-7 grid gap-x-8 gap-y-4 sm:grid-cols-2 max-w-[520px]">
+        <dl className="mt-5 lg:mt-7 grid grid-cols-2 gap-2.5 lg:gap-x-8 lg:gap-y-4 max-w-[520px]">
           {bullets.map((b) => (
-            <div key={b.label} className="flex flex-col gap-1">
+            <div
+              key={b.label}
+              className="flex flex-col gap-1 rounded-xl bg-bg-warm p-3.5 lg:rounded-none lg:bg-transparent lg:p-0"
+            >
               <dt className="font-mono text-[11px] tracking-[0.18em] text-ink-3 uppercase">
                 {b.label}
               </dt>

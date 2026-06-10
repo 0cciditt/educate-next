@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 import { SpringBreakCampHero } from "@/components/spring-break-camp/spring-break-camp-hero";
 import { SpringBreakCampHighlights } from "@/components/spring-break-camp/spring-break-camp-highlights";
 import { SpringBreakCampMoreInfo } from "@/components/spring-break-camp/spring-break-camp-more-info";
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function SpringBreakCampPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <SpringBreakCampHero />

@@ -39,13 +39,13 @@ export function ContactCTA() {
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="grid gap-10 lg:gap-16 lg:grid-cols-[1.3fr_1fr] items-center">
-          <div>
+          <div className="reveal-up">
             <div className="font-display text-[13px] tracking-[0.2em] text-orange uppercase">
               Casa abierta
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-tight mt-2 text-ink">
-              Ven a vivir
-              <br />
+            <h2 className="font-display text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] sm:leading-[0.95] tracking-tight mt-2 text-ink text-balance">
+              Ven a vivir{" "}
+              <br className="hidden sm:block" />
               una experiencia real.
             </h2>
             <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[560px]">
@@ -57,7 +57,9 @@ export function ContactCTA() {
             <ul className="flex flex-col gap-3.5 mt-8">
               {benefits.map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <CheckIcon className="w-5 h-5 text-green-deep" />
+                  <span className="grid place-items-center w-7 h-7 rounded-full bg-green-soft text-green-deep shrink-0">
+                    <CheckIcon className="w-4 h-4" />
+                  </span>
                   <span className="text-base text-ink-2">{b}</span>
                 </li>
               ))}

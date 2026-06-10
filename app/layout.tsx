@@ -46,9 +46,10 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${archivoBlack.variable} ${archivo.variable} ${nunito.variable} ${jetbrainsMono.variable}`}
+      data-scroll-behavior="smooth"
+      className={`overflow-x-clip ${archivoBlack.variable} ${archivo.variable} ${nunito.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-white text-ink font-sans antialiased">
+      <body className="min-h-screen flex flex-col overflow-x-clip bg-white text-ink font-sans antialiased">
         {children}
         <WhatsAppFab />
       </body>

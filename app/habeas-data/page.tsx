@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 import { Button } from "@/components/ui/button";
 import { chapters, policyMeta, type Node } from "./policy-content";
 
@@ -50,7 +49,6 @@ function NodeBlock({ node }: { node: Node }) {
 export default function HabeasDataPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         {/* Encabezado */}

@@ -7,7 +7,14 @@ import {
   UsersIcon,
 } from "./icons";
 
-const pillars: {
+/**
+ * Mobile-only "Principios y valores" — an image-first, editorial redesign.
+ * Each principle leads with a large colour-rich photo slot (placeholder for
+ * now) carrying the index and a faint icon watermark; a floating icon sticker
+ * bridges into a clean card body with the title and copy. Hidden at `lg`+,
+ * where the four-up `Methodology` grid takes over instead.
+ */
+const principles: {
   n: string;
   title: string;
   desc: string;
@@ -66,30 +73,28 @@ const pillars: {
   },
 ];
 
-export function Methodology() {
+export function PrinciplesMobile() {
   return (
-    <section className="hidden lg:block bg-bg-warm py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
-        <div className="font-display text-[13px] tracking-[0.2em] text-orange uppercase">
+    <section className="lg:hidden bg-bg-warm py-14">
+      <div className="px-4">
+        <div className="font-display text-[12px] tracking-[0.2em] text-orange uppercase">
           Principios y valores
         </div>
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[0.95] tracking-tight mt-2 text-ink">
+        <h2 className="font-display text-[34px] leading-[0.97] tracking-tight mt-2 text-ink">
           Lo que enseñamos
           <br />
           lo vivimos primero.
         </h2>
-        <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[720px]">
-          Educación para la vida, ciudadanos del mundo, liderazgo integral,
-          corresponsabilidad, interdependencia, solidaridad, confianza, respeto,
-          comunidad, inclusión e interioridad. Estos cuatro principios reúnen el
-          espíritu de Educate.
+        <p className="text-[15px] leading-relaxed text-ink-2 mt-4">
+          Cuatro principios reúnen el espíritu de Educate — educación para la
+          vida, ciudadanos del mundo, liderazgo integral y comunidad.
         </p>
 
-        <div className="grid gap-7 sm:grid-cols-2 xl:grid-cols-4 mt-12">
-          {pillars.map((p) => (
+        <div className="flex flex-col gap-7 mt-10">
+          {principles.map((p) => (
             <article
               key={p.n}
-              className="reveal-up group flex flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-line-2 shadow-brand-md transition-shadow duration-300 hover:shadow-brand-lg"
+              className="reveal-up overflow-hidden rounded-[28px] bg-white ring-1 ring-line-2 shadow-brand-md"
             >
               {/* Image-first photo slot */}
               <div
@@ -101,8 +106,8 @@ export function Methodology() {
                     src={p.image}
                     alt={p.imageAlt ?? ""}
                     fill
-                    sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                    sizes="(min-width: 1024px) 0px, 100vw"
+                    className="object-cover"
                   />
                 )}
                 {/* Depth scrim — keeps the index chip legible */}
@@ -119,7 +124,7 @@ export function Methodology() {
                 {!p.image && (
                   <div
                     aria-hidden
-                    className="absolute -bottom-7 -right-5 opacity-[0.16] rotate-[-8deg] transition-transform duration-500 ease-out group-hover:scale-110 [&>svg]:w-44 [&>svg]:h-44 [&>svg]:text-white"
+                    className="absolute -bottom-7 -right-5 opacity-[0.16] [&>svg]:w-44 [&>svg]:h-44 [&>svg]:text-white rotate-[-8deg]"
                   >
                     {p.icon}
                   </div>
@@ -137,13 +142,13 @@ export function Methodology() {
               </div>
 
               {/* Body */}
-              <div className="relative flex flex-col px-7 pb-8">
+              <div className="relative px-6 pb-7">
                 <div
                   className={`-mt-9 mb-4 grid place-items-center w-[68px] h-[68px] rounded-2xl ring-4 ring-white shadow-brand-md ${p.chip}`}
                 >
                   {p.icon}
                 </div>
-                <h3 className="font-display text-[22px] leading-[1.08] tracking-tight text-ink">
+                <h3 className="font-display text-[26px] leading-[1.04] tracking-tight text-ink">
                   {p.title}
                 </h3>
                 <p className="text-[15px] leading-relaxed text-ink-3 mt-2.5">

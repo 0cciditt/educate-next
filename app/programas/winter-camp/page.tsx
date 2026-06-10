@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 import { WinterCampHero } from "@/components/winter-camp/winter-camp-hero";
 import { WinterCampHighlights } from "@/components/winter-camp/winter-camp-highlights";
 import { WinterCampInternational } from "@/components/winter-camp/winter-camp-international";
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 export default function WinterCampPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <WinterCampHero />

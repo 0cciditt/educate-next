@@ -103,7 +103,7 @@ export function ExtracurricularesHero() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 min-h-[360px] sm:min-h-[400px] md:min-h-[440px] lg:min-h-[480px] flex flex-col justify-center">
-        <div className="max-w-[760px]">
+        <div className="max-w-[760px] text-center lg:text-left">
           <div className="inline-flex items-center gap-2.5 bg-white/15 border border-white/25 backdrop-blur-md rounded-pill pl-2 pr-4 py-2 text-[13px] text-white mb-5">
             <span className="bg-orange text-white px-2.5 py-1 rounded-pill font-display text-[11px] tracking-[0.08em]">
               EXTRA
@@ -121,7 +121,7 @@ export function ExtracurricularesHero() {
           </h1>
 
           <p
-            className="text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[560px]"
+            className="text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[560px] mx-auto lg:mx-0 line-clamp-3 sm:line-clamp-none"
             style={{ textShadow: "0 1px 14px rgba(20,59,92,0.5)" }}
           >
             Espacios donde niños y jóvenes siguen aprendiendo inglés más allá
@@ -129,7 +129,7 @@ export function ExtracurricularesHero() {
             través del juego y la curiosidad.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+          <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:justify-center lg:justify-start">
             <Button
               href={whatsappUrl()}
               target="_blank"
@@ -144,7 +144,7 @@ export function ExtracurricularesHero() {
               href="#programas"
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
+              className="max-sm:hidden w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
             >
               Conoce los programas
             </Button>
@@ -153,7 +153,7 @@ export function ExtracurricularesHero() {
       </div>
 
       {/* Carousel controls */}
-      <div className="absolute z-20 bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-4 md:right-6 lg:right-12 xl:right-16 flex items-center gap-2 sm:gap-3 bg-black/20 backdrop-blur-md border border-white/15 rounded-pill px-2.5 sm:px-3 py-1.5 sm:py-2">
+      <div className="absolute z-20 bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:right-4 md:right-6 lg:right-12 xl:right-16 hidden sm:flex items-center gap-2 sm:gap-3 bg-black/20 backdrop-blur-md border border-white/15 rounded-pill px-2.5 sm:px-3 py-1.5 sm:py-2">
         <div
           className="flex items-center gap-1.5 sm:gap-2"
           role="tablist"

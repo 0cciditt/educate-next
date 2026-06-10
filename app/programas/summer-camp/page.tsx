@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 import { SummerCampHero } from "@/components/summer-camp/summer-camp-hero";
 import { SummerCampHighlights } from "@/components/summer-camp/summer-camp-highlights";
 import { SummerCampInternational } from "@/components/summer-camp/summer-camp-international";
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 export default function SummerCampPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <SummerCampHero />

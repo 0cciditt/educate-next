@@ -56,8 +56,8 @@ export function SiteFooter() {
               alt="Educate Learning Center"
               width={224}
               height={56}
-              className="h-14 w-auto"
-              style={{ filter: "brightness(0) invert(1)" }}
+              className="h-12 lg:h-16 w-auto"
+              style={{ width: "auto", filter: "brightness(0) invert(1)" }}
             />
             <p className="text-white/75 leading-relaxed text-[15px] max-w-[280px] mt-5">
               Academia de idiomas para niños, jóvenes y adultos. Fundada en Cali

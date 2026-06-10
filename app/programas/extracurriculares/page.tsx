@@ -5,7 +5,6 @@ import { ExtracurricularesProgramas } from "@/components/extracurriculares/extra
 import { Sedes } from "@/components/landing/sedes";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 
 export const metadata: Metadata = {
   title: "Programas Extracurriculares — Educate Learning Center",
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function ExtracurricularesPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <ExtracurricularesHero />

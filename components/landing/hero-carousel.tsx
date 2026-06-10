@@ -25,20 +25,23 @@ const slides: Slide[] = [
 export function HeroCarousel() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    if (paused) return;
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return;
-    }
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    if (paused || reducedMotion) return;
     const id = window.setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
     }, 5500);
     return () => window.clearInterval(id);
-  }, [paused]);
+  }, [paused, reducedMotion]);
 
   const prev = () =>
     setIndex((i) => (i - 1 + slides.length) % slides.length);
@@ -72,8 +75,10 @@ export function HeroCarousel() {
               alt={s.alt}
               fill
               priority={i === 0}
-              sizes="100vw"
-              className="object-cover"
+              sizes="(min-width: 1024px) 100vw, 0px"
+              className={`object-cover transition-transform duration-[900ms] ease-out ${
+                i === index ? "ken-burns-active" : "scale-100"
+              }`}
             />
           </div>
         ))}
@@ -98,9 +103,12 @@ export function HeroCarousel() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:min-h-[460px] flex flex-col justify-center">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:min-h-[560px] xl:min-h-[640px] flex flex-col justify-center">
         <div className="max-w-[640px]">
-          <div className="inline-flex items-center gap-2.5 bg-white/15 border border-white/25 backdrop-blur-md rounded-pill pl-2 pr-4 py-2 text-[13px] text-white mb-5">
+          <div
+            className="hero-rise inline-flex items-center gap-2.5 bg-white/15 border border-white/25 backdrop-blur-md rounded-pill pl-2 pr-4 py-2 text-[13px] text-white mb-5"
+            style={{ animationDelay: "60ms" }}
+          >
             <span className="bg-orange text-white px-2.5 py-1 rounded-pill font-display text-[11px] tracking-[0.08em]">
               NUEVO
             </span>
@@ -108,23 +116,32 @@ export function HeroCarousel() {
           </div>
 
           <h1
-            className="font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-tight text-white"
-            style={{ textShadow: "0 2px 28px rgba(20,59,92,0.55)" }}
+            className="hero-rise font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-tight text-white"
+            style={{
+              textShadow: "0 2px 28px rgba(20,59,92,0.55)",
+              animationDelay: "160ms",
+            }}
           >
             Educate abre las puertas del mundo <br />
             <span className="text-orange">para tu hijo</span>
           </h1>
 
           <p
-            className="text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[560px]"
-            style={{ textShadow: "0 1px 14px rgba(20,59,92,0.5)" }}
+            className="hero-rise text-lg sm:text-xl text-white/95 leading-relaxed mt-5 sm:mt-6 max-w-[560px]"
+            style={{
+              textShadow: "0 1px 14px rgba(20,59,92,0.5)",
+              animationDelay: "280ms",
+            }}
           >
             Formación en lengua extranjera y segunda lengua, intercambios
             culturales, campamentos de inmersión y desarrollo de habilidades
             blandas. Una experiencia educativa y significativa para tu hijo.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+          <div
+            className="hero-rise mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3"
+            style={{ animationDelay: "400ms" }}
+          >
             <Button
               href={whatsappUrl()}
               target="_blank"
@@ -145,7 +162,10 @@ export function HeroCarousel() {
             </Button>
           </div>
 
-          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/90">
+          <div
+            className="hero-rise mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/90"
+            style={{ animationDelay: "500ms" }}
+          >
             <span className="inline-flex items-center gap-2">
               <span className="text-yellow tracking-[2px] text-lg">★★★★★</span>
               <strong className="text-white">4,9/5</strong>
@@ -174,12 +194,27 @@ export function HeroCarousel() {
               aria-selected={i === index}
               aria-label={`Diapositiva ${i + 1} de ${slides.length}`}
               onClick={() => setIndex(i)}
-              className={`h-1.5 sm:h-2 rounded-full transition-[width,background-color] duration-300 cursor-pointer ${
+              className={`relative overflow-hidden h-1.5 sm:h-2 rounded-full transition-[width,background-color] duration-300 cursor-pointer ${
                 i === index
-                  ? "w-6 sm:w-8 bg-yellow"
+                  ? "w-6 sm:w-8 bg-white/35"
                   : "w-1.5 sm:w-2 bg-white/55 hover:bg-white/85"
               }`}
-            />
+            >
+              {i === index &&
+                (reducedMotion ? (
+                  <span className="absolute inset-0 rounded-full bg-yellow" />
+                ) : (
+                  <span
+                    key={index}
+                    aria-hidden
+                    className="absolute inset-0 origin-left rounded-full bg-yellow"
+                    style={{
+                      animation: "dot-progress 5500ms linear both",
+                      animationPlayState: paused ? "paused" : "running",
+                    }}
+                  />
+                ))}
+            </button>
           ))}
         </div>
         <span aria-hidden className="w-px h-4 sm:h-5 bg-white/20" />

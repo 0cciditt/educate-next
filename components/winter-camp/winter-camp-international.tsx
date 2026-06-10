@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { GlobeIcon } from "../landing/icons";
 
 type Destination = {
   country: string;
-  flagBg: string;
-  flagAccent: string;
+  flag: string;
   tagline: string;
   body: string;
   meta: { label: string; value: string }[];
@@ -12,8 +12,7 @@ type Destination = {
 const destinations: Destination[] = [
   {
     country: "Canadá",
-    flagBg: "bg-red",
-    flagAccent: "bg-white",
+    flag: "/flags/Flag-of-Canada.svg",
     tagline: "Nieve, naturaleza y bilingüismo.",
     body: "Convenios con campamentos de invierno en Ontario y la Columbia Británica. Inglés con un guiño francófono y un entorno seguro, natural y lleno de nieve.",
     meta: [
@@ -23,8 +22,7 @@ const destinations: Destination[] = [
   },
   {
     country: "Estados Unidos",
-    flagBg: "bg-navy",
-    flagAccent: "bg-white",
+    flag: "/flags/Flag-of-the-United-States.svg",
     tagline: "Cultura, deporte y liderazgo.",
     body: "Alianzas con campamentos de invierno en la costa este y oeste de EE. UU. Inmersión total en inglés combinando deporte de nieve, cultura y vida en comunidad.",
     meta: [
@@ -80,15 +78,19 @@ export function WinterCampInternational() {
           {destinations.map((d) => (
             <article
               key={d.country}
-              className="relative flex flex-col gap-4 rounded-[28px] bg-white/[0.06] border border-white/15 p-7 sm:p-8 backdrop-blur-sm"
+              className="reveal-up relative flex flex-col gap-4 rounded-[28px] bg-white/[0.06] border border-white/15 p-7 sm:p-8 backdrop-blur-sm transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1] hover:border-white/25"
             >
               <div className="flex items-center gap-3">
-                <div
-                  className={`w-11 h-11 rounded-xl grid place-items-center ${d.flagBg}`}
-                  aria-hidden
-                >
-                  <span className={`w-4 h-4 rounded-sm ${d.flagAccent}`} />
-                </div>
+                <span className="relative w-12 h-8 rounded-md overflow-hidden shrink-0 ring-1 ring-white/25 shadow-sm">
+                  <Image
+                    src={d.flag}
+                    alt=""
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </span>
                 <div className="font-display text-2xl sm:text-[28px] leading-none text-white">
                   {d.country}
                 </div>
@@ -118,7 +120,7 @@ export function WinterCampInternational() {
         <div className="mt-10 lg:mt-12 grid gap-4 sm:grid-cols-3 rounded-2xl bg-white/[0.06] border border-white/15 p-6 sm:p-7">
           <FactRow label="Edad mínima" value="10 años" />
           <FactRow label="Temporada" value="Diciembre a enero" />
-          <FactRow label="Acompañamiento" value="Educate · de punta a punta" />
+          <FactRow label="Apoyo" value="Educate · de punta a punta" />
         </div>
       </div>
     </section>

@@ -7,7 +7,6 @@ import { CentrosEducativosPrograma } from "@/components/centros-educativos/centr
 import { Sedes } from "@/components/landing/sedes";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 
 export const metadata: Metadata = {
   title: "Programa para Centros Educativos — Educate Learning Center",
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
 export default function CentrosEducativosPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <CentrosEducativosHero />

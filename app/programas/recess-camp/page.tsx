@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
-import { TopBar } from "@/components/landing/top-bar";
 import { RecessCampHero } from "@/components/recess-camp/recess-camp-hero";
 import { RecessCampHighlights } from "@/components/recess-camp/recess-camp-highlights";
 import { RecessCampMoreInfo } from "@/components/recess-camp/recess-camp-more-info";
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function RecessCampPage() {
   return (
     <>
-      <TopBar />
       <SiteNavV2 />
       <main>
         <RecessCampHero />

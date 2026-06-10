@@ -21,6 +21,15 @@
   --color-burgundy-deep: #4f1b2e;
   --color-burgundy-soft: #f1e4e8;
 
+  /* Vivid variants — punchier, saturated versions of the brand hues, used for
+     full-bleed color blocks (e.g. the mobile language-programs stack). */
+  --color-blue-vivid: #2f6fed;
+  --color-blue-vivid-deep: #1c4fd0;
+  --color-lime-vivid: #8fbf1f;
+  --color-lime-vivid-deep: #5c8a0e;
+  --color-violet-vivid: #6c5ce0;
+  --color-violet-vivid-deep: #4a3bc0;
+
   /* Neutrals */
   --color-ink: #161616;
   --color-ink-2: #2e2e2e;
@@ -68,4 +77,85 @@
 button:not(:disabled),
 [role="button"]:not([aria-disabled="true"]) {
   cursor: pointer;
+}
+
+/* Scroll-driven reveal used by the mobile "Principios y valores" cards.
+   Progressively enhanced: elements stay visible where scroll timelines or
+   reduced-motion aren't honoured, and only animate in where supported. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    @keyframes reveal-up {
+      from {
+        opacity: 0;
+        transform: translateY(34px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .reveal-up {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 45%;
+    }
+  }
+}
+
+/* Navbar dropdown entrance — fade + slide down on open. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes nav-dropdown-in {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .nav-dropdown-in {
+    animation: nav-dropdown-in 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* Desktop hero — staggered content entrance + slow Ken Burns drift on the
+   active slide. Both gated to reduced-motion: no-preference, so reduced-motion
+   visitors get the static end state. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .hero-rise {
+    animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes ken-burns {
+    from {
+      transform: scale(1.001);
+    }
+    to {
+      transform: scale(1.09);
+    }
+  }
+  .ken-burns-active {
+    animation: ken-burns 6.5s ease-out both;
+  }
+}
+
+/* Autoplay progress fill on the active carousel dot. Gated in JS for
+   reduced-motion, so the keyframe itself stays unconditional. */
+@keyframes dot-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }

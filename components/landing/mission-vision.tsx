@@ -1,6 +1,6 @@
 export function MissionVision() {
   return (
-    <section id="mision" className="bg-white py-16 sm:py-20 lg:py-24">
+    <section id="mision" className="hidden lg:block bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 lg:items-end mb-12">
           <div>
