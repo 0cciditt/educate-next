@@ -6,6 +6,7 @@ import {
   CheckIcon,
   RocketLaunchIcon,
 } from "../landing/icons";
+import Image from "next/image";
 import { PhotoPlaceholder } from "../ui/photo-placeholder";
 
 type Program = {
@@ -16,6 +17,9 @@ type Program = {
   description: string;
   highlights: string[];
   photoLabel: string;
+  /** Optional real photo; replaces the placeholder when set. */
+  image?: string;
+  imageAlt?: string;
   // brand accent applied to the icon chip
   chip: string;
   bullet: string;
@@ -51,6 +55,8 @@ const programs: Program[] = [
       "Retos y juegos pensados por edad",
     ],
     photoLabel: "MATEMÁTICAS EN INGLÉS CON RETOS",
+    image: "/math-genius/math-genius.webp",
+    imageAlt: "Niños jugando un reto de matemáticas en inglés en Math Genius",
     chip: "bg-navy",
     bullet: "text-navy",
   },
@@ -67,6 +73,8 @@ const programs: Program[] = [
       "Aprendizaje basado en el juego",
     ],
     photoLabel: "EXPLORACIÓN CIENTÍFICA PARA NIÑOS",
+    image: "/science-playdate/img-1.webp",
+    imageAlt: "Niños haciendo un experimento de ciencia en inglés",
     chip: "bg-green",
     bullet: "text-green",
   },
@@ -83,6 +91,8 @@ const programs: Program[] = [
       "Seis meses de acompañamiento a participantes y familias",
     ],
     photoLabel: "EXPERIENCIA DE LIDERAZGO PARA JÓVENES",
+    image: "/lead/img1.webp",
+    imageAlt: "Niña con alas de cartón soñando en grande — programa LEAD",
     chip: "bg-burgundy",
     bullet: "text-burgundy",
   },
@@ -121,11 +131,23 @@ export function ExtracurricularesProgramas() {
                     photoLeft ? "order-2 lg:order-1" : "order-2"
                   }`}
                 >
-                  <PhotoPlaceholder
-                    label={p.photoLabel}
-                    rounded="rounded-[32px]"
-                    className="relative z-10 aspect-[4/3] shadow-brand-lg"
-                  />
+                  {p.image ? (
+                    <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-[32px] shadow-brand-lg">
+                      <Image
+                        src={p.image}
+                        alt={p.imageAlt ?? ""}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <PhotoPlaceholder
+                      label={p.photoLabel}
+                      rounded="rounded-[32px]"
+                      className="relative z-10 aspect-[4/3] shadow-brand-lg"
+                    />
+                  )}
                 </div>
 
                 <div className={photoLeft ? "order-1 lg:order-2" : "order-1"}>

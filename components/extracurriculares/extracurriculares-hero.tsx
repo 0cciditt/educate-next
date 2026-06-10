@@ -17,6 +17,10 @@ const slides: Slide[] = [
     alt: "Jóvenes en la experiencia de liderazgo LEAD",
   },
   {
+    src: "/science-playdate/img-2.webp",
+    alt: "Niños haciendo un experimento de volcán en Science Play Date",
+  },
+  {
     src: "/hero/educate-1.webp",
     alt: "Estudiantes Educate en una actividad cultural",
   },

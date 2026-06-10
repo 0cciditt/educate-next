@@ -34,7 +34,7 @@ export function YlApoyos() {
           <div className="relative max-w-md lg:max-w-none mx-auto w-full">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-brand-lg">
               <Image
-                src="/hero/educate-3.webp"
+                src="/young-learners/programs-help.webp"
                 alt="Estudiantes de Educate practicando inglés con apoyo de un tutor"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

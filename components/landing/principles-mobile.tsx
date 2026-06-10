@@ -68,7 +68,7 @@ const principles: {
     photo:
       "linear-gradient(145deg, var(--color-burgundy) 0%, var(--color-burgundy-deep) 100%)",
     chip: "bg-burgundy",
-    image: "/principles-and-values/card-4.webp",
+    image: "/principles-and-values/card-5.webp",
     imageAlt: "Comunidad de estudiantes de Educate",
   },
 ];
