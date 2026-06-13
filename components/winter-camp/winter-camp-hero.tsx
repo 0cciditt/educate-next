@@ -8,20 +8,20 @@ type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
-    src: "/programs/Winter Camp.webp",
-    alt: "Estudiantes Educate viviendo un campamento de invierno",
+    src: "/winter-camp/card-1.webp",
+    alt: "Grupo de niños y jóvenes con esquís en la cima de una montaña nevada",
   },
   {
-    src: "/hero/educate-1.webp",
-    alt: "Familia y estudiantes Educate en jornada internacional",
+    src: "/winter-camp/card-3.webp",
+    alt: "Instructor guiando una clase de esquí para niños en la nieve",
   },
   {
-    src: "/hero/educate-2.webp",
-    alt: "Aula de Educate Learning Center preparada para el Winter Camp",
+    src: "/winter-camp/card-4.webp",
+    alt: "Niños en la salida de una competencia de snowboard en el campamento",
   },
   {
-    src: "/hero/educate-3.webp",
-    alt: "Estudiantes Educate en una actividad cultural",
+    src: "/winter-camp/card-2.webp",
+    alt: "Dos niñas acariciando un caballo durante una actividad de invierno",
   },
 ];
 

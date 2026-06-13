@@ -14,14 +14,28 @@ export const metadata: Metadata = {
     "Inglés para niños y jóvenes de 4 a 13 años. Metodología 100% conversacional y experiencial, niveles homologados con el Marco Común Europeo y apoyos académicos para un aprendizaje constante.",
 };
 
+const heroSlides = [
+  {
+    src: "/young-learners/programs-help.webp",
+    alt: "Jóvenes conversando en inglés alrededor de una mesa con banderas de varios países",
+  },
+  {
+    src: "/young-learners/children-studying.webp",
+    alt: "Niños trabajando en un proyecto creativo durante una clase",
+  },
+];
+
 export default function YoungLearnersPage() {
   return (
     <>
       <SiteNavV2 />
       <main>
-        <YlHero />
+        <YlHero slides={heroSlides} />
         <YlHighlights />
-        <YlBrief />
+        <YlBrief
+          image="/young-learners/children-studying.webp"
+          imageAlt="Niños trabajando en un proyecto creativo durante una clase"
+        />
         <YlLevels />
         <YlApoyos />
         <Sedes />

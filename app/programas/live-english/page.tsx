@@ -59,13 +59,13 @@ const briefTitle = (
 
 const briefBody = (
   <>
-    <p className="text-lg leading-relaxed text-ink-2 mt-6 max-w-[560px]">
+    <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-6 max-w-[560px]">
       El Global Learners Program acompaña a adultos y jóvenes desde los 14 años a aprender
       inglés como una herramienta real para conectar con el mundo: clases
       grupales presenciales, 100% conversacionales y experienciales, con
       inmersión total desde el primer día y profesores certificados.
     </p>
-    <p className="text-lg leading-relaxed text-ink-2 mt-4 max-w-[560px]">
+    <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
       Se compone de ciclos de aprendizaje{" "}
       <span className="font-heading font-bold text-navy">
         homologados de acuerdo al Marco Común Europeo

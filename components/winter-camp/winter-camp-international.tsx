@@ -119,7 +119,7 @@ export function WinterCampInternational() {
 
         <div className="mt-10 lg:mt-12 grid gap-4 sm:grid-cols-3 rounded-2xl bg-white/[0.06] border border-white/15 p-6 sm:p-7">
           <FactRow label="Edad mínima" value="10 años" />
-          <FactRow label="Temporada" value="Diciembre a enero" />
+          <FactRow label="Temporada" value="Noviembre a Enero" />
           <FactRow label="Apoyo" value="Educate · de punta a punta" />
         </div>
       </div>

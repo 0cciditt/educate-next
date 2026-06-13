@@ -59,13 +59,13 @@ const briefTitle = (
 
 const briefBody = (
   <>
-    <p className="text-lg leading-relaxed text-ink-2 mt-6 max-w-[560px]">
+    <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-6 max-w-[560px]">
       Un programa de español como lengua extranjera para quienes vienen a vivir,
       estudiar o trabajar en Colombia. Aprendes el idioma viviéndolo: 100%
       conversacional y experiencial, con inmersión total en la lengua y la
       cultura desde el primer día y profesores certificados.
     </p>
-    <p className="text-lg leading-relaxed text-ink-2 mt-4 max-w-[560px]">
+    <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
       Se compone de ciclos de aprendizaje{" "}
       <span className="font-heading font-bold text-navy">
         homologados de acuerdo al Marco Común Europeo

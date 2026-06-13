@@ -50,8 +50,8 @@ const programs: {
     icon: <SparklesIcon className="w-8 h-8 text-white" />,
     photo:
       "linear-gradient(145deg, var(--color-navy) 0%, var(--color-navy-deep) 100%)",
-    image: "/our-programs/card-3.webp",
-    imageAlt: "Estudiantes de Educate en un campamento de inmersión",
+    image: "/summer-camp/hero-3.webp",
+    imageAlt: "Niños celebrando con los brazos en alto en un campamento de Educate",
   },
   {
     title: "Asesoría institucional",

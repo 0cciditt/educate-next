@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 type Tone = "navy" | "orange" | "green";
 
@@ -10,6 +11,9 @@ type Row = {
   bullets: { label: string; value: string }[];
   imageLabel: string;
   imageTone: Tone;
+  /** Optional real photo; replaces the gradient placeholder when set. */
+  image?: string;
+  imageAlt?: string;
   flip?: boolean;
 };
 
@@ -41,6 +45,8 @@ const rows: Row[] = [
     ],
     imageLabel: "DAY CAMP · CALI",
     imageTone: "green",
+    image: "/spring-break-camp/spring-break-camp-hero-1.webp",
+    imageAlt: "Niños practicando tiro con arco en el campamento",
   },
   {
     eyebrow: "QUÉ SE VIVE",
@@ -61,6 +67,8 @@ const rows: Row[] = [
     ],
     imageLabel: "EXPERIENCIAS QUE TRANSFORMAN",
     imageTone: "orange",
+    image: "/spring-break-camp/spring-break-camp-hero-3.webp",
+    imageAlt: "Niña con casco y arnés en un circuito de cuerdas altas",
   },
 ];
 
@@ -84,6 +92,8 @@ function ZigzagRow({
   bullets,
   imageLabel,
   imageTone,
+  image,
+  imageAlt,
   flip,
 }: Row) {
   return (
@@ -97,20 +107,32 @@ function ZigzagRow({
         className="relative aspect-[16/10] overflow-hidden lg:aspect-[4/3] lg:rounded-[32px] lg:shadow-brand-lg"
         style={{ background: toneGradient[imageTone] }}
       >
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(120% 85% at 18% 0%, rgba(255,255,255,0.22), transparent 55%), linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.22) 100%)",
-          }}
-        />
-        <span className="absolute bottom-5 left-6 font-display text-base tracking-[0.04em] text-white/95">
-          {imageLabel}
-        </span>
-        <span className="absolute top-5 right-6 font-mono text-[10px] tracking-[0.16em] uppercase text-white/55">
-          Imagen
-        </span>
+        {image ? (
+          <Image
+            src={image}
+            alt={imageAlt ?? ""}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        ) : (
+          <>
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(120% 85% at 18% 0%, rgba(255,255,255,0.22), transparent 55%), linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.22) 100%)",
+              }}
+            />
+            <span className="absolute bottom-5 left-6 font-display text-base tracking-[0.04em] text-white/95">
+              {imageLabel}
+            </span>
+            <span className="absolute top-5 right-6 font-mono text-[10px] tracking-[0.16em] uppercase text-white/55">
+              Imagen
+            </span>
+          </>
+        )}
       </div>
 
       <div className="p-6 sm:p-8 lg:p-0">

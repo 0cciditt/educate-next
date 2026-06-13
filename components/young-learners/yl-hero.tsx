@@ -30,6 +30,8 @@ type Props = {
   description?: string;
   waMessage?: string;
   slides?: Slide[];
+  secondaryHref?: string;
+  secondaryLabel?: string;
 };
 
 export function YlHero({
@@ -40,6 +42,8 @@ export function YlHero({
   description = "Aprenden hablando inglés: un programa donde el idioma se vive a través del juego, la cultura y la conversación real desde el primer día. Metodología Integral Learning, 100% conversacional y experiencial.",
   waMessage = "¡Hola! Quiero información sobre el Young Learners Program (4 a 13 años).",
   slides = defaultSlides,
+  secondaryHref = "#niveles",
+  secondaryLabel = "Ver niveles",
 }: Props = {}) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -155,12 +159,12 @@ export function YlHero({
               Comenzar ahora
             </Button>
             <Button
-              href="#niveles"
+              href={secondaryHref}
               variant="secondary"
               size="lg"
               className="max-sm:hidden w-full sm:w-auto bg-white/10! text-white! border-white/60! backdrop-blur-sm hover:bg-white/20!"
             >
-              Ver niveles
+              {secondaryLabel}
             </Button>
           </div>
         </div>

@@ -45,6 +45,8 @@ const rows: Row[] = [
     ],
     imageLabel: "DAY CAMP · CALI",
     imageTone: "orange",
+    image: "/summer-camp/hero-3.webp",
+    imageAlt: "Niños celebrando con los brazos en alto en el Summer Camp",
   },
   {
     eyebrow: "QUÉ SE VIVE",
@@ -65,9 +67,8 @@ const rows: Row[] = [
     ],
     imageLabel: "EXPERIENCIAS QUE TRANSFORMAN",
     imageTone: "green",
-    image: "/summer-camp/hero-2.webp",
-    imageAlt:
-      "Estudiantes viviendo una experiencia que transforma en el Summer Camp",
+    image: "/summer-camp/hero-4.webp",
+    imageAlt: "Niños armando una carpa juntos en el bosque del Summer Camp",
   },
 ];
 

@@ -39,6 +39,9 @@ const programs: Program[] = [
       "Competencias amistosas organizadas por nivel",
     ],
     photoLabel: "CLUB DE DELETREO EN INGLÉS",
+    image: "/spelling-bee/spelling-bee.webp",
+    imageAlt:
+      "Niños mostrando sus certificados en una competencia de Spelling Bee",
     chip: "bg-orange",
     bullet: "text-orange",
   },
@@ -117,61 +120,57 @@ export function ExtracurricularesProgramas() {
           </p>
         </div>
 
-        <div className="mt-24 sm:mt-32 lg:mt-36 flex flex-col gap-20 sm:gap-24 lg:gap-28">
+        <div className="mt-12 sm:mt-16 lg:mt-36 flex flex-col gap-8 sm:gap-12 lg:gap-28">
           {programs.map((p, i) => {
             const photoLeft = i % 2 === 1;
             return (
               <div
                 key={p.id}
                 id={p.id}
-                className="scroll-mt-28 grid gap-10 lg:gap-16 xl:gap-20 lg:grid-cols-2 lg:items-center"
+                className={`scroll-mt-28 reveal-up overflow-hidden rounded-[28px] bg-white ring-1 ring-line-2 shadow-brand-md lg:grid lg:gap-16 xl:gap-20 lg:items-center lg:grid-cols-2 lg:overflow-visible lg:rounded-none lg:bg-transparent lg:ring-0 lg:shadow-none ${
+                  photoLeft ? "" : "lg:[&>*:first-child]:order-2"
+                }`}
               >
-                <div
-                  className={`relative max-w-md lg:max-w-none mx-auto w-full ${
-                    photoLeft ? "order-2 lg:order-1" : "order-2"
-                  }`}
-                >
-                  {p.image ? (
-                    <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-[32px] shadow-brand-lg">
-                      <Image
-                        src={p.image}
-                        alt={p.imageAlt ?? ""}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <PhotoPlaceholder
-                      label={p.photoLabel}
-                      rounded="rounded-[32px]"
-                      className="relative z-10 aspect-[4/3] shadow-brand-lg"
+                {p.image ? (
+                  <div className="relative aspect-[16/10] overflow-hidden lg:aspect-[4/3] lg:rounded-[32px] lg:shadow-brand-lg">
+                    <Image
+                      src={p.image}
+                      alt={p.imageAlt ?? ""}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover"
                     />
-                  )}
-                </div>
+                  </div>
+                ) : (
+                  <PhotoPlaceholder
+                    label={p.photoLabel}
+                    rounded="rounded-none lg:rounded-[32px]"
+                    className="relative aspect-[16/10] lg:aspect-[4/3] lg:shadow-brand-lg"
+                  />
+                )}
 
-                <div className={photoLeft ? "order-1 lg:order-2" : "order-1"}>
+                <div className="p-6 sm:p-8 lg:p-0">
                   <div
                     className={`w-12 h-12 rounded-2xl grid place-items-center ${p.chip}`}
                   >
                     {p.icon}
                   </div>
-                  <div className="font-mono text-[11px] tracking-[0.22em] text-orange uppercase mt-5">
+                  <div className="font-mono text-[11px] tracking-[0.22em] text-orange uppercase mt-4 lg:mt-5">
                     {p.eyebrow}
                   </div>
-                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[0.97] tracking-tight mt-2 text-ink">
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-5xl leading-[1.05] lg:leading-[0.97] tracking-tight mt-2 text-ink">
                     {p.name}
                   </h3>
-                  <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[540px]">
+                  <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-5 max-w-[540px]">
                     {p.description}
                   </p>
-                  <ul className="mt-6 flex flex-col gap-3">
+                  <ul className="mt-5 lg:mt-6 flex flex-col gap-3">
                     {p.highlights.map((h) => (
                       <li key={h} className="flex items-start gap-3">
                         <CheckIcon
                           className={`w-5 h-5 shrink-0 mt-0.5 ${p.bullet}`}
                         />
-                        <span className="text-base leading-relaxed text-ink-2">
+                        <span className="text-[15px] lg:text-base leading-relaxed text-ink-2">
                           {h}
                         </span>
                       </li>

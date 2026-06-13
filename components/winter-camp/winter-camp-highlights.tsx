@@ -18,7 +18,7 @@ const highlights = [
   },
   {
     eyebrow: "TEMPORADA",
-    label: "Diciembre–enero",
+    label: "Noviembre – Enero",
     sub: "Invierno hemisferio norte",
   },
 ];

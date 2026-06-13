@@ -8,20 +8,16 @@ type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
-    src: "/programs/Spring Break Camp.webp",
-    alt: "Niños en el campamento de primavera de Educate en Cali",
+    src: "/spring-break-camp/spring-break-camp-hero-1.webp",
+    alt: "Niños practicando tiro con arco en el campamento",
   },
   {
-    src: "/hero/educate-1.webp",
-    alt: "Niños en una clase activa del campamento",
+    src: "/spring-break-camp/spring-break-camp-hero-2.webp",
+    alt: "Niño cruzando un puente de cuerdas en el campamento",
   },
   {
-    src: "/hero/educate-2.webp",
-    alt: "Estudiantes Educate en una actividad cultural",
-  },
-  {
-    src: "/hero/educate-3.webp",
-    alt: "Familia y estudiantes Educate en jornada de campamento",
+    src: "/spring-break-camp/spring-break-camp-hero-3.webp",
+    alt: "Niña con casco y arnés en un circuito de cuerdas altas",
   },
 ];
 

@@ -9,8 +9,8 @@ type Slide = { src: string; alt: string };
 
 const slides: Slide[] = [
   {
-    src: "/programs/SpellingBee.webp",
-    alt: "Niños participando en el club Spelling Bee en inglés",
+    src: "/spelling-bee/spelling-bee.webp",
+    alt: "Niños mostrando sus certificados en una competencia de Spelling Bee",
   },
   {
     src: "/programs/LEAD.webp",

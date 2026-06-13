@@ -19,6 +19,10 @@ const slides: Slide[] = [
     src: "/summer-camp/hero-2.webp",
     alt: "Actividades de verano en el Summer Camp de Educate",
   },
+  {
+    src: "/summer-camp/hero-3.webp",
+    alt: "Niños celebrando con los brazos en alto en el Summer Camp",
+  },
 ];
 
 export function SummerCampHero() {
