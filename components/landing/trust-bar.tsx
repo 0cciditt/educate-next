@@ -40,7 +40,7 @@ const items: Item[] = [
   },
   {
     icon: TrophyIcon,
-    title: "12 años en el Valle",
+    title: "15 años en el Valle",
     sub: "3.200 estudiantes formados",
     tile: "bg-yellow-soft",
     accent: "text-yellow-deep",

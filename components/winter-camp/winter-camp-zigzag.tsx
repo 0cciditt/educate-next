@@ -40,8 +40,8 @@ const rows: Row[] = [
     bullets: [
       { label: "Duración", value: "2 a 4 semanas" },
       { label: "Modalidad", value: "Inmersión internacional" },
-      { label: "Países", value: "Canadá y EE. UU." },
-      { label: "Temporada", value: "Diciembre–enero" },
+      { label: "Países", value: "Canadá, EE. UU. y Polonia" },
+      { label: "Temporada", value: "Noviembre – Enero" },
     ],
     imageLabel: "INMERSIÓN DE INVIERNO",
     imageTone: "navy",

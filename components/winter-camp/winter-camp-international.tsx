@@ -30,6 +30,16 @@ const destinations: Destination[] = [
       { label: "Idioma", value: "Inglés" },
     ],
   },
+  {
+    country: "Polonia",
+    flag: "/flags/Flag-of-Poland.svg",
+    tagline: "Europa central, en inglés.",
+    body: "Convenios con campamentos de invierno en Polonia para vivir el inglés en un entorno europeo seguro, lleno de historia, nieve y nuevas amistades internacionales.",
+    meta: [
+      { label: "Duración", value: "2–4 semanas" },
+      { label: "Idioma", value: "Inglés" },
+    ],
+  },
 ];
 
 export function WinterCampInternational() {
@@ -63,7 +73,7 @@ export function WinterCampInternational() {
               <br />
               instituciones aliadas
               <br />
-              en dos países.
+              en tres países.
             </h2>
           </div>
           <p className="text-lg leading-relaxed text-white/85 lg:max-w-[480px]">
@@ -74,7 +84,7 @@ export function WinterCampInternational() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destinations.map((d) => (
             <article
               key={d.country}

@@ -19,17 +19,17 @@ type Stat = {
 const stats: Stat[] = [
   {
     color: "text-navy",
-    value: 12,
+    value: 15,
     smallSuffix: "años",
     sub: "formando estudiantes",
-    caption: "en el Valle del Cauca desde 2014",
+    caption: "en el Valle del Cauca desde 2011",
   },
   {
     color: "text-orange",
-    value: 3.2,
+    value: 3.75,
     decimals: 1,
     bigSuffix: "k",
-    sub: "estudiantes graduados",
+    sub: "estudiantes formados",
     caption: "niños, jóvenes y adultos",
   },
   {

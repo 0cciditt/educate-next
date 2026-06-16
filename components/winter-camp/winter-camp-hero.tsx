@@ -133,8 +133,8 @@ export function WinterCampHero() {
               animationDelay: "280ms",
             }}
           >
-            De dos a cuatro semanas viviendo otra cultura en Canadá o Estados
-            Unidos, entre diciembre y enero. Una inmersión total en inglés para
+            De dos a cuatro semanas viviendo otra cultura en Canadá, Estados
+            Unidos o Polonia, entre noviembre y enero. Una inmersión total en inglés para
             niños y jóvenes desde los 10 años.
           </p>
 
