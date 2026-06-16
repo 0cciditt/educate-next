@@ -159,3 +159,33 @@ button:not(:disabled),
     transform: scaleX(1);
   }
 }
+
+/* Aliados world map — pulsing pins and drawn flight-path arcs. Decorative,
+   so gated to reduced-motion: no-preference (static end state otherwise). */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes aliados-ping {
+    0% {
+      transform: scale(0.6);
+      opacity: 0.7;
+    }
+    70%,
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+  .aliados-ping {
+    animation: aliados-ping 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  }
+  @keyframes aliados-arc {
+    from {
+      stroke-dashoffset: var(--arc-len, 600);
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .aliados-arc {
+    animation: aliados-arc 1.6s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+}
