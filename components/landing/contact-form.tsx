@@ -105,7 +105,7 @@ export function ContactForm() {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2.5 font-heading font-bold text-lg text-white bg-orange shadow-brand-sm rounded-pill px-8 py-4 mt-1 no-underline cursor-pointer transition-[transform,box-shadow,background-color] duration-200 ease-out hover:bg-orange-deep hover:-translate-y-px hover:shadow-brand-md"
+        className="inline-flex items-center justify-center gap-2.5 font-heading font-bold text-[15px] sm:text-lg text-white bg-orange shadow-brand-sm rounded-pill px-5 sm:px-8 py-3.5 sm:py-4 mt-1 no-underline cursor-pointer transition-[transform,box-shadow,background-color] duration-200 ease-out hover:bg-orange-deep hover:-translate-y-px hover:shadow-brand-md"
       >
         <WhatsAppIcon className="w-5 h-5" />
         Obtener más información
@@ -113,7 +113,7 @@ export function ContactForm() {
 
       <p className="text-xs text-ink-3 text-center -mt-1">
         Te llevamos a WhatsApp con tu mensaje listo. Te respondemos en menos de
-        24 horas — nunca marketing.
+        24 horas. Nunca marketing.
       </p>
     </form>
   );

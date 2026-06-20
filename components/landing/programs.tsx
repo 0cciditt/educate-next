@@ -22,7 +22,7 @@ const programs: {
 }[] = [
   {
     title: "Formación en lenguas",
-    desc: "Programas de lengua extranjera y segunda lengua. El idioma se descubre con su cultura — no solo se memoriza.",
+    desc: "Programas de lengua extranjera y segunda lengua. El idioma se descubre con su cultura, no solo se memoriza.",
     audience: "Niños, jóvenes y adultos",
     meta: ["Inmersión cultural"],
     icon: <BookOpenIcon className="w-8 h-8 text-white" />,

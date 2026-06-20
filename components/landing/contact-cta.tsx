@@ -23,7 +23,7 @@ export function ContactCTA() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden bg-orange-soft py-16 sm:py-20"
+      className="relative overflow-hidden bg-bg-warm py-16 sm:py-20"
     >
       <div
         aria-hidden
@@ -41,23 +41,23 @@ export function ContactCTA() {
         <div className="grid gap-10 lg:gap-16 lg:grid-cols-[1.3fr_1fr] items-center">
           <div className="reveal-up">
             <div className="font-display text-[13px] tracking-[0.2em] text-orange uppercase">
-              Casa abierta
+              Contáctanos
             </div>
             <h2 className="font-display text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] sm:leading-[0.95] tracking-tight mt-2 text-ink text-balance">
-              Ven a vivir{" "}
-              <br className="hidden sm:block" />
-              una experiencia real.
+              ¿Quieres saber más?
             </h2>
             <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[560px]">
-              Agenda 60 minutos. Conoce nuestros programas de lenguas,
-              intercambio, inmersión y habilidades blandas. Trae a tu hijo o
-              ven con tu equipo — el café lo ponemos nosotros.
+              Déjanos tus datos y te contamos todo: programas, sedes y horarios.{" "}
+              <br className="sm:hidden" />
+              <br className="sm:hidden" />
+              Resolvemos tus dudas y te ayudamos a elegir la mejor ruta, sin
+              compromiso.
             </p>
 
             <ul className="flex flex-col gap-3.5 mt-8">
               {benefits.map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <span className="grid place-items-center w-7 h-7 rounded-full bg-green-soft text-green-deep shrink-0">
+                  <span className="grid place-items-center w-7 h-7 rounded-full bg-green text-white shrink-0">
                     <CheckIcon className="w-4 h-4" />
                   </span>
                   <span className="text-base text-ink-2">{b}</span>

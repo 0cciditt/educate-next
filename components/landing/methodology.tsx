@@ -45,7 +45,7 @@ const pillars: {
   {
     n: "03",
     title: "Liderazgo integral.",
-    desc: "Habilidades blandas y compromiso colectivo-social. No solo formamos hablantes — formamos líderes.",
+    desc: "Habilidades blandas y compromiso con la comunidad. Aquí no solo formamos hablantes, también líderes.",
     icon: <TrendUpIcon className="w-8 h-8 text-white" />,
     photo:
       "linear-gradient(145deg, var(--color-navy) 0%, var(--color-navy-deep) 100%)",

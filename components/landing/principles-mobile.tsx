@@ -52,7 +52,7 @@ const principles: {
   {
     n: "03",
     title: "Liderazgo integral.",
-    desc: "Habilidades blandas y compromiso colectivo-social. No solo formamos hablantes — formamos líderes.",
+    desc: "Habilidades blandas y compromiso con la comunidad. Aquí no solo formamos hablantes, también líderes.",
     icon: <TrendUpIcon className="w-8 h-8 text-white" />,
     photo:
       "linear-gradient(145deg, var(--color-navy) 0%, var(--color-navy-deep) 100%)",
@@ -86,7 +86,7 @@ export function PrinciplesMobile() {
           lo vivimos primero.
         </h2>
         <p className="text-[15px] leading-relaxed text-ink-2 mt-4">
-          Cuatro principios reúnen el espíritu de Educate — educación para la
+          Cuatro principios reúnen el espíritu de Educate: educación para la
           vida, ciudadanos del mundo, liderazgo integral y comunidad.
         </p>
 

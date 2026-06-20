@@ -27,7 +27,7 @@ const items: {
   },
   {
     quote:
-      "Pasé el CAE al primer intento. Lo que más me sirvió no fue el examen — fue aprender a defender una idea en otro idioma.",
+      "Pasé el CAE al primer intento. Lo que más me sirvió no fue el examen, sino aprender a defender una idea en otro idioma.",
     name: "Valentina O.",
     role: "Adulta · Palmira · C1",
     avatarBg: "bg-burgundy",
