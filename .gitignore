@@ -45,3 +45,7 @@ AGENTS.md
 CLAUDE.md
 .claude/
 .design/
+
+# markdown notes (claims audit, scratch docs, etc.)
+*.md
+CLAIMS-AUDIT.md

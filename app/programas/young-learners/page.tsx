@@ -11,7 +11,7 @@ import { YlLevels } from "@/components/young-learners/yl-levels";
 export const metadata: Metadata = {
   title: "Young Learners Program — Educate Learning Center",
   description:
-    "Inglés para niños y jóvenes de 4 a 13 años. Metodología 100% conversacional y experiencial, niveles homologados con el Marco Común Europeo y apoyos académicos para un aprendizaje constante.",
+    "Inglés para niños y jóvenes de 4 a 13 años en Cali. Aprenden hablando desde la primera clase: conversación, juego y confianza real.",
 };
 
 const heroSlides = [
@@ -25,6 +25,22 @@ const heroSlides = [
   },
 ];
 
+const briefBody = (
+  <>
+    <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-6 max-w-[560px]">
+      Tu hijo aprende inglés hablándolo desde la primera clase. A través del
+      juego, la conversación y actividades que disfruta, gana vocabulario y
+      soltura sin darse cuenta.
+    </p>
+    <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
+      <span className="font-heading font-bold text-navy">
+        Construye confianza real para comunicarse
+      </span>
+      , con acompañamiento cercano en cada etapa de su proceso.
+    </p>
+  </>
+);
+
 export default function YoungLearnersPage() {
   return (
     <>
@@ -33,6 +49,7 @@ export default function YoungLearnersPage() {
         <YlHero slides={heroSlides} />
         <YlHighlights />
         <YlBrief
+          body={briefBody}
           image="/young-learners/children-studying.webp"
           imageAlt="Niños trabajando en un proyecto creativo durante una clase"
         />

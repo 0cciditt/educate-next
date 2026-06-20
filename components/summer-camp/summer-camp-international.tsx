@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GlobeIcon } from "../landing/icons";
+import { GlobeIcon, PinIcon } from "../landing/icons";
 
 type Destination = {
   country: string;
@@ -133,6 +133,19 @@ export function SummerCampInternational() {
                   </div>
                 ))}
               </dl>
+              <a
+                href={`/aliados?country=${encodeURIComponent(d.country)}#mapa`}
+                className="group mt-1 inline-flex items-center gap-2 self-start rounded-pill border border-white/25 bg-white/5 px-4 py-2.5 font-heading text-[13px] font-bold text-white no-underline transition-colors duration-200 hover:border-yellow hover:bg-yellow hover:text-ink"
+              >
+                <PinIcon className="h-4 w-4" />
+                Ver en el mapa
+                <span
+                  aria-hidden
+                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </a>
             </article>
           ))}
         </div>

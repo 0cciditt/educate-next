@@ -33,3 +33,12 @@ export {
 
 // WhatsApp uses its real brand mark rather than a generic chat bubble.
 export { FaWhatsapp as WhatsAppIcon } from "react-icons/fa6";
+
+// Social brand marks for the footer.
+export {
+  FaInstagram as InstagramIcon,
+  FaFacebookF as FacebookIcon,
+  FaYoutube as YoutubeIcon,
+  FaLinkedinIn as LinkedinIcon,
+  FaTiktok as TiktokIcon,
+} from "react-icons/fa6";

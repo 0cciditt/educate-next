@@ -11,7 +11,7 @@ import { YlLevels, type Level } from "@/components/young-learners/yl-levels";
 export const metadata: Metadata = {
   title: "Global Learners Program — Inglés para adultos y jóvenes (14+) | Educate Learning Center",
   description:
-    "Live English: clases grupales presenciales de inglés para adultos y jóvenes desde los 14 años. Metodología 100% conversacional, niveles A1 a C1 homologados con el Marco Común Europeo.",
+    "Live English: clases grupales presenciales de inglés para adultos y jóvenes (14+) en Cali. Aprende hablando desde el primer día, en grupos reducidos y con profesores cercanos.",
 };
 
 const highlights: Highlight[] = [
@@ -23,27 +23,27 @@ const highlights: Highlight[] = [
 
 const levels: Level[] = [
   {
-    name: "Básico 1",
+    name: "Starter",
     cefr: "A1",
     desc: "Das tus primeros pasos en inglés: te presentas, saludas y sostienes conversaciones básicas sobre ti y tu día a día.",
   },
   {
-    name: "Básico 2",
+    name: "Explorer",
     cefr: "A2",
     desc: "Te desenvuelves en situaciones cotidianas: pides comida, haces compras, hablas del clima y cuentas tus planes con naturalidad.",
   },
   {
-    name: "Intermedio",
+    name: "Connector",
     cefr: "B1",
     desc: "Hablas con fluidez de temas personales, laborales y sociales; expresas opiniones, cuentas experiencias y resuelves imprevistos.",
   },
   {
-    name: "Avanzado 1",
+    name: "Achiever",
     cefr: "B2",
     desc: "Participas en debates, comprendes distintos puntos de vista y explicas ideas complejas adaptando tu estilo a cada contexto.",
   },
   {
-    name: "Avanzado 2",
+    name: "Expert",
     cefr: "C1",
     desc: "Te comunicas con claridad y un lenguaje amplio y estructurado; negocias y sostienes conversaciones largas con hablantes nativos.",
   },
@@ -60,18 +60,14 @@ const briefTitle = (
 const briefBody = (
   <>
     <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-6 max-w-[560px]">
-      El Global Learners Program acompaña a adultos y jóvenes desde los 14 años a aprender
-      inglés como una herramienta real para conectar con el mundo: clases
-      grupales presenciales, 100% conversacionales y experienciales, con
-      inmersión total desde el primer día y profesores certificados.
+      Hablas inglés desde el primer día. En grupos reducidos y con conversación
+      real, ganas fluidez y confianza sin memorizar.
     </p>
     <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
-      Se compone de ciclos de aprendizaje{" "}
       <span className="font-heading font-bold text-navy">
-        homologados de acuerdo al Marco Común Europeo
-      </span>
-      , que garantizan una formación constante y efectiva durante todo el
-      programa.
+        Un inglés que de verdad usas
+      </span>{" "}
+      en el trabajo, los viajes y tu día a día.
     </p>
   </>
 );
@@ -86,7 +82,7 @@ export default function LiveEnglishPage() {
           badgeNote="Inglés para adultos y jóvenes"
           titleLead="Global Learners Program."
           titleAccent=""
-          description="Clases grupales presenciales para adultos y jóvenes (14+). Aprende inglés conversando desde el primer día, en grupos reducidos y con acompañamiento real. Metodología Integral Learning, 100% conversacional y experiencial."
+          description="Aprende inglés hablando desde el primer día. Clases grupales presenciales para adultos y jóvenes (14+), en grupos reducidos y con acompañamiento real."
           waMessage="¡Hola! Quiero información sobre Live English (adultos y jóvenes 14+)."
         />
         <YlHighlights items={highlights} />

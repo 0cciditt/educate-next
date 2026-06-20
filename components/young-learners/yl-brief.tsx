@@ -15,15 +15,14 @@ const defaultBody = (
       El Young Learners Program acompaña a niños y jóvenes de 4 a 13 años a
       aprender inglés como una herramienta real para conectar con el mundo: 100%
       conversacional y experiencial, con inmersión total desde el primer día y
-      profesores certificados.
+      un equipo docente comprometido y en formación continua.
     </p>
     <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
       Se compone de ciclos de aprendizaje{" "}
       <span className="font-heading font-bold text-navy">
-        homologados de acuerdo al Marco Común Europeo
+        orientados según los estándares del Marco Común Europeo
       </span>
-      , que garantizan una formación constante y efectiva durante todo el
-      programa.
+      , que buscan una formación constante y efectiva durante todo el programa.
     </p>
   </>
 );

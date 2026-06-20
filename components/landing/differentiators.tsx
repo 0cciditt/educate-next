@@ -34,8 +34,8 @@ const items: {
   },
   {
     icon: GraduationCapIcon,
-    title: "Profes certificados",
-    desc: "Licenciados en lenguas, con TKT, CELTA o experiencia internacional. Hablantes nativos en C1+.",
+    title: "Equipo docente comprometido",
+    desc: "Docentes con experiencia en la enseñanza del idioma, dominio avanzado del inglés y formación continua en metodologías alineadas con estándares internacionales.",
     tile: "bg-green-soft",
     accent: "text-green-deep",
   },

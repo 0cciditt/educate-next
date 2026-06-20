@@ -33,9 +33,8 @@ export function CentrosEducativosPrograma() {
               lengua extranjera.
             </p>
             <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
-              Cada componente se rige por los niveles del Marco Común Europeo de
-              Referencia (MCER) y cuenta con el aval de la Secretaría de
-              Educación.
+              Cada componente se orienta según los estándares de competencia
+              lingüística del Marco Común Europeo de Referencia (MCER).
             </p>
           </div>
         </div>

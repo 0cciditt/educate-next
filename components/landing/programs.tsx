@@ -83,7 +83,8 @@ export function Programs() {
           </div>
           <p className="text-[17px] leading-relaxed text-ink-3 lg:max-w-sm">
             Formación lingüística, intercambio cultural, inmersión y desarrollo
-            humano. Homologados con el Marco Común Europeo cuando aplica.
+            humano. Con progresión orientada a los estándares del Marco Común
+            Europeo cuando aplica.
           </p>
         </div>
 

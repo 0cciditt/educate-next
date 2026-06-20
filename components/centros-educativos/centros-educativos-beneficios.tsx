@@ -18,7 +18,7 @@ const benefits: Benefit[] = [
   {
     bg: "bg-burgundy",
     icon: <GraduationCapIcon className="w-6 h-6 text-white" />,
-    label: "Profesores avalados por certificaciones internacionales.",
+    label: "Docentes con experiencia en la enseñanza del idioma y formación continua.",
   },
   {
     bg: "bg-navy",

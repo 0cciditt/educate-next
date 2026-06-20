@@ -12,14 +12,6 @@ const apoyos: Apoyo[] = [
     title: "Tutorías",
     desc: "Espacios creados para resolver dudas y practicar lo visto en clase.",
   },
-  {
-    title: "My Learn App",
-    desc: "Contenidos de interés actualizados en nuestra App Learn para poner en práctica todo lo aprendido.",
-  },
-  {
-    title: "Plataforma Interactiva",
-    desc: "Acceso 24/7 a nuestra plataforma de aprendizaje continuo, para practicar lo aprendido y prepararse para los exámenes internacionales.",
-  },
 ];
 
 export function YlApoyos() {

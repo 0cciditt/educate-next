@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         <MissionVision />
         <Modalities />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Sedes />
         <ContactCTA />
       </main>

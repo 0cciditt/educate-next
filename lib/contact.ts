@@ -38,3 +38,25 @@ export function whatsappMessageForPath(pathname: string | null | undefined) {
 export function whatsappUrl(message: string = WHATSAPP_DEFAULT_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
+
+// Social profiles shown in the footer. `label` maps to a brand icon in the
+// footer; drop an entry to hide that network.
+//
+// TODO: replace each "#" with the real profile URL.
+export type SocialLink = { label: string; href: string };
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/educatelearningcentercol/",
+  },
+  {
+    label: "Facebook",
+    href: "https://web.facebook.com/profile.php?id=61591067060977",
+  },
+  { label: "TikTok", href: "https://www.tiktok.com/@educatelearningcenter" },
+  { label: "YouTube", href: "https://www.youtube.com/@EDUCATELEARNING-yq4cb" },
+  // TODO: confirm the real LinkedIn company URL (the one provided looked
+  // incomplete, e.g. https://www.linkedin.com/company/<slug>).
+  { label: "LinkedIn", href: "#" },
+];

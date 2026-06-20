@@ -1,6 +1,22 @@
 import Image from "next/image";
-import { whatsappUrl } from "@/lib/contact";
+import type { ComponentType } from "react";
+import { SOCIAL_LINKS, whatsappUrl } from "@/lib/contact";
 import { Button } from "../ui/button";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TiktokIcon,
+  YoutubeIcon,
+} from "./icons";
+
+const socialIcons: Record<string, ComponentType<{ className?: string }>> = {
+  Instagram: InstagramIcon,
+  Facebook: FacebookIcon,
+  TikTok: TiktokIcon,
+  YouTube: YoutubeIcon,
+  LinkedIn: LinkedinIcon,
+};
 
 type FooterLink = { label: string; href: string };
 
@@ -60,20 +76,25 @@ export function SiteFooter() {
               style={{ width: "auto", filter: "brightness(0) invert(1)" }}
             />
             <p className="text-white/75 leading-relaxed text-[15px] max-w-[280px] mt-5">
-              Academia de idiomas para niños, jóvenes y adultos. Fundada en Cali
-              en 2014.
+              Academia de idiomas para niños, jóvenes y adultos. Con experiencia
+              en formación en inglés en Cali desde 2011.
             </p>
             <div className="mt-5 flex gap-2.5">
-              {["in", "f", "ig", "yt"].map((label) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-white text-[13px] font-bold no-underline hover:bg-white/20"
-                >
-                  {label}
-                </a>
-              ))}
+              {SOCIAL_LINKS.map(({ label, href }) => {
+                const Icon = socialIcons[label];
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-white no-underline hover:bg-white/20 transition-colors"
+                  >
+                    {Icon ? <Icon className="w-[18px] h-[18px]" /> : label}
+                  </a>
+                );
+              })}
             </div>
           </div>
 

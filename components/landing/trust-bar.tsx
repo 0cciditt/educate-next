@@ -19,29 +19,29 @@ type Item = {
 const items: Item[] = [
   {
     icon: GraduationCapIcon,
-    title: "Marco Común Europeo",
-    sub: "Homologados A1 a C1",
+    title: "Metodología propia",
+    sub: "Integral Learning",
     tile: "bg-navy-soft",
     accent: "text-navy",
   },
   {
     icon: ClipboardCheckIcon,
-    title: "Cambridge Authorized",
-    sub: "Centro de preparación oficial",
+    title: "Aprendizaje",
+    sub: "100% conversacional",
     tile: "bg-green-soft",
     accent: "text-green-deep",
   },
   {
     icon: UsersIcon,
-    title: "Profes certificados",
-    sub: "TKT, CELTA y nativos",
+    title: "Equipo docente",
+    sub: "Formación continua",
     tile: "bg-orange-soft",
     accent: "text-orange-deep",
   },
   {
     icon: TrophyIcon,
-    title: "15 años en el Valle",
-    sub: "3.200 estudiantes formados",
+    title: "15 años de experiencia",
+    sub: "Desde nuestro primer campamento, en 2011",
     tile: "bg-yellow-soft",
     accent: "text-yellow-deep",
   },
@@ -54,7 +54,7 @@ export function TrustBar() {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 grid gap-8 lg:gap-12 lg:grid-cols-[200px_1fr] lg:items-center">
         <div className="text-center lg:text-left">
           <div className="font-mono text-xs tracking-[0.15em] text-ink-3 leading-relaxed">
-            RESPALDOS QUE NOS AVALAN
+            POR QUÉ EDUCATE
           </div>
           <span className="mt-2.5 inline-block h-[3px] w-10 rounded-full bg-orange" />
         </div>

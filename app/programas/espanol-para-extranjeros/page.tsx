@@ -11,7 +11,7 @@ import { YlLevels, type Level } from "@/components/young-learners/yl-levels";
 export const metadata: Metadata = {
   title: "Español para extranjeros — Educate Learning Center",
   description:
-    "Programa de español como lengua extranjera (ELE) en Cali para quienes vienen a vivir, estudiar o trabajar en Colombia. Clases 100% conversacionales, inmersión cultural y niveles A1 a C1 homologados con el Marco Común Europeo.",
+    "Programa de español como lengua extranjera (ELE) en Cali para quienes vienen a vivir, estudiar o trabajar en Colombia. Clases 100% conversacionales, inmersión cultural y niveles A1 a C1 orientados según los estándares del Marco Común Europeo.",
 };
 
 const highlights: Highlight[] = [
@@ -63,15 +63,15 @@ const briefBody = (
       Un programa de español como lengua extranjera para quienes vienen a vivir,
       estudiar o trabajar en Colombia. Aprendes el idioma viviéndolo: 100%
       conversacional y experiencial, con inmersión total en la lengua y la
-      cultura desde el primer día y profesores certificados.
+      cultura desde el primer día y un equipo docente comprometido y en
+      formación continua.
     </p>
     <p className="text-[15px] lg:text-lg leading-relaxed text-ink-2 mt-3 lg:mt-4 max-w-[560px]">
       Se compone de ciclos de aprendizaje{" "}
       <span className="font-heading font-bold text-navy">
-        homologados de acuerdo al Marco Común Europeo
+        orientados según los estándares del Marco Común Europeo
       </span>
-      , que garantizan una formación constante y efectiva durante todo el
-      programa.
+      , que buscan una formación constante y efectiva durante todo el programa.
     </p>
   </>
 );

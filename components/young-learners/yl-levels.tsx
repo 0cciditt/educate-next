@@ -4,27 +4,27 @@ export type Level = { name: string; cefr: string; desc: string };
 
 const defaultLevels: Level[] = [
   {
-    name: "Básico 1",
+    name: "Starter",
     cefr: "A1",
     desc: "Sus primeros pasos en inglés: aprende a saludar, presentarse y nombrar lo que le rodea a través del juego y la canción.",
   },
   {
-    name: "Básico 2",
+    name: "Explorer",
     cefr: "A2",
-    desc: "Empieza a comunicarse en situaciones cotidianas —la familia, la comida, los juegos— con frases sencillas y mucha confianza.",
+    desc: "Empieza a comunicarse en situaciones cotidianas como la familia, la comida y los juegos, con frases sencillas y mucha confianza.",
   },
   {
-    name: "Intermedio",
+    name: "Connector",
     cefr: "B1",
     desc: "Cuenta historias, expresa gustos y opiniones y participa en conversaciones sobre el colegio, sus amigos y sus intereses.",
   },
   {
-    name: "Avanzado 1",
+    name: "Achiever",
     cefr: "B2",
     desc: "Se desenvuelve con fluidez en distintos contextos, comprende ideas más complejas y argumenta sus puntos de vista.",
   },
   {
-    name: "Avanzado 2",
+    name: "Expert",
     cefr: "C1",
     desc: "Usa el inglés con naturalidad y precisión, comprende textos exigentes y se expresa con un vocabulario amplio y un estilo propio.",
   },
@@ -116,9 +116,6 @@ export function YlLevels({
             })}
           </ol>
         </div>
-        <p className="text-sm text-ink-4 mt-2 sm:hidden">
-          Desliza para ver todos los niveles →
-        </p>
       </div>
     </section>
   );

@@ -94,7 +94,7 @@ const programs: Program[] = [
       "Seis meses de acompañamiento a participantes y familias",
     ],
     photoLabel: "EXPERIENCIA DE LIDERAZGO PARA JÓVENES",
-    image: "/lead/img1.webp",
+    image: "/lead/img-1.webp",
     imageAlt: "Niña con alas de cartón soñando en grande — programa LEAD",
     chip: "bg-burgundy",
     bullet: "text-burgundy",

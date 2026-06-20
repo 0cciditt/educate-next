@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Programa para Centros Educativos — Educate Learning Center",
   description:
-    "Educate Bilingual School: programas bilingües personalizados para colegios y centros educativos, con certificación internacional y metodología adaptable a la filosofía institucional.",
+    "Educate Bilingual School: programas bilingües personalizados para colegios y centros educativos, alineados con estándares internacionales y con metodología adaptable a la filosofía institucional.",
 };
 
 const heroSlides = [
@@ -40,14 +40,14 @@ const highlights: Highlight[] = [
     sub: "De cada institución",
   },
   {
-    eyebrow: "CERTIFICACIÓN",
-    label: "Internacional",
-    sub: "Docentes y estudiantes",
+    eyebrow: "ESTÁNDARES",
+    label: "Internacionales",
+    sub: "Metodologías alineadas",
   },
   {
     eyebrow: "NIVELES",
     label: "MCER",
-    sub: "Aval Secretaría de Educación",
+    sub: "Competencia lingüística",
   },
   {
     eyebrow: "POBLACIÓN",
@@ -66,7 +66,7 @@ export default function CentrosEducativosPage() {
           badgeNote="Programas bilingües para instituciones"
           titleLead="Centros Educativos."
           titleAccent=""
-          description="Diseñamos programas bilingües a la medida de cada colegio y abrimos rutas de certificación internacional en inglés para todo su equipo docente y su alumnado."
+          description="Diseñamos programas bilingües a la medida de cada colegio y acompañamos el aprendizaje del inglés de su equipo docente y su alumnado con metodologías alineadas a estándares internacionales."
           waMessage="¡Hola! Quiero información sobre el programa para centros educativos (Educate Bilingual School)."
           secondaryHref="#programa"
           secondaryLabel="Conoce el programa"

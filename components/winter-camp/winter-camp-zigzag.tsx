@@ -63,7 +63,7 @@ const rows: Row[] = [
     bullets: [
       { label: "Actividades", value: "Nieve · deporte · cultura" },
       { label: "Habilidades", value: "Autonomía y liderazgo" },
-      { label: "Apoyo", value: "Equipo Educate certificado" },
+      { label: "Apoyo", value: "Equipo Educate dedicado" },
       { label: "Cierre", value: "Memorias para las familias" },
     ],
     imageLabel: "EXPERIENCIAS QUE TRANSFORMAN",
