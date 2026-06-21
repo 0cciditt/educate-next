@@ -56,7 +56,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   { label: "TikTok", href: "https://www.tiktok.com/@educatelearningcenter" },
   { label: "YouTube", href: "https://www.youtube.com/@EDUCATELEARNING-yq4cb" },
-  // TODO: confirm the real LinkedIn company URL (the one provided looked
-  // incomplete, e.g. https://www.linkedin.com/company/<slug>).
-  { label: "LinkedIn", href: "#" },
+  // LinkedIn hidden until we have the real company URL. Restore this entry to
+  // bring the footer icon back.
+  // { label: "LinkedIn", href: "#" },
 ];

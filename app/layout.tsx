@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { WhatsAppFab } from "@/components/ui/whatsapp-fab";
+import { SITE_URL } from "@/lib/site";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-display",
@@ -33,6 +34,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Educate Learning Center — Aprende inglés que te lleva al mundo",
   description:
     "Academia de idiomas en Cali para niños, jóvenes y adultos. Grupos pequeños, equipo docente en formación continua, metodología 100% conversacional y acompañamiento para exámenes internacionales de inglés.",
