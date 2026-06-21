@@ -33,7 +33,7 @@ const rows: Row[] = [
       <>
         Cuatro a seis semanas
         <br />
-        de verano en casa.
+        de verano en Cali.
       </>
     ),
     body: "Un campamento diurno en Cali donde niños y jóvenes viven el inglés a través del juego, el arte, el deporte y la cultura. Cada tarde regresan a casa cargados de experiencias, vocabulario nuevo y amistades.",
@@ -45,7 +45,7 @@ const rows: Row[] = [
     ],
     imageLabel: "DAY CAMP · CALI",
     imageTone: "orange",
-    image: "/summer-camp/hero-3.webp",
+    image: "/summer-camp/hero-5.webp",
     imageAlt: "Niños celebrando con los brazos en alto en el Summer Camp",
   },
   {
@@ -67,7 +67,7 @@ const rows: Row[] = [
     ],
     imageLabel: "EXPERIENCIAS QUE TRANSFORMAN",
     imageTone: "green",
-    image: "/summer-camp/hero-4.webp",
+    image: "/summer-camp/hero-3.webp",
     imageAlt: "Niños armando una carpa juntos en el bosque del Summer Camp",
   },
 ];
