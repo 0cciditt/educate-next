@@ -79,6 +79,11 @@ export function SiteFooter() {
               Academia de idiomas para niños, jóvenes y adultos. Con experiencia
               en formación en inglés en Cali desde 2011.
             </p>
+            <address className="not-italic text-white/70 leading-relaxed text-[14px] max-w-[280px] mt-4">
+              Calle 12 #73-101, piso 2, Edificio ID Lab
+              <br />
+              Barrio Capri, sur de Cali
+            </address>
             <div className="mt-5 flex gap-2.5">
               {SOCIAL_LINKS.map(({ label, href }) => {
                 const Icon = socialIcons[label];
