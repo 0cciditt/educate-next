@@ -13,10 +13,10 @@ const sedes = [
     mapQuery: "Torre Centenario, Cl. 6 Nte. #1-42, Granada, Cali, Valle del Cauca, Colombia",
   },
   {
-    name: "Alfaguara",
-    addr: "Centro Comercial Alfaguara",
-    city: "Jamundí, Valle del Cauca",
-    mapQuery: "Centro Comercial Alfaguara, Jamundí, Valle del Cauca, Colombia",
+    name: "Capri",
+    addr: "Calle 12 #73-101, piso 2, Edificio ID Lab",
+    city: "Barrio Capri, sur de Cali",
+    mapQuery: "Calle 12 #73-101, Barrio Capri, Cali, Valle del Cauca, Colombia",
   },
 ];
 
@@ -31,9 +31,8 @@ export function Sedes() {
           Encuentra una sede cerca de ti.
         </h2>
         <p className="text-lg leading-relaxed text-ink-2 mt-5 max-w-[720px]">
-          Tres sedes en el Valle del Cauca: Unicentro y Centenario en Cali, y
-          Alfaguara en Jamundí. Visita la que te quede mejor o pide una clase
-          virtual.
+          Tres sedes en Cali: Unicentro, Centenario y Capri. Visita la que te
+          quede mejor o pide una clase virtual.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">

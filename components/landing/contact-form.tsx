@@ -94,7 +94,7 @@ export function ContactForm() {
           >
             <option>Unicentro</option>
             <option>Centenario</option>
-            <option>Alfaguara</option>
+            <option>Capri</option>
             <option>{NO_SEDE}</option>
           </select>
           <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-ink-4" />

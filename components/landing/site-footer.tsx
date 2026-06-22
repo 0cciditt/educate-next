@@ -46,7 +46,7 @@ const cols: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: "Unicentro", href: "/#sedes" },
       { label: "Centenario", href: "/#sedes" },
-      { label: "Alfaguara", href: "/#sedes" },
+      { label: "Capri", href: "/#sedes" },
     ],
   },
 ];

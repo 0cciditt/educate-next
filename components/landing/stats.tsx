@@ -40,7 +40,7 @@ const stats: Stat[] = [
     color: "text-burgundy",
     value: 3,
     sub: "sedes en el Valle del Cauca",
-    caption: "En Unicentro, Centenario y Alfaguara",
+    caption: "En Unicentro, Centenario y Capri",
   },
 ];
 
