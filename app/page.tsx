@@ -12,7 +12,6 @@ import { Sedes } from "@/components/landing/sedes";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteNavV2 } from "@/components/landing/site-nav-v2";
 import { Stats } from "@/components/landing/stats";
-import { Testimonials } from "@/components/landing/testimonials";
 import { TrustBar } from "@/components/landing/trust-bar";
 
 export default function Home() {

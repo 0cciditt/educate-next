@@ -43,7 +43,7 @@ export function HeroMobile() {
             className="font-display text-3xl sm:text-4xl leading-[1.03] tracking-tight text-white mt-3"
             style={{ textShadow: "0 2px 18px rgba(20,59,92,0.45)" }}
           >
-            La mejor academia para aprender idiomas en Colombia.
+            La mejor academia para aprender idiomas en Cali.
           </h1>
           <Button
             href={whatsappUrl()}

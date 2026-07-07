@@ -104,7 +104,7 @@ export function HeroCarousel() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:min-h-[560px] xl:min-h-[640px] flex flex-col justify-center">
-        <div className="max-w-[640px]">
+        <div className="max-w-[640px] lg:max-w-[760px] xl:max-w-[820px] 2xl:max-w-[900px]">
           <div
             className="hero-rise inline-flex items-center gap-2.5 bg-white/15 border border-white/25 backdrop-blur-md rounded-pill pl-2 pr-4 py-2 text-[13px] text-white mb-5"
             style={{ animationDelay: "60ms" }}
@@ -116,14 +116,14 @@ export function HeroCarousel() {
           </div>
 
           <h1
-            className="hero-rise font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[0.95] tracking-tight text-white"
+            className="hero-rise font-display text-[34px] sm:text-[42px] md:text-5xl lg:text-[52px] xl:text-[58px] 2xl:text-[64px] leading-[0.98] tracking-tight text-white text-balance"
             style={{
               textShadow: "0 2px 28px rgba(20,59,92,0.55)",
               animationDelay: "160ms",
             }}
           >
-            Educate abre las puertas del mundo <br />
-            <span className="text-orange">para tu hijo</span>
+            La mejor academia para aprender idiomas en{" "}
+            <span className="text-orange">Cali</span>
           </h1>
 
           <p
